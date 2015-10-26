@@ -1,0 +1,3 @@
+id,name,product_id/id,partner_id/id,free_if_more_than,amount,normal_price,use_detailed_pricelist
+delivery.tnt_exp_eco,TNT Express ECO,product.fraisportaf,base.partner_tnt,True,10000.0,,True
+delivery.tnt_exp,TNT Express,product.fraisportaf,base.partner_tnt,True,10000.0,,True

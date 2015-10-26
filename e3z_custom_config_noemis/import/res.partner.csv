@@ -1,0 +1,176 @@
+id,customer,supplier,active,is_company,name,street,street2,zip,city,country_id/id,siret,nic,vat,phone,fax,email,credit_limit
+base.partner_noemis_cust_00001,True,False,True,True,4UI ,Immeuble Ordinal - Porte 4 - 4∞ Et.,rue des Chauffours,95002,CERGY,base.fr,528886559,,FR37528886559,,,,6000
+base.partner_noemis_cust_00002,True,False,True,True,6MTECHNOLOGIES,4 bd albert 1er,,94130,NOGENT SUR MARNE,base.fr,415006618,,,,,jiljazy@6mtechnologies.fr,0
+base.partner_noemis_cust_00003,True,False,True,True,A.I.R.E. TELECOM,12 RUE DE CANNES,,59000,LILLE,base.fr,494082381,,FR49494082381,03 20 62 23 33,03 20 62 23 39,,40000
+base.partner_noemis_cust_00004,True,False,True,True,ABERIA,229 RUE ALPHONSE BEAU DE ROCHAS,PAE MERCORENT,34500,BEZIERS,base.fr,393421086,41,FR56393421086,04 67 09 25 25,04 67 30 05 13,aberia@aberia.fr,6000
+base.partner_noemis_cust_00005,True,False,True,True,AC2I-SECURITE,29 RUE DE LA FORET,,57915,WOUSTVILLER,base.fr,489880815,35,FR16489880815,03 87 28 10 50,03 87 28 12 12,,0
+base.partner_noemis_cust_00006,True,False,True,True,ACIP IDF ( ARGOSSE SECURITE),44 avenue du 8 mai 1945,,92390,VILLENEUVE LA GARENNE,base.fr,479076762,,FR19479076762,01 47 98 98 88, 01 47 98 98 89,,0
+base.partner_noemis_cust_00007,True,False,True,True,ACTEMIUM PARIS SDEL,IMMEUBLE COLISEE DEFENSE - ENTREE64,50 AVENUE FRANCOIS ARAGO - CS 80002,92022,NANTERRE CEDEX,base.fr,443975826,,,01 55 47 59 85,01 55 47 59 75,,6000
+base.partner_noemis_cust_00008,True,False,True,True,ACTIVASYS SAS,"101, RUE CONDORCET",,38090,VAULX-MILIEU,base.fr,424218139,48,FR73 424 218 139,04 74 95 34 88,04 74 95 34 89,contact@activasys.com,4000
+base.partner_noemis_cust_00009,True,False,True,True,ADD-ON CONSULTING ,9 rue du Batiment,,95420,CLERY EN VEXIN,base.fr,424218964,,,,,,4000
+base.partner_noemis_cust_00010,True,False,True,True,ADM21,"273, rue Gabriel PÈri",,92700,COLOMBES,base.fr,417736972,,,01 46 52 01 03,01 46 52 01 04,,4000
+base.partner_noemis_cust_00011,True,False,True,True,AG2S,ZA LES BOSQUETS 4,,95540,MERY SUR OISE,base.fr,404298580,,,,,,6000
+base.partner_noemis_cust_00012,True,False,True,True,AIM ELECTRONIQUE,51 avenue de l'Europe,,77184,EMERAINVILLE,base.fr,434618260,,FR95434618260,,,,35000
+base.partner_noemis_cust_00013,True,False,True,True,ALPIX,12 RUE JEAN MONNET,,10600,LA CHAPELLE ST LUC,base.fr,,,,,,,0
+base.partner_noemis_cust_00014,True,False,True,True,ALVI PRO,"34, rue StÈphanie",,67100,STRASBOURG,base.fr,533908141,13,FR04 533908141,03 88 66 15 11,,,25000
+base.partner_noemis_cust_00015,True,False,True,True,AMESYS INTERNATIONAL SAS,655 Avenue GalilÈe - BP 80102,,13793,AIX EN PROVENCE  CEDEX3,base.fr,315067942,,,,,,50000
+base.partner_noemis_cust_00016,True,False,True,True,AMR SERVICES,ZA DU TAILLIS 3,3 RUE DES COQUELICOTS,44840,LES SORINIERES,base.fr,490598091,26,FR93490598091,02.28.44.19.80,02 28 44 53 88,contact@amr-services.com,50000
+base.partner_noemis_cust_00017,True,False,True,True,ANFRAY GIORIA,157 ROUTE DE BEAUGE,,72021,LE MANS CEDEX 2,base.fr,324746007,,FR06324746007,02 43 52 05 90,02 43 52 00 05,,
+base.partner_noemis_cust_00018,True,False,True,True,ARAMIS SECURITY,"100, RUE DES FOUGERES",,69009,LYON,base.fr,443092226,,,,,,6000
+base.partner_noemis_cust_00019,True,False,True,True,ARTEMIS SECURITE,6 avenue de la Rize,,69100,Villeurbanne,base.fr,,,,,,,0
+base.partner_noemis_cust_00020,True,False,True,True,ARTSNET,155 rue du docteur Bauer,Energy III,93400,SAINT OUEN,base.fr,434467593,,,08 92 230 333,01 46 24 51 68,,
+base.partner_noemis_cust_00021,True,False,True,True,AUTOMATIC ALARM COTE D'AZUR,31 BD FREDERIC SAUVAGE,PARC CLUB DES AYGALADES  BAT A7,13014,MARSEILLE,base.fr,410084677,,,04 97 21 68 00,04 91 65 86 72,,4000
+base.partner_noemis_cust_00022,True,False,True,True,AUTOMATIC ALARM GRAND EST,13 RUE CLAIRE ET YVAN GOLL,PARC DES POTERIES,67200,STRASBOURG,base.fr,479450991,,,03 88 78 97 60,03 88 77 31 94,,20000
+base.partner_noemis_cust_00023,True,False,True,True,AUTOMATIC ALARM RHONE ALPES,65 RUE DE LA TALAUDIERE,,42000,SAINT ETIENNE,base.fr,492680160,16,,04 77 53 79 60,04 77 53 79 69,,70000
+base.partner_noemis_cust_00024,True,False,True,True,AUTOMATIC ALARM SUD OUEST,112 CHEMIN DE BELLECROIX,B.P. 80024,46001,CAHORS CEDEX,base.fr,403214463,,,05 65 35 90 21,05 65 35 90 30,,15000
+base.partner_noemis_cust_00025,True,False,True,True,AVENIR SYSTEMES,Z.A. MIVOIE,Rue Emile Sauvestre,35136,SAINT JACQUES DE LA LANDE,base.fr,402604508,,,02 99 83 02 04,02 99 83 02 05,,100000
+base.partner_noemis_cust_00026,True,False,True,True,AVS,1642  route des PUGETS,,6700,SAINT LAURENT DU VAR,base.fr,325266476,51,FR04325266476,04 93 31 96 16,04 93 31 96 46,,40000
+base.partner_noemis_cust_00027,True,False,True,True,AXIANS-INTERACT SYSTEME S.O,Z.A. DE RIBAUTE,"35, CHEMIN DES TOURNESOLS",31130,QUINT-FONSEGRIVES,base.fr,433899697,42,,05 62 71 84 71,05 62 71 84 74,,50000
+base.partner_noemis_cust_00028,True,False,True,True,AXIONE - UC 788,CS 90429,,44823,SAINT HERBLAIN CEDEX,base.fr,449586544,,FR58449586544,01 72 33 93 00,,,6000
+base.partner_noemis_cust_00029,True,False,True,True,AZ COM,56 av Vieux Chemin de St Denis,,92230,GENNEVILLIERS ,base.fr,422659219,,FR71422659219,01 41 21 80 90,01 4121 80 99,,4000
+base.partner_noemis_cust_00030,True,False,True,True,BAILLY MONTHURY,14 RUE D'ANJOU,,75008,PARIS,base.fr,572190288,,,01 42 65 07 91,,,12000
+base.partner_noemis_cust_00031,True,False,True,True,BARBE-DEVAUX SAS,"7, Rue de la SapiniËre",ZAC de la ChenardiËre,72560,CHANGE,base.fr,329135354,,,02 43 87 13 41,,,0
+base.partner_noemis_cust_00032,True,False,True,True,BARO ELECTRICITE,ZONE ARTISANALE N∞ 10,,4660,CHAMPTERCIER,base.fr,320543804,35,fr02320543804,04 92 31 17 82,04 92 31 10 03,baro@wanadoo.fr,0
+base.partner_noemis_cust_00033,True,False,True,True,BEIP,PARIS NORD II- LES FREGATES 5 HallA,"13, RUE DE LA PERDRIX",95913,ROISSY CDG CEDEX,base.fr,485207484,,FR15485207484,01 70 71 88 90,01 70 71 88 94,,0
+base.partner_noemis_cust_00034,True,False,True,True,BOSSARD SA,ZI du Cormier -  B.P. 61942,Rue de la G‚tine,49319,CHOLET,base.fr,546350224,46,FR71 546 350 224,02 41 75 22 50,02 41 62 61 93,,4000
+base.partner_noemis_cust_00035,True,False,True,True,BOUYGUES E & S - TPR : UC 848,"19, rue Stephenson",BP 90429,44823,SAINT HERBLAIN,base.fr,775 664 8,,FR36 775 664 873,,,,50000
+base.partner_noemis_cust_00036,True,False,True,True,BOUYGUES E&S FM France - UC 548,19 RUE STEPHENSON,CS 90429,44823,SAINT HERBLAIN CEDEX,base.fr,381762762,,FR46381762038,01 30 60 23 00,01 30 60 48 61,,20000
+base.partner_noemis_cust_00037,True,False,True,True,BRINK'S EVOLUTIION,Service ComptabilitÈ Fournisseurs,"49, rue de Provence",75431,PARIS Cedex 09,base.fr,324 613 6,,,01 55 07 60 00,,,50000
+base.partner_noemis_cust_00038,True,False,True,True,BRINK'S FRANCE,ComptabilitÈ Fournisseurs,"49, rue de Provence",75431,PARIS CEDEX 09,base.fr,672009636,,FR29672009636,,,,10000
+base.partner_noemis_cust_00039,True,False,True,True,BRINK'S REUNION,ZONE ENTREPOT CHAUDRON,,97490,SAINTE CLOTILDE,base.fr,,,,,,,0
+base.partner_noemis_cust_00040,True,False,True,True,CABLYS,10 rue Maryse Bastie,,63800,COURNON D'AUVERGNE,base.fr,529307993,,FR41529307993,04 73 60 32 20,09 56 46 12 66,,4000
+base.partner_noemis_cust_00041,True,False,True,True,CACTS,32 RUE DE BORDEAUX,,94220,CHARENTON LE PONT,base.fr,793623547,,FR27793623547,04 13 89 45 54,09 78 65 69 71,,0
+base.partner_noemis_cust_00042,True,False,True,True,CASTELCOMS,9 RUE LOUIS MALBETE,ZA LES CHAMPS DU BOIS,36130,DEOLS,base.fr,415004472,23,FR64 415004472,02 54 61 11 11,02 54 61 11 12,,40000
+base.partner_noemis_cust_00043,True,False,True,True,CEGELEC  BORDEAUX,"54, avenue Gustave Eiffel",CANEJAN,33612,CESTAS Cedex,base.fr,537916363,,FR65 537 916 363,05 56 13 27 27,05 56 13 27 10,,50000
+base.partner_noemis_cust_00044,True,False,True,True,CEGELEC  DAUPHINE,Parc Sud Galaxie ,"4, RUE DE L'OCTANT  -  CS60237",38433,ECHIROLLES CEDEX,base.fr,537915456,25,FR60537915456,04 76 60 43 43,04 76 60 43 10,,50000
+base.partner_noemis_cust_00045,True,False,True,True,CEGELEC  Val de Loire,"103, avenue du Danemark",CS 17566,37075,TOURS Cedex 2,base.fr,537934028,29,FR01 537 934 028,02.47.88.12.12,02.47.41.95.66,,50000
+base.partner_noemis_cust_00046,True,False,True,True,CEGELEC IDF,Nanterre/Montesson,"51, rue des Trois-Fontanot  BP 202",92002,NANTERRE Cedex,base.fr,438116428,,,01.46.95.20.00,01.47.24.55.15,,50000
+base.partner_noemis_cust_00047,True,False,True,True,CEGELEC LORRAINE ALSACE,5 RUE DU MOUZON ,CS21020,54521,LAXOU CEDEX,base.fr,537908659,,FR39537908659,03 83 95 57 57,03 83 95 57 00,,50000
+base.partner_noemis_cust_00048,True,False,True,True,CENTRAPHONE,37 rue NicÈphore NIEPCE,,45700,VILLEMANDEUR,base.fr,392973822,27,FR65392973822,02 38 85 95 95,02 38 89 11 98,centraphone@centraphone.fr,6000
+base.partner_noemis_cust_00049,True,False,True,True,CESO TÈlephonie d'Entreprise,31 rue Robert GREFFRE,ZA DES RIVAUDS SUD,17000,LA ROCHELLE,base.fr,480892868,,,05 46 30 07 30,,,20000
+base.partner_noemis_cust_00050,True,False,True,True,CEZZAM,BP N∞ 10073,,80082,AMIENS CEDEX2,base.fr,322707712,,,03 22 92 05 74,03 22 92 13 85,contact@cezzam.fr,0
+base.partner_noemis_cust_00051,True,False,True,True,CISDEC,33 Avenue du GÈnÈral Michel Bizot,,75012,PARIS,base.fr,443939491,,FR46443939491,01 46 28 01 89,01 46 28 10 54,info@cisdec.com,20000
+base.partner_noemis_cust_00052,True,False,True,True,CITELUM,"101, Chemin de La Digue",Zone industrielle secteur D,6700,Saint laurent du var,base.fr,,,,04 92 29 83 29,04 92 29 11 98,,50000
+base.partner_noemis_cust_00053,True,False,True,True,CITEOS,5 RUE LOUIS LUMIERE,ZI DE L'INQUETRIE,62280,ST MARTIN BOULOGNE,base.fr,512802653,,FR16528932627,,,,6000
+base.partner_noemis_cust_00054,True,False,True,True,COLAS INDUSTRIE,13 RUE JACQUELINE AURIOL,,63100,CLERMONT FERRAND,base.fr,865200315,14,FR73865200315,04 73 98 67 00 ,04 73 98 67 09,,6000
+base.partner_noemis_cust_00055,True,False,True,True,COMUTEX,17 BD ALFRED DE VIGNY,BP 129,79104,THOUARS CEDEX,base.fr,389199571,57,FR25389199571,,,,6000
+base.partner_noemis_cust_00056,True,False,True,True,CONEXDATA,60 RUE ETIENNE DOLET,,92240,MALAKOFF,base.fr,352732465,,,01 47 35 10 10,01 47 35 70 80,,40000
+base.partner_noemis_cust_00057,True,False,True,True,CONNECT,11 rue henri becquerel,BP 505,77295,MITRY MORY CEDEX,base.fr,431794080,,,01 60 21 23 75,,,6000
+base.partner_noemis_cust_00058,True,False,True,True,CORESYS,11 PLACE DU GENERAL DE GAULLE,,41130,SELLES SUR CHER,base.fr,437602899,27,FR39 437 602 899,02 54 95 51 01,01 54 95 51 04,contact@coresys.fr,4000
+base.partner_noemis_cust_00059,True,False,True,True,CTV,Parc d'ActivitÈ  de BEAUPUY 3,BP107 -  MOUILLERON LE CAPTIF,85003,LA ROCHE SUR YON Cedex,base.fr,340140102,39,,02 51 44 94 48,02 51 44 50 80,,6000
+base.partner_noemis_cust_00060,True,False,True,True,D7REA,11 RUE GUTEMBERG,ZI DE LA BUTTE,91620,NOZAY,base.fr,481275162,,FR92481275162,01 30 11 10 75, 01 60 11 53 49,,50000
+base.partner_noemis_cust_00061,True,False,True,True,DOUD'ELEC,37 rue de la RÈvolution ,,34200,SETE,base.fr,529964157,18,FR1552996415700018,04 67 53 04 88,09 72 22 53 30,contact@doudelec.com,6000
+base.partner_noemis_cust_00062,True,False,True,True,DVI,"43, avenue de Verdun",,92120,MONTROUGE,base.fr,440223923,,FR00440223923,01 46 73 00 80 ,01 49 85 18 36,ajh@dvi.fr,
+base.partner_noemis_cust_00063,True,False,True,True,E-DENTIC,13 CHEMIN DE LA PLAINE,,69390,VOURLES,base.fr,449240266,30,,04 72 65 65 24,04 72 65 64 93,,15000
+base.partner_noemis_cust_00064,True,False,True,True,EASY EXTERN,9 RUE DU GUE,,92500,RUEIL MALMAISON,base.fr,498586643,,,,,,6000
+base.partner_noemis_cust_00065,True,False,True,True,EDIH,21 RUE LE SUEUR,,75116,PARIS,base.fr,424965838,,,134311132,,info@edih.fr,6000
+base.partner_noemis_cust_00066,True,False,True,True,EIFFAGE ENERGIE IDF BRY TIC,104 AVENUE GEORGES CLEMENCEAU,,94360,BRY SUR MARNE,base.fr,420540643,,FR74420540643,,,,200000
+base.partner_noemis_cust_00067,True,False,True,True,EIFFAGE ENERGIE ANGOULEME,"73, rue du port Thureau",,16000,ANGOULEME,base.fr,302 068 3,,FR21 302 068 382,06 26 80 03 96,,,0
+base.partner_noemis_cust_00068,True,False,True,True,EIFFAGE ENERGIE  TERTIAIRE NORD,7 RUE RENE CASSIN,ZI RESURGAT II,62230,OUTREAU,base.fr,388784928,52,FR24388784928,,,,50000
+base.partner_noemis_cust_00069,True,False,True,True,EIFFAGE ENERGIE COMMUNICATIONS,RESEAUX & SECURITE,"Zone AÈroparc II  8, rue des HÈrons",67960,ENTZHEIM,base.fr,558501466,293,FR33558501466,03.88.78.97.21,03.88.78.97.40,,60000
+base.partner_noemis_cust_00070,True,False,True,True,EIFFAGE ENERGIE INDUSTRIE NORD,D 937,B.P. 41,62131,VERQUIN,base.fr,388727240,,,,,,4000
+base.partner_noemis_cust_00071,True,False,True,True,EIFFAGE ENERGIE INFRA. NORD,AGENCE DE LA BASSEE,BP 23 - LA BASSEE,59537,WAVRIN,base.fr,388781551,22,FR78388781551,03 20 29 99 29,03 20 29 99 39,,100000
+base.partner_noemis_cust_00072,True,False,True,True,EIFFAGE ENERGIE POITOU CHARENTES,ETS DE POITIERS ZONE REPUBLIQUE N∞1,3 RUE DES ENTREPRENEURS,86000,POITIERS,base.fr,302068382,,FR21 302 068 382,05 49 38 42 00,05 49 47 85 20,,20000
+base.partner_noemis_cust_00073,True,False,True,True,EIFFAGE ENERGIE Val de Loire,6 / 8 rue Denis Papin,BP 50447,37304,JOUE LES TOURS Cedex,base.fr,388779407,,,,,,20000
+base.partner_noemis_cust_00074,True,False,True,True,ELECINE,Parc des bonnettes,Rue de la Symphorine,62000,ARRAS,base.fr,521131094,,,03 21 23 76 76,03 21 51 42 40,,0
+base.partner_noemis_cust_00075,True,False,True,True,EP PLUS,7 PLACE DE JAUDE,,63000,CLERMONT FERRAND,base.fr,440655892,,,04.73.43.50.50,,,1000
+base.partner_noemis_cust_00076,True,False,True,True,ESPACE.COM,ZONE VERTE,14 RUE DE LA JONCHERE,71880,CHATENOY LE ROYAL,base.fr,410246680,61,FR75410246680,03 85 97 02 12,03 85 97 12 36,,20000
+base.partner_noemis_cust_00077,True,False,True,True,EST VALEURS SA,ComptabilitÈ Fournisseurs,49 rue de Provence,75431,PARIS CEDEX 09,base.fr,309358554,,FR44309358554,,,,4000
+base.partner_noemis_cust_00078,True,False,True,True,Etablissement Paul LARUE,7 rue des Maraichers,,91160,CHAMPLAN,base.fr,709801484,,FR33709801484,01 60 10 56 52,,chgoupil@paul-larue.com,30000
+base.partner_noemis_cust_00079,True,False,True,True,ETP TETRACOM,"91, rue Racine",,91120,MONTROUGE,base.fr,662023233,,FR46662023233,01 42 31 58 00, 01 42 31 58 01,,0
+base.partner_noemis_cust_00080,True,False,True,True,ETS ALEXANDRE,8 BIS RUE DES SABLONS,,95360,MONTMAGNY,base.fr,353827397,20,FR48353827397,01 39 83 86 81,01 34 17 91 51,06 72 24 19 50,20000
+base.partner_noemis_cust_00081,True,False,True,True,EXCELIUM,8 Rue Jules Vernes,Forum d'Orvault,44700,ORVAULT,base.fr,450248265,,,,,,30000
+base.partner_noemis_cust_00082,True,False,True,True,EXPAUDIO / MUSIC MAINTENANCE,Parc Volta,"7ter, RUE PARMENTIER",94140,ALFORTVILLE,base.fr,411749955,,,01 43 96 57 50,01 43 96 52 89,,4000
+base.partner_noemis_cust_00083,True,False,True,True,FASE Industries,P.A. Notre Dame de Gr‚ce,"337, AVENUE DU BOIS AU COQ",76620,LE HAVRE,base.fr,491962957,,FR30491962957,02 35 45 64 23,09 56 46 86 05,,6000
+base.partner_noemis_cust_00084,True,False,True,True,FAURIE TELECOM,"18, rue Guy Buisson",,19100,BRIVE LA GAILLARDE,base.fr,378550792,22,FR56 378550792,05.55.23.37.56,,,25000
+base.partner_noemis_cust_00085,True,False,True,True,GASTINNE SECURITE SAS,21 RUE DU PONT DES HALLES,,94536,RUNGIS CEDEX,base.fr,380007641,,FR74380007641,,,,4000
+base.partner_noemis_cust_00086,True,False,True,True,GONZALES,"ZA ""LA CRAZ""",761 ROUTE DE LA BOUGIE,38780,ESTRABLIN,base.fr,323076612,15,FR28323076612,04 74 59 44 61,04 74 58 07 50,,0
+base.partner_noemis_cust_00087,True,False,True,True,GOUPIL TECHNOLOGIES,CHEMIN DU VEIX,,63140,CHATEL GUYON,base.fr,534714688,,,,,,15000
+base.partner_noemis_cust_00088,True,False,True,True,GROUPE SCUTUM SAS,LE GUYNEMER,21 RUE DU PONT DES HALLES,94536,RUNGIS,base.fr,309174589,,FR79309174589,,,,100000
+base.partner_noemis_cust_00089,True,False,True,True,GROUPE SNEF ,189 RUE D'AUBERVILLIERS,,75018,PARIS,base.fr,568006590,,FR52056800659,01 49 33 42 51,01 49 33 42 67,,75000
+base.partner_noemis_cust_00090,True,False,True,True,GRUSSON SECURITE,13 rue des champs,CENTRAL PARC,59650,VILLENEUVE D'ASCQ,base.fr,455504340,,FR21455504340,03 20 93 40 40,,,6000
+base.partner_noemis_cust_00091,True,False,True,True,GTIE TERTIARE,5/7 AllÈe des Vignes ,ZA des Pouards,91160,CHAMPLAN,base.fr,443971791,,FR43443971791,01 69 74 70 30,01 69 74 70 40,,0
+base.partner_noemis_cust_00092,True,False,True,True,HORELEC SYSTEMES,Groupe Sygmatel,"8, rue de la RabotiËre",44800,SAINT HERBLAIN,base.fr,350970679,,,02 40 86 71 13,02 40 86 71 11,,35000
+base.partner_noemis_cust_00093,True,False,True,True,HOROQUARTZ,46 RUE DE LA CAPITALE DU BAS POITOU,B P 251,85205,FONTENAY LE COMTE,base.fr,399243922,20016,FR28 399 243 922,05.34.61.41.70,02 51 53 13 20,,10000
+base.partner_noemis_cust_00094,True,False,True,True,IMECA,Z.A.C. du BACONNET,107 ALLEE DES SAPINS,69700,MONTAGNY,base.fr,305207557,86,,04 72 24 47 00,,mc.LAFONT@imeca-technologies.com,4000
+base.partner_noemis_cust_00095,True,False,True,True,INEO MARCOULE,400 RUE HENRI MOISSAN,ZI DE L4ARDOISE ,30290,L'ARDOISE,base.fr,,,,04 66 39 61 61,04 6639 61 60,,0
+base.partner_noemis_cust_00096,True,False,True,True,Ineo AQUITAINE,"Parc Industriel, 5 rue Jean Perrin ",,33600,PESSAC,base.fr,,,,,,,0
+base.partner_noemis_cust_00097,True,False,True,True,INEO COM IDF,Chez INEO CAP -  CSP Fournisseurs,11 RUE LOUNES MATOUB  -  BP 27850,21078,DIJON CEDEX,base.fr,442743530,,FR96442743530,01 49 68 44 44,01 49 68 47 21,,50000
+base.partner_noemis_cust_00098,True,False,True,True,INEO ENERSYS,CHEZ INEO CAP DIJON  -  BP 27850,72/76  AVENUE R. POINCARRE  ,21078,DIJON CEDEX,base.fr,,,,03 80 73 74 74 ,03 80 73 74 70 ,,0
+base.partner_noemis_cust_00099,True,False,True,True,INEO INFRACOM ,Chez INEO CAP- CSP FOURNISSEURS,11 rue LounËs Maloub - BP 27850,21078,DIJON CEDEX,base.fr,409867942,,FR22409867942,,,,20000
+base.partner_noemis_cust_00100,True,False,True,True,INEO INFRACOM Nord-Est,"5, rue LAVOISIER",CS20089,21603,LONGVIC Cedex,base.fr,409867942,511,,03 80 73 73 36,03 80 73 73 16,,0
+base.partner_noemis_cust_00101,True,False,True,True,INEO MPLR,"16, rue Claude Marie PERROUD",,31047,TOULOUSE,base.fr,,,,05 61 50 32 11,,,0
+base.partner_noemis_cust_00102,True,False,True,True,INEO NIMES,"566, rue le Corbusier",,30000,NIMES,base.fr,,,,,,,0
+base.partner_noemis_cust_00103,True,False,True,True,INEO NORD PICARDIE,Chez INEO CAP -CSP  Fournisseurs,11 rue LounËs Matoub - BP 27850,21078,DIJON CEDEX,base.fr,383870797,,FR79383870797,,,,4000
+base.partner_noemis_cust_00104,True,False,True,True,INEO RHONE ALPES  AUVERGNE,CHEZ INEO CAP - CSP fournisseurs,BP 27850 - 11 rue LounËs Matoub,21078,DIJON CEDEX,base.fr,409899127,16,FR69409899127,04 73 24 45 61,04 73 24 71 84,,50000
+base.partner_noemis_cust_00105,True,False,True,True,INESYS,Chemin de Fouillusant,,69140,RILLIEUX LA PAPE,base.fr,494881717,,,09 64 28 37 84,04 78 56 46 03,,50000
+base.partner_noemis_cust_00106,True,False,True,True,INTELEC,"9 BIS, PASSAGE DARTOIS BIDOT",,94100,SAINT MAUR DES FOSSES,base.fr,384192134,,,02 32 07 15 15,02 32 07 15 16,,4000
+base.partner_noemis_cust_00107,True,False,True,True,IPSILAN NETWORKS,Agence RhÙne Alpes,"30, rue Jean Vaujany",38100,GRENOBLE,base.fr,791519812,14,,04 99 57 23 25,04 99 57 23 29,,6000
+base.partner_noemis_cust_00108,True,False,True,True,IRIS SURETE MAINTENANCE,ITI SÈcuritÈ DÈfense,BP63004,69605,VILLEURBANNE CEDEX,base.fr,305110090,,FR64305110090,04 72 04 68 73,04 72 04 68 83,info@iris-surete.com,35000
+base.partner_noemis_cust_00109,True,False,True,True,ISOPROTECH,"9, AVENUE DU BOIS DE L'EPINE",,91080,COURCOURONNES,base.fr,501864995,,,01 60 79 34 48,01 78 76 97 08,o.saadi@isoprotech.fr,0
+base.partner_noemis_cust_00110,True,False,True,True,ITQ SECURITY,26 RUE DE LA MAISON ROUGE,,77185,LOGNES,base.fr,529603110,,,04 60 37 08 72,03 70 06 48 52,contact@itqsecurity.fr,50000
+base.partner_noemis_cust_00111,True,False,True,True,IVT security,Ch. DÈpartemental N∞ 982,,76750,YAINVILLE,base.fr,505079228,,,,,,10000
+base.partner_noemis_cust_00112,True,False,True,True,KIECE,4 Rue des Indes Noires,,80440,BOVES,base.fr,484238514,,,06 73 70 88 13,,epourre@kiece.fr ,55000
+base.partner_noemis_cust_00113,True,False,True,True,LOGITRADE SAS,PIT DE LA POMPIGNANE  BAT T2,RUE DE LA VIEILLE POSTE,34055,MONTPELLIER CEDEX  01,base.fr,393313556,10,FR88393313556,04 99 52 40 00,04 99 52 40 10,,4000
+base.partner_noemis_cust_00114,True,False,True,True,MADUPUY,2 RUE FERNAND TAURISSON,,19100,BRIVE LA GAILLARDE,base.fr,794339184,10,,06 80 21 85 52,,,0
+base.partner_noemis_cust_00115,True,False,True,True,MFP MICHELIN,PL DES CARMES,PO BOX 336,63040,CLERMONT FERRAND,base.fr,,,,02 41 71 63 41,02 41 71 60 11,,0
+base.partner_noemis_cust_00116,True,False,True,True,MICHELIN AIR SERVICES,"23, place des Carmes - DÈchaux  ",Bat W12,63040,CLERMONT FERRAND CEDEX 9,base.fr,414746503,,FR54414746503,04 73 60 44 85,04 73 60 44 89,,4000
+base.partner_noemis_cust_00117,True,False,True,True,My SPORT CONNECT,"110, rue des POISSONIERS48 voieCI18",IMMEUBLE PRINE Paris Innov RÈg Nord,75899,PARIS,base.fr,523996155,,,,,,4000
+base.partner_noemis_cust_00118,True,False,True,True,MYDIS,15 BD PAUL POCHET LAGAYE,,63000,CLERMONT FERRAND,base.fr,314712654,40,FR17314712654,04 73 28 03 88,04 73 28 00 65,,4000
+base.partner_noemis_cust_00119,True,False,True,True,NISCAYAH  SAS,ComptabilitÈ Fournisseurs,45-47 BD PAUL VAILLANT COUTURIER,94200,IVRY SUR SEINE,base.fr,332726140,,,,,,50000
+base.partner_noemis_cust_00120,True,False,True,True,NISCAYAH C7501,26 RUE PAUL HENRY SPAAK,PARC DE L'ESPLANADE,77400,ST THIBAULT DES VIGNES ,base.fr,332726140,327,,,,,4000
+base.partner_noemis_cust_00121,True,False,True,True,NISCAYAH IDF,"4/8, rue Gambetta",,92240,MALAKOFF,base.fr,332726140,376,,,,,0
+base.partner_noemis_cust_00122,True,False,True,True,NISCAYAH LABEGE,"Green Park  / 1 - 298, allÈe du Lac",BP  87654,31676,LABEGE CEDEX,base.fr,332726140,103,,,,,4000
+base.partner_noemis_cust_00123,True,False,True,True,NISCAYAH P3301,Compta. Fournisseurs  - CS 50035,45/47 Bd Paul Vaillant Couturier,94853,IVRY SUR SEINE,base.fr,332726140,251,,04 42 90 40 38,,patrick.marx@niscahay.fr,5000
+base.partner_noemis_cust_00124,True,False,True,True,NISCAYAH SAS,Compta.Fournisseurs - CS 50035,"45/47, Bd Paul Vaillant Couturier",94853,IVRY SUR SEINE,base.fr,332726140,95,FR29332726140,,,,4000
+base.partner_noemis_cust_00125,True,False,True,True,NTI SOLUTIONS,5 rue de Maidstone,,60000,BEAUVAIS,base.fr,421003518,,FR47421003518,344101481,344101471,adv@nti-solutions.com,30000
+base.partner_noemis_cust_00126,True,False,True,True,OPTEOR IMMOTIC,"11-13, RUE DES HAUTES PATURES",,92737,NANTERRE CEDEX,base.fr,552008914,,,01 41 11 76 76,01 41 11 76 75,,6000
+base.partner_noemis_cust_00127,True,False,True,True,OSIACOM SOCETAT,"7/11, rue Sainte Lucie",,75015,PARIS,base.fr,702004839,,FR96702004839,01 44 37 07 07,01 44 37 07 88,,0
+base.partner_noemis_cust_00128,True,False,True,True,PHIBOR ENTRPRISES,Parc d'affaires SILIC,71 rue de Montlhery - BP 30142,94523,RUNGIS CEDEX,base.fr,412790198,11,,01 56 70 57 00,,,50000
+base.partner_noemis_cust_00129,True,False,True,True,POINT FORT FICHET,"4, bd Cote Blatin",,63000,CLERMONT FERRAND,base.fr,310699673,,,04 73 90 37 37,04 73 90 42 00,,4000
+base.partner_noemis_cust_00130,True,False,True,True,PROXILOR,12 RUE DE L'ARTISANAT,,21560,COUTERNON,base.fr,487948366,25,FR68487948366,03 80 67 02 08,03 80 67 30 85,administratif@proxilor.fr,6000
+base.partner_noemis_cust_00131,True,False,True,True,R2SFRANCE,Rue Toussaint Catros  ,,33185,LE HAILLAN,base.fr,,,,,,,0
+base.partner_noemis_cust_00132,True,False,True,True,RCE,RUE DE LA GARE,,59269,ARTRES,base.fr,316112531,,,03 27 27 10 03,03 27 27 10 34,contact@rce-sa.com,6000
+base.partner_noemis_cust_00133,True,False,True,True,RESINTEL,5 AVENUE DES PUPILLES,,15000,AURILLAC,base.fr,388641375,59,FR45388641375,04 71 48 62 00,04 71 48 62 52,resintel.63@resintel.fr,0
+base.partner_noemis_cust_00134,True,False,True,True,RISP,5 RUE DE LA CROIX BLANCHE,BP 3321,27950,SAINT MARCEL,base.fr,380898189,,,02 32 21 36 55,02 32 21 01 03,,0
+base.partner_noemis_cust_00135,True,False,True,True,RM SECURITE,340 rue d'Obsidienne  -  BP 33,PA LES VALLADES,13510,EGUILLES,base.fr,331250712,63,FR49331250712,04 42 95 18 18,04 42 95 23 37,,4000
+base.partner_noemis_cust_00136,True,False,True,True,RX COM ,"441, rue Marguerite PEREY",ZAC Du Levant,77127,LIEUSAINT,base.fr,517496683,,FR17517496683,01 74 59 62 04,09 74 44 34 06,,0
+base.partner_noemis_cust_00137,True,False,True,True,S. F. C. E. ,"18, rue Troyon",,92316,SEVRES Cedex,base.fr,333520591,,FR92333520591,01 46 23 56 56,01 46 23 57 06,,100000
+base.partner_noemis_cust_00138,True,False,True,True,SANTERNE TOULOUSE,35 CHEMIN DES TOURNESOLS,ZA RIBAUTE,31130,QUINT FONSEGRIVES,base.fr,420246084,,,,,,20000
+base.partner_noemis_cust_00139,True,False,True,True,SCATE,PARC EUROPEEN D'ENTREPRISE,RUE LUDWIG VAN BEETHOVEN,63200,RIOM,base.fr,320787435,33,FR00320787435,04.73.64.53.33,04.73.64.53.30,patrick.levandoux@scate.fr,20000
+base.partner_noemis_cust_00140,True,False,True,True,SECURILEC,59 CHEMIN DE CHAVENNES,,3000,AVERMES,base.fr,492509807,11,fr19492509807,04 70 20 93 34,,,6000
+base.partner_noemis_cust_00141,True,False,True,True,SECURITAS France Sarl,AGENCE R0048,TSA 81561,75901,PARIS CEDEX 15,base.fr,702011172,,,,,,50000
+base.partner_noemis_cust_00142,True,False,True,True,SEGMA,4 RUE DES BEGONNES,ZA CHAMP LAMET,63430,PONT DU CHATEAU,base.fr,409979226,27,FR00409979226,04 73  83 70 30,04 73 83 70 31,contact@segma.elec.fr,20000
+base.partner_noemis_cust_00143,True,False,True,True,SEMAPHORE PROTECTION,"62 ter, Route de Paris",,78760,JOUARS PONTCHARTRAIN,base.fr,343285151,,,01 30 43 01 01,01 30 55 26 53,contact@semaphore-protecton.fr,50000
+base.partner_noemis_cust_00144,True,False,True,True,SEMERU,"34, rue Charles PIKETTY",,91178,VIRY CHATILLON Cedex,base.fr,320661010,,FR92320661010,01.69.12.76.06,01.69.12.70.01,,6000
+base.partner_noemis_cust_00145,True,False,True,True,SETELEN,5 Boulevard Pierre Desgranges,BP70029,42160,ANDREZIEUX-BOUTHEON,base.fr,448389536,120,FR71448389536,04 77 55 61 78,04 77 36 79 04,,6000
+base.partner_noemis_cust_00146,True,False,True,True,SHI,"1, Rond Point Victor Hugo ",,92137,ISSY LES MOULINEAUX,base.fr,522742972,,FR52522742972,01 41 33 94 94,01 41 33 94 99,,10000
+base.partner_noemis_cust_00147,True,False,True,True,SIRIS PROTECTION,Parc de l'Esplanade  -  Bat C,"10, rue Paul Henri Spaak",77400,ST THIBAULT DES VIGNES,base.fr,449101427,,FR95449101427,01 60 07 23 23,01 60 07 04 00,contacr@siris-protection.fr,0
+base.partner_noemis_cust_00148,True,False,True,True,SNEF S.T.C.,189 RUE D'AUBERVILLIERS,,75018,PARIS,base.fr,394335301,,FR26394335301,01 40 05 58 20,,,0
+base.partner_noemis_cust_00149,True,False,True,True,SNEF VDI,CARRE PLEYEL - 5 RUE PLEYEL,BP 162,93208,SAINT DENIS,base.fr,56800659,,FR52056800659,01 49 33 43 00,01 48 09 40 45,,25000
+base.partner_noemis_cust_00150,True,False,True,True,SOFRATEL,8 rue Emile Allard,,59111,BOUCHAIN,base.fr,333996197,,FR40333996197,03 27 09 90 90,03 27 09 90 91,,0
+base.partner_noemis_cust_00151,True,False,True,True,SOGETREL,BP 90132,5 RUE SAINT LEON,54003,NANCY CEDEX,base.fr,397767831,,FR96397767831,03 83 92 34 34,03 83 92 34 30,,10000
+base.partner_noemis_cust_00152,True,False,True,True,SOGETREL SUD AQUITAINE,"5, rue Saint LÈon",,54000,NANCY,base.fr,397767831,811,FR96 397 767 831,05.59.44.26.90,05.59.44.03.97,,4000
+base.partner_noemis_cust_00153,True,False,True,True,SONTEC,16 Rue Combattants D Extreme Orie ,,13700,MARIGNANE,base.fr,327984548,,,,,,0
+base.partner_noemis_cust_00154,True,False,True,True,SPIE COMMUNICATIONS (AE),,53 boulevard de STALINGRAD,92247,MALAKOFF CEDEX,base.fr,319060075,,FR25 351 916 457,,,,70000
+base.partner_noemis_cust_00155,True,False,True,True,SPIE EST,"2, route de Lingolsheim",BP 70 330  - Geispolsheim Gare,67411,ILLKIRCH CEDEX,base.fr,440056026,105,FR30440056026,,,,133333
+base.partner_noemis_cust_00156,True,False,True,True,SPIE IDF NORD OUEST,1/3  PLACE DE LA BERLINE,,93287,SAINT DENIS CEDEX,base.fr,440056182,,FR13440056182,01 34 21 27 00,01 34 21 27 57,,103333
+base.partner_noemis_cust_00157,True,False,True,True,SPIE OUEST CENTRE,"7, rue Julius et Ethel ROSENBERG",BP 105,44817,SAINT HERBLAIN Cedex,base.fr,440056356,445,FR50440056356,02 40 67 06 06,02 40 63 48 78,,50000
+base.partner_noemis_cust_00158,True,False,True,True,SPIE SUD EST,ComptabilitÈ Fournisseurs,"4, avenue Jean Jaures  TSA 50006",69551,FEYZIN CEDEX,base.fr,440055861,312,FR20440055861,,,,0
+base.partner_noemis_cust_00159,True,False,True,True,STANLEY SECURITY FRANCE,RÈseau SDS,1 ALLEE DE L'EXPANSION,69340,FRANCHEVILLE,base.fr,,,,,,,4000
+base.partner_noemis_cust_00160,True,False,True,True,STENTORIUS,34 rue Pierre et Marie Curie,,94204,IVRY SUR SEINE,base.fr,712005685,,FR49712005685,01 46 70 75 20,01 46 58 23 57,stentorius@stentorius.fr,100000
+base.partner_noemis_cust_00161,True,False,True,True,SVD FRANCE,ZA JEAN MERMOZ,18 AVENUE DE LA FORET - BP40005,33326,EYZINES,base.fr,344460472,22,,,,,50000
+base.partner_noemis_cust_00162,True,False,True,True,TEL,9/13 RUE ANTOINE WATTEAU,BP 31,59430,SAINT POL SUR MER,base.fr,312844491,,,,,,6000
+base.partner_noemis_cust_00163,True,False,True,True,TELECOM PROTECT,3 Impasse de la Corre,,3270,MARIOL,base.fr,494964885,11,FR43494964885,06 86 43 31 65,04 70 59 08 37,jfm.tellecom.protect@orange.fr,6000
+base.partner_noemis_cust_00164,True,False,True,True,TELEGIL,"2266, Avenue de líEurope",,69140,RILLEUX LA PAPE,base.fr,329703946,49,FR37329703946,04 72 04 94 04,04.72.04.94.09,contact @telegil.com,10000
+base.partner_noemis_cust_00165,True,False,True,True,THEMYS,Pont de líEtoile  - CD 45,Quartier la Chaume,13360,ROQUEVAIRE,base.fr,413395690,,FR81413395690,33.6.51.50.16.39 ,04 42 32 94 95,,0
+base.partner_noemis_cust_00166,True,False,True,True,TSA,6 AVENUE DE PARIS,,42300,ROANNE,base.fr,411029457,16,,04 77 78 06 06,04 77 72 81 81,,4000
+base.partner_noemis_cust_00167,True,False,True,True,TSEI,6 rue de Nantes,,75019,PARIS,base.fr,379707367,,FR91379707367,01 44 72 08 80,01 46 07 44 81,tsei@tsei.fr,10000
+base.partner_noemis_cust_00168,True,False,True,True,UBIC,100 AV ALFRED SAUVY,,34470,PEROL,base.fr,,,,,,,0
+base.partner_noemis_cust_00169,True,False,True,True,ULTRABOX,11 AVENUE MIREILLE,LES ACACIAS C,6100,NICE,base.fr,792870271,14,,06 95 42 00 00,04 93 51 11 12,ultrabox09@gmail.com,0
+base.partner_noemis_cust_00170,True,False,True,True,VAE,59 RUE MAURICE BERTEAUX,,93150,LE BLANC MESNIL,base.fr,326522521,,,01 48 65 67 39,01 48 65 77 63,,50000
+base.partner_noemis_cust_00171,True,False,True,True,VERITRONIC,6 RUE DU VELAY,SILIC 1746,91090,LISSES,base.fr,349165456,,FR73 349 165 456,01 60 86 57 57,01 60 86 57 90,,0
+base.partner_noemis_cust_00172,True,False,True,True,VIDEO EXTERN,86 AVENUE DU 18 JUIN 1940,,92500,RUEIL MALMAISON,base.fr,752463703,,,06 42 05 19 05,,b.bauer@easyextern.com,6000
+base.partner_noemis_cust_00173,True,False,True,True,VIGIE-VILLAGES,"4, avenue de Flandre",,59650,VILLENEUVE D'ASCQ,base.fr,411964109,,,03 20 20 05 20,03 20 98 78 40,,0
+base.partner_noemis_cust_00174,True,False,True,True,VK ELECTRONIC,"140, Cours Docteur LONG",,69003,LYON,base.fr,523015501,,FR26523015501,04 72 91 46 62,,,30000
+base.partner_noemis_cust_00175,True,False,True,True,WARGAMING EUROPE SAS,54 AVENUE DU GENERAL LECLERC,,92100,BOULOGNE BILLANCOURT,base.fr,537547879,,FR25537547879,01 41 22 27 26,,,4000

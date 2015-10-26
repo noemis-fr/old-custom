@@ -1,0 +1,3 @@
+id,active,zip,lang,name,country/id,parent_id/id,street,street2,city,supplier,customer
+base.main_partner,True,,fr_FR,IPBox,base.fr,,,,,,
+base.partner_tnt,True,,fr_FR,TNT,base.fr,,,,,true,false

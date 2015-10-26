@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <record model="ir.ui.view" id="view_asgard_ledger_export_grouped_statement_form">
+            <field name="name">Asgard Ledger Export Grouped Statement </field>
+            <field name="model">asgard.ledger.export.statement</field>
+            <field name="inherit_id" ref="asgard_ledger_export.view_asgard_ledger_export_statement_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <!--<xpath expr="//field[@name='journal_period_id']" position="attributes">-->
+                        <!--<attribute name="widget"></attribute>-->
+                    <!--</xpath>-->
+
+                    <xpath expr="//group[@string='Statement lines']" position="replace">
+                    </xpath>
+
+                        <xpath expr="//group[@string='Journal/Period']" position="after">
+                            <notebook>
+                                <page string="Statement lines">
+                                    <field colspan="4" name="ales_line_ids" nolabel="1">
+                                        <tree colors="red:partner_ref == False" >
+                                            <field name="date_created"/>
+                                            <field name="move_id"/>
+                                            <field name="partner_ref"/>
+                                            <field name="partner_is_company" invisible="1"/>
+                                            <field name="period_id"/>
+                                            <field name="journal_id"/>
+                                            <field name="move_line_id"/>
+                                            <field name="account_id"/>
+                                            <field name="debit" sum="Total Debit"/>
+                                            <field name="credit" sum="Total Credit"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Grouped Statement lines">
+                                    <field colspan="4" name="grouped_ales_line_ids" nolabel="1">
+                                        <tree colors="red:partner_ref == False" >
+                                            <field name="date"/>
+                                            <field name="move_id"/>
+                                            <field name="partner_ref"/>
+                                            <field name="period_id"/>
+                                            <field name="journal_id"/>
+                                            <field name="account_id"/>
+                                            <field name="debit" sum="Total Debit"/>
+                                            <field name="credit" sum="Total Credit"/>
+                                            <!--<field name="text_line"/>-->
+                                            <field name="company_id"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </xpath>
+
+
+                        <!--<group string="Statement lines" colspan="4">-->
+
+                        <!--</group>-->
+
+
+                </data>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="view_asgard_ledger_export_journal_part_ref_form">
+            <field name="name">Journal configuration partner ref</field>
+            <field name="model">asgard.ledger.export.journal</field>
+            <field name="inherit_id" ref="asgard_ledger_export.view_asgard_ledger_export_journal_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='journal_id']" position="after">
+                    <field name="default_partner_ref"/>
+                </xpath>
+
+             </field>
+        </record>
+	</data>
+</openerp>

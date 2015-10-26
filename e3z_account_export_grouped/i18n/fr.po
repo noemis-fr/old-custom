@@ -1,0 +1,211 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* e3z_account_export_grouped
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-28 10:05+0000\n"
+"PO-Revision-Date: 2014-03-28 10:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_asgard_ledger_export_fields
+msgid "Definition of fields"
+msgstr "Définition des champs"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_asgard_ledger_export_statement_line
+msgid "Export Statement reconcile"
+msgstr "Relevés des exports reconciliés"
+
+#. module: e3z_account_export_grouped
+#: field:asgard.ledger.export.statement,grouped_ales_line_ids:0
+msgid "Grouped Lines"
+msgstr "Lignes regroupées"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,debit:0
+msgid "Debit"
+msgstr "Débit"
+
+#. module: e3z_account_export_grouped
+#: help:account.export.grouped.statement.line.grouped,text_line:0
+msgid "Value of the line when it's exported in file (From format field)"
+msgstr "Value of the line when it's exported in file (From format field)"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,partner_ref:0
+#: field:asgard.ledger.export.statement.line,partner_ref:0
+msgid "Partner ref"
+msgstr "Réf partenaire"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,company_id:0
+msgid "Company"
+msgstr "Société"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,date:0
+msgid "Date Created Entry"
+msgstr "Date de création"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_asgard_ledger_export_statement
+msgid "Asgard Ledger Export Statement"
+msgstr "Relevé d'export d'écritures"
+
+#. module: e3z_account_export_grouped
+#: view:asgard.ledger.export.statement:0
+msgid "Total Credit"
+msgstr "Total Crédit"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,account_id:0
+msgid "Account"
+msgstr "Compte"
+
+#. module: e3z_account_export_grouped
+#: field:asgard.ledger.export.statement.line,partner_is_company:0
+msgid "Is a company"
+msgstr "Est une société"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_account_export_grouped_statement_line_grouped
+msgid "Export Statement reconcile grouped"
+msgstr "Export groupé"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,text_line:0
+msgid "Line exported"
+msgstr "Lignes exportées"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,ales_id:0
+msgid "Asgard Statement"
+msgstr "Relevé d'Export"
+
+#. module: e3z_account_export_grouped
+#: view:asgard.ledger.export.statement:0
+msgid "Total Debit"
+msgstr "Total Débit"
+
+#. module: e3z_account_export_grouped
+#: field:asgard.ledger.export.journal,default_partner_ref:0
+msgid "Default partner ref"
+msgstr "Réf partenaire par défault"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,entry_name:0
+msgid "Entry Name"
+msgstr "Entry Name"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,move_id:0
+msgid "Entry"
+msgstr "Écriture"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_asgard_ledger_export_journal
+msgid "Link beetween OpenERP's journal and Sage journal"
+msgstr "Lien entre le journal OpenERP et le journal de l'application de destination"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,credit:0
+msgid "Credit"
+msgstr "Crédit"
+
+#. module: e3z_account_export_grouped
+#: view:asgard.ledger.export.statement:0
+msgid "Grouped Statement lines"
+msgstr "Lignes du relevé groupées"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,period_id:0
+msgid "Period"
+msgstr "Période"
+
+#. module: e3z_account_export_grouped
+#: view:asgard.ledger.export.statement:0
+msgid "Statement lines"
+msgstr "Lignes du relevé"
+
+#. module: e3z_account_export_grouped
+#: help:asgard.ledger.export.journal,default_partner_ref:0
+msgid "Default partner ref used in target system. Used only for non company customer "
+msgstr "Le compte du tiers dans le système cible. Il est utilisé par défaul pour les particuliers"
+
+#. module: e3z_account_export_grouped
+#: model:ir.model,name:e3z_account_export_grouped.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: e3z_account_export_grouped
+#: field:asgard.ledger.export.statement,grouped:0
+msgid "Export grouped"
+msgstr "Export groupé"
+
+#. module: e3z_account_export_grouped
+#: field:account.export.grouped.statement.line.grouped,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:382
+#, python-format
+msgid "No Lines !"
+msgstr "Pas de ligne !"
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:383
+#, python-format
+msgid "You have to add some line to export. !"
+msgstr "Vous deveriez remplir des lignes à exporter !"
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:404
+#, python-format
+msgid "Bad balance !"
+msgstr "Balance incorrcte !"
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:405
+#, python-format
+msgid "Balance need to be equal to zero."
+msgstr "La balance doit être égale à zéro."
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:288
+#, python-format
+msgid "No Move line  !"
+msgstr "Pas d'écritures comptable"
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:289
+#, python-format
+msgid "There is no line to add !\n'"
+"Or  Selected journals contain no accounting entry or they"
+"have already been exported  (or in current exports)."
+msgstr "Il n'y a aucune ligne à ajouter !"
+"Soit les journaux séléctionnés ne contiennent pas d'écriture comptable \n"
+ "soit elles ont déjà été exportées (ou bien encours d'export)."
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:72
+#: code:addons/e3z_account_export_grouped/account_export.py:233
+#, python-format
+msgid "No Journal/Period selected !"
+msgstr "Pas de journal/période séléctionné "
+
+#. module: e3z_account_export_grouped
+#: code:addons/e3z_account_export_grouped/account_export.py:72
+#: code:addons/e3z_account_export_grouped/account_export.py:233
+#, python-format
+msgid "You have to select Journal/Period before populate line."
+msgstr "Vous devriez choisir un journal/période avant de remplir les lignes."

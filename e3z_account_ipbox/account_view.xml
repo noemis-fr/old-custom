@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_invoice_line_tree_inherit_1_noseq">
+            <field name="name">account.invoice.line.tree.inherit_1.noseq</field>
+            <field name="model">account.invoice.line</field>
+            <field name="inherit_id" ref="account_invoice_layout.view_invoice_line_tree_inherit_1"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+				<field name="name" position="before">
+					<field name="product_id"
+						on_change="product_id_change(product_id, uos_id, quantity, name, parent.type, parent.partner_id, parent.fiscal_position, price_unit, parent.currency_id, context, parent.company_id)" />
+				</field>
+                <field name="sequence" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="context">{'search':True}</attribute>
+                </field>
+                <field name="discount" position="after">
+                    <field name="purchase_price"/>
+                    <field name="invoice_line_tax_id" widget="many2many_tags"/>
+                    <field name="margin" invisible="True"/>
+                    <field name="margin_percent" invisible="True"/>
+                    <field name="margin_display"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="invoice_form_margin">
+            <field name="name">account.invoice.form.margin</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+                <field name="residual" position="after">
+                    <field name="distribution_costs" string="Distribution costs"/>
+                    <field name="margin" string="Margin euros"/>
+                    <field name="margin_percent" string="Margin percent"/>
+                </field>
+                <button name="button_reset_taxes" position="attributes">
+                    <attribute name="states">draft,open</attribute>
+                </button>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_invoice_line_form_cmup">
+            <field name="name">account.invoice.line.cmup</field>
+            <field name="model">account.invoice.line</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="account.view_invoice_line_form"/>
+            <field name="arch" type="xml">
+                <field name="price_unit" position="after">
+                    <field name="purchase_price"/>
+                    <field name="status" invisible="True"/>
+                </field>
+                <!--<field name="state" position="attributes">-->
+                    <!--<attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>-->
+                <!--</field>-->
+                <!--<field name="sequence" position="attributes">-->
+                    <!--<attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>-->
+                <!--</field>-->
+                <field name="product_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <field name="quantity" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <field name="price_unit" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <field name="discount" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <!--<field name="note" position="attributes">-->
+                    <!--<attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>-->
+                <!--</field>-->
+                <field name="account_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','!=','draft')]}</attribute>
+                </field>
+                <field name="invoice_line_tax_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('status','not in',['draft', 'open'])]}</attribute>
+                </field>
+            </field>
+        </record>
+
+        <!--<record model="ir.ui.view" id="invoice_tree_margin">-->
+            <!--<field name="name">account.invoice.tree.margin</field>-->
+            <!--<field name="model">account.invoice</field>-->
+            <!--<field name="inherit_id" ref="account.invoice_tree"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<field name="currency_id" position="after">-->
+                    <!--<field name="margin" sum="Marge"/>-->
+                    <!--<field name="margin_percent" sum="marge"/>-->
+                <!--</field>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</openerp>

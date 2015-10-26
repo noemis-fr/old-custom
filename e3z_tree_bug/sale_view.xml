@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_order_form_lead" model="ir.ui.view">
+            <field name="name">sale.order.from.lead</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//tree/field[@name='name']" position="attributes">
+                   <attribute name="attrs">{'readonly':[('product_uom_qty', '>', 10)]}</attribute>
+               </xpath>
+               <xpath expr="//tree/field[@name='price_unit']" position="attributes">
+                   <attribute name="attrs">{'readonly':[('product_uom_qty', '>', 10)]}</attribute>
+               </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

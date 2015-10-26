@@ -1,0 +1,4 @@
+id,name,warehouse_id/id,payment_default_id/id,company_id/id,pricelist_id/id
+sale.sale_shop_1,Dépôt,stock.warehouse0,account.account_payment_term_net,base.main_company,product.list0
+sale.sale_shop_2,Prêt – Pièces Détachées,stock.warehouse1,account.account_payment_term_net,base.main_company,product.list0
+sale.sale_shop_3,SAV,stock.warehouse2,account.account_payment_term_net,base.main_company,product.list0

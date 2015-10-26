@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_order_withcarrier_form_nobutton" model="ir.ui.view">
+            <field name="name">delivery.sale.order_withcarrier.form.view.nobutton</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="delivery.view_order_withcarrier_form"/>
+            <field name="arch" type="xml">
+                <button name="delivery_set" position="replace"/>
+                <label string="If you don't 'Add in Quote', the exact price will be computed when invoicing based on delivery order(s)." position="replace"/>
+            </field>
+        </record>
+
+    </data>
+</openerp>

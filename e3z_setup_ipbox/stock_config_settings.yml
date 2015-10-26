@@ -1,0 +1,14 @@
+-
+  I set stock settings.
+-
+  !record {model: stock.config.settings, id: ipbox_stock_setting}:
+    group_stock_multiple_locations: true
+    module_stock_location: true
+    group_stock_packaging: false
+    decimal_precision: 0
+    group_uom: false
+    group_stock_tracking_lot: true
+
+-
+  !python {model: stock.config.settings}: |
+    self.execute(cr, uid, [ref('ipbox_stock_setting')], context=context)

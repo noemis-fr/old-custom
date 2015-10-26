@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <record id="e3z_delivery_product_normal_form_view" model="ir.ui.view">
+            <field name="name">e3z.delivery.product.normal.form.view</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+            	<group string="Sale Conditions" position="inside">
+            		<field name="without_delivery"/>
+            	</group>
+            </field>
+        </record>
+    </data>
+</openerp>

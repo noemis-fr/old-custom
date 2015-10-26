@@ -1,0 +1,3 @@
+id,active,zip_to,zip_from,line_ids/variable_factor,line_ids/name,line_ids/operator,line_ids/standard_price,line_ids/list_price,line_ids/price_type,line_ids/max_value,line_ids/type,name,country_ids/id,sequence,carrier_id/id,state_ids/id
+delivery_grid.price_list_1,True,,,,,,,,,,,TNT Express ECO,,1,delivery.tnt_exp_eco,
+delivery_grid.price_list_2,True,,,,,,,,,,,TNT Express,,1,delivery.tnt_exp,

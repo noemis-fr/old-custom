@@ -1,0 +1,89 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* e3z_account_ipbox
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-14 09:07+0000\n"
+"PO-Revision-Date: 2014-04-14 09:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: e3z_account_ipbox
+#: code:addons/e3z_account_ipbox/account.py:165
+#, python-format
+msgid "Please put a invoice date before validate this invoice."
+msgstr "Veuillez entrer une date avant de valider cette facture."
+
+#. module: e3z_account_ipbox
+#: code:addons/e3z_account_ipbox/account.py:144
+#: code:addons/e3z_account_ipbox/account.py:168
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
+
+#. module: e3z_account_ipbox
+#: code:addons/e3z_account_ipbox/account.py:168
+#, python-format
+msgid "Please define a sequence on the journal."
+msgstr "Veuillez définir une séquence sur le journal."
+
+#. module: e3z_account_ipbox
+#: code:addons/e3z_account_ipbox/account.py:144
+#, python-format
+msgid "You cannot validate a non-balanced entry.\n"
+"Make sure you have configured payment terms properly.\n"
+"The latest payment term line should be of the \"Balance\" type."
+msgstr "Vous ne pouvez valider une entrée non balancée.\n"
+"Soyez sur que les termes de paiements ont été configurés.\n"
+"La dernière line de termes de paiement doit être de type \"Balance\" ."
+
+#. module: e3z_account_ipbox
+#: code:addons/e3z_account_ipbox/account.py:164
+#, python-format
+msgid "Error, no date!"
+msgstr "Erreur, pas de date de facture!"
+
+#. module: e3z_account_ipbox
+#: view:account.invoice:0
+msgid "Distribution costs"
+msgstr "Frais d'approche"
+
+#. module: e3z_account_ipbox
+#: view:account.invoice:0
+msgid "Margin euros"
+msgstr "Marge (€)"
+
+#. module: e3z_account_ipbox
+#: help:account.invoice,margin:0
+msgid "It gives profitability by calculating the difference between the Unit Price and the cost price."
+msgstr "Cela donne la profitabilité  en calculant la différence entre le prix unitaire et le coût."
+
+#. module: e3z_account_ipbox
+#: field:account.invoice,margin_percent:0
+#: field:account.invoice.line,margin_percent:0
+msgid "Margin in Percent"
+msgstr "Marge (%)"
+
+#. module: e3z_account_ipbox
+#: view:account.invoice:0
+msgid "Margin percent"
+msgstr "Marge (%)"
+
+#. module: e3z_account_ipbox
+#: field:ir.sequence,reset_zero:0
+msgid "Reset to zero"
+msgstr "Remettre à zero"
+
+#. module: e3z_account_ipbox
+#: field:account.invoice,margin:0
+#: field:account.invoice.line,margin:0
+#: field:account.invoice.line,margin_display:0
+msgid "Margin"
+msgstr "Marge"

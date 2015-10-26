@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_invoice_form_inherit_print_invoice" model="ir.ui.view">
+			<field name="name">invoice.form.print.invoice</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form" />
+			<field name="arch" type="xml">
+				<button name="invoice_print" position="replace" />
+				<button name="invoice_print" position="replace" />
+			</field>
+		</record>
+	</data>
+</openerp>

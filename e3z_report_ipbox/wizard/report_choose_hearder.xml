@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="report_choose_hearder_view" model="ir.ui.view">
+            <field name="name">Report Choose Header</field>
+            <field name="model">report.choose.hearder</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Select Message">
+                    <group colspan="4" col="6">
+                        <field name="header" on_change="onchange_header(header,context)"/>
+                    </group>
+                    <separator colspan="4"/>
+                    <group colspan="4" col="6">
+                        <button special="cancel" string="Cancel" icon="gtk-cancel"/>
+                        <button name="check_report" string="Print" type="object" icon="gtk-print"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_report_choose_hearder" model="ir.actions.act_window">
+            <field name="name">Choose invoice Header</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.choose.hearder</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'active_id':active_id}</field>
+            <field name="view_id" ref="report_choose_hearder_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <record id="ir_actions_server_report_choose_hearder" model="ir.actions.server">
+            <field name="sequence" eval="5"/>
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_report_choose_hearder"/>
+            <field name="code">action = pool.get('report.choose.hearder').check_report(cr, uid, None, context)</field>
+            <field name="condition">True</field>
+            <field name="name">Invoice</field>
+        </record>
+
+        <record model="ir.values" id="report_choose_hearder_values">
+            <field name="model_id" ref="account.model_account_invoice" />
+            <field name="name">Report Choose Header</field>
+            <field name="key2">client_print_multi</field>
+            <field name="value" eval="'ir.actions.server,' + str(ref('ir_actions_server_report_choose_hearder'))" />
+            <field name="key">action</field>
+            <field name="model">account.invoice</field>
+        </record>
+
+        <record id="ir_actions_server_grouped_report_choose_hearder" model="ir.actions.server">
+            <field name="sequence" eval="5"/>
+            <field name="state">code</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_report_choose_hearder"/>
+            <field name="code">action = pool.get('report.choose.hearder').check_report_grouped(cr, uid, None, context)</field>
+            <field name="condition">True</field>
+            <field name="name">Grouped Invoice</field>
+        </record>
+
+        <record model="ir.values" id="account_grouped_report_choose_hearder_values">
+            <field name="model_id" ref="account.model_account_invoice" />
+            <field name="name">Account Grouped Invioce Choose Header</field>
+            <field name="key2">client_print_multi</field>
+            <field name="value" eval="'ir.actions.server,' + str(ref('ir_actions_server_grouped_report_choose_hearder'))" />
+            <field name="key">action</field>
+            <field name="model">account.invoice</field>
+        </record>
+
+    </data>
+</openerp>

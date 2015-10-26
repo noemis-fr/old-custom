@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sale_reminder_lead_form_view" model="ir.ui.view">
+            <field name="name">sale.reminder.lead.form</field>
+            <field name="model">sale.reminder.lead</field>
+            <field name="arch" type="xml">
+                <form string="Reminder" version="7.0">
+                       <p>
+                           You haven't create a Opportunity for this order.<br/>
+                           Are you sure to confirm this order without create an Opportunity?
+                       </p>
+                       <footer>
+                           <button name="create_confirm" string="Create Oppor &amp; Confirm Order" type="object" class="oe_highlight"/>
+                            or
+                           <button name="confirm_order" string="Confirm Order" type="object" class="oe_highlight"/>
+                            or
+                            <button string="Cancel" class="oe_link" special="cancel" />
+                       </footer>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

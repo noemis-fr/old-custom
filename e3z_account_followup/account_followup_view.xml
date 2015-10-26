@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<report auto="False" id="account_followup_followup_report" menu="False" model="account_followup.followup" name="account_followup.followup.print2" rml="e3z_account_followup/report/account_followup_print.rml" string="Follow-up Report"/>
+	
+		<record id="view_account_followup_followup_line_form_inherit" model="ir.ui.view">
+			<field name="name">account_followup.followup.line.form.inherit</field>
+			<field name="model">account_followup.followup.line</field>
+			<field name="inherit_id" ref="account_followup.view_account_followup_followup_line_form" />
+			<field name="arch" type="xml">
+				<field name="description" position="after">
+					<field name="description2" nolabel="1" colspan="2" />
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

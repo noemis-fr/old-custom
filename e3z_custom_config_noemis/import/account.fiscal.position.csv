@@ -1,0 +1,3 @@
+"id","name","company_id/id","active","note"
+"__export__.account_fiscal_position_1","Intra-EU B2B","base.main_company","True","Exemption de TVA en France selon les articles 262 ter I (pour les biens) et/ou 283-2 (pour les services) du CGI"
+"__export__.account_fiscal_position_2","Import/Export + DOM-TOM","base.main_company","True","Exemption de TVA en France selon les articles 262"

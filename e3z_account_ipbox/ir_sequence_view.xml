@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sequence_view_reset" model="ir.ui.view">
+            <field name="name">ir.sequence</field>
+            <field name="model">ir.sequence</field>
+            <field name="inherit_id" ref="base.sequence_view"/>
+            <field name="arch" type="xml">
+                <field name="active" position="after">
+                    <field name="reset_zero"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

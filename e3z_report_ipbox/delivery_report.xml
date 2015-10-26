@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<delete model="ir.actions.report.xml" id="delivery.report_shipping" />
+		<delete model="ir.actions.report.xml" id="stock.report_picking_list_out" />
+		<report id="delivery.report_shipping" string="Delivery order"
+			model="stock.picking.out" name="sale.shipping1" rml="e3z_report_ipbox/report/shipping.rml"
+			auto="False" />
+	</data>
+</openerp>

@@ -1,0 +1,19 @@
+-
+  I set language settings.
+-
+  !record {model: base.language.install, id: ipbox_language_setting}:
+    lang: 'fr_FR'
+    overwrite: true
+-
+  !python {model: base.language.install}: |
+    self.lang_install(cr, uid, [ref('ipbox_language_setting')], context=context)
+
+
+-
+  I set Synchronise translated terme .
+-
+  !record {model: base.update.translations, id: ipbox_update_translations}:
+    lang: 'fr_FR'
+-
+  !python {model: base.update.translations}: |
+    self.act_update(cr, uid, [ref('ipbox_update_translations')], context=context)

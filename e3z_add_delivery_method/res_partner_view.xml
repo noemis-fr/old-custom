@@ -1,0 +1,14 @@
+<openerp>
+    <data>
+        <record id="e3z_view_partner_property_form" model="ir.ui.view">
+            <field name="name">e3z.res.partner.carrier.property.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="delivery.view_partner_property_form" />
+            <field name="arch" type="xml">
+                <field name="property_delivery_carrier" position="after">
+                    <field name="without_delivery"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

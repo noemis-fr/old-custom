@@ -1,0 +1,22 @@
+-
+  I set  multiple shops group settings.
+-
+  !record {model: account.config.settings, id: ipbox_account_setting}:
+    expects_chart_of_accounts: true
+    date_start: !eval time.strftime('%Y') + '-01-01'
+    date_stop: !eval time.strftime('%Y') + '-12-31'
+    period: 'month'
+    module_account_accountant: true
+    module_account_voucher: true
+    module_account_payment: true
+    paypal_account : false
+    group_payment_options : false
+
+-
+ Apply setting
+-
+  !python {model: account.config.settings}: |
+    self.execute(cr, uid, [ref('ipbox_account_setting')], context=context)
+
+
+

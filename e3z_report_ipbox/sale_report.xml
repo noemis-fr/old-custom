@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<delete model="ir.actions.report.xml" id="sale.report_sale_order" />
+		<delete model="ir.actions.report.xml" id="sale_layout.sale_order_1" />
+		<report id="sale_layout.sale_order_1"
+			string="Quotation / Order" model="sale.order" name="sale.order.layout2"
+			rml="e3z_report_ipbox/report/report_sale_layout.rml" auto="False" />
+	</data>
+</openerp>

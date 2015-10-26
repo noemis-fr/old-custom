@@ -1,0 +1,10 @@
+-
+  I set purchase settings.
+-
+  !record {model: purchase.config.settings, id: ipbox_purchase_setting}:
+    default_invoice_method: "manual"
+    group_purchase_pricelist: true
+    group_costing_method: true
+-
+  !python {model: purchase.config.settings}: |
+    self.execute(cr, uid, [ref('ipbox_purchase_setting')], context=context)

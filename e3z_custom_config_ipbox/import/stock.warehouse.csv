@@ -1,0 +1,2 @@
+id,name,company_id/id,lot_input_id/id,lot_stock_id/id,lot_output_id/id,partner_id/id
+stock.warehouse0,Depôt,base.main_company,stock.stock_rc_dpt,stock.stock_location_stock,stock.stock_location_output,

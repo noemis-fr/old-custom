@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="sale.adv" model="res.groups">
+            <field name="name">ADV</field>
+            <field name="category_id" ref="base.module_category_sales_management"></field>
+        </record>
+
+        <record id="mrp.team" model="res.groups">
+            <field name="name">Equipe Prod</field>
+            <field name="category_id" ref="base.module_category_manufacturing"></field>
+        </record>
+    </data>
+</openerp>

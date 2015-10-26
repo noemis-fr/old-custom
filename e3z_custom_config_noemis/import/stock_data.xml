@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<openerp>
+	<data noupdate="1">
+        <record id="stock.journal_delivery" model="stock.journal">
+            <field name="name">Livraison</field>
+        </record>
+        <record id="stock.journal_reception" model="stock.journal">
+            <field name="name">Réception</field>
+        </record>
+        <record id="stock.journal_interne" model="stock.journal">
+            <field name="name">Mouvement interne</field>
+        </record>
+	</data>
+</openerp>

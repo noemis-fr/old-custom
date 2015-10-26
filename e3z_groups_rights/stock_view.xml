@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="e3z_groups_rights.group_stock_commercial" model="res.groups">
+            <field name="name">Commercial</field>
+            <field name="category_id" ref="base.module_category_warehouse_management"/>
+        </record>
+
+        <record id="e3z_groups_rights.group_stock_logistique" model="res.groups">
+            <field name="name">Logistique</field>
+            <field name="category_id" ref="base.module_category_warehouse_management"/>
+            <field name="implied_ids" eval="[(4, ref('stock.group_stock_user'))]"/>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Warehouse"
+            id="stock.menu_stock_root"
+            groups="stock.group_stock_manager,stock.group_stock_user,e3z_groups_rights.group_stock_commercial,e3z_groups_rights.group_stock_logistique"
+            sequence="70"/>
+
+        <menuitem id="stock.menu_stock_products_moves" name="Receive/Deliver Products" parent="stock.menu_stock_root" sequence="2"
+            groups="stock.group_stock_manager,stock.group_stock_user"/>
+
+        <menuitem id="stock.menu_stock_product" name="Products" parent="stock.menu_stock_root" sequence="6"
+            groups="stock.group_stock_manager,stock.group_stock_user"/>
+
+        <record id="vpicktree_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.tree.commercial</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.vpicktree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_picking_form_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.form.commercial</field>
+            <field name="model">stock.picking</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_validate']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Create Invoice/Refund']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Reverse Transfer']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='button_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_picking_out_form_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.out.form.commercial</field>
+            <field name="model">stock.picking.out</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_validate']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Create Invoice/Refund']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Reverse Transfer']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='button_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_done']" position="replace">
+                    <field name="date_done"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_picking_in_form_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.in.form.commercial</field>
+            <field name="model">stock.picking.in</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial'),ref('e3z_groups_rights.group_stock_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_validate']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Create Invoice/Refund']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Reverse Transfer']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='button_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_done']" position="replace">
+                    <field name="date_done"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_tree_commercial" model="ir.ui.view">
+            <field name="name">stock.move.tree.commercial</field>
+            <field name="model">stock.move</field>
+            <field eval="8" name="priority"/>
+            <field name="inherit_id" ref="stock.view_move_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+                <xpath expr="//button[@string='Scrap Products']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Split in Serial Numbers']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Put in current pack']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_done']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_picking_out_tree_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.out.tree.commercial</field>
+            <field name="model">stock.picking.out</field>
+            <field name="inherit_id" ref="stock.view_picking_out_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_picking_in_tree_commercial" model="ir.ui.view">
+            <field name="name">stock.picking.in.tree.commercial</field>
+            <field name="model">stock.picking.in</field>
+            <field name="inherit_id" ref="stock.view_picking_in_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>

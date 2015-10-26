@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="e3z_purchase_order_form" model="ir.ui.view">
+            <field name="name">e3z.purchase.order.form</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//tree[@string='Purchase Order Lines']" position="attributes">-->
+                    <!--<attribute name="attrs">{'create': [('state', 'in', ['approved', 'done'])]}</attribute>-->
+                <!--</xpath>-->
+                <xpath expr="//tree/field[@name='product_id']" position="before">
+                    <field name="state" invisible="1"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='name']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='company_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='account_analytic_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_qty']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_uom']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <!-- <xpath expr="//tree/field[@name='price_unit']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath> -->
+                <xpath expr="//tree/field[@name='taxes_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '=', 'confirmed')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_id']" position="attributes">
+                    <attribute name="on_change">onchange_product_id(parent.pricelist_id, product_id, product_qty, False, parent.partner_id, parent.date_order, parent.fiscal_position, date_planned, name, price_unit, context)</attribute>
+				</xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="view_workflow_transition_msg_form">
+        <field name="name">view.workflow.transition.msg.form</field>
+        <field name="model">workflow.transition</field>
+        <field name="inherit_id" ref="base.view_workflow_transition_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='condition']" position="after">
+                <field name="display_msg" />
+                <field name="notcondition_msg"  attrs="{'invisible' : [('display_msg', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</openerp>

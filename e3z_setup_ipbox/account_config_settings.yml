@@ -1,0 +1,98 @@
+# -
+  # I set actions.todo to open
+# -
+  # !record {model: ir.actions.todo, id: account.account_configuration_installer_todo}:
+    # state: 'open'
+# -
+  # I set accounting data configuration - France-Accounting.
+# -
+  # !record {model: account.installer, id: ipbox_accout_setting}:
+    # charts: 'l10n_fr'
+    # company_id: base.main_company
+# -
+  # !python {model: account.installer}: |
+    # self.execute_simple(cr, uid, [ref('ipbox_accout_setting')], context=context)
+# -
+  # I set actions.todo to Done
+# -
+  # !record {model: ir.actions.todo, id: account.account_configuration_installer_todo}:
+    # state: 'done'
+# -
+
+
+# -
+  # I configure automatically if the country is set on the company, mainly for online offers.
+# -
+  # !python {model: account.installer}: |
+    # modules = self.pool.get('ir.module.module')
+    # wizards = self.pool.get('ir.actions.todo')
+    # wiz = wizards.browse(cr, uid, ref('account.account_configuration_installer_todo'))
+    # part = self.pool.get('res.partner').browse(cr, uid, ref('base.main_partner'))
+    #if we know the country and the wizard has not yet been executed, we do it
+    # wizards.write(cr, uid, [ref('account.account_configuration_installer_todo')], {
+        # 'state': 'open'
+    # })
+    # if (part.country_id.id) and (wiz.state=='open'):
+        # mod = 'l10n_'+part.country_id.code.lower()
+        # ids = modules.search(cr, uid, [ ('name','=',mod) ], context=context)
+        # if ids:
+            # wizards.write(cr, uid, [ref('account.account_configuration_installer_todo')], {
+                # 'state': 'done'
+            # })
+            # wiz_id = self.create(cr, uid, {
+                # 'charts': mod,
+                # 'company_id': ref('base.main_company')
+            # })
+            # self.execute_simple(cr, uid, [wiz_id])
+            # modules.state_update(cr, uid, ids,
+                # 'to install', ['uninstalled'], context=context)
+#has_chart_of_accounts = company_id not in self.pool.get('account.installer').get_unconfigured_cmp(cr, uid)
+# -
+ # !python {model: ir.actions.todo}: |
+   # install_todo = self.browse(cr, uid, ref('account.action_wizard_multi_chart_todo'))
+   # wizards = self.pool.get('ir.actions.todo')
+   # wizards.write(cr, uid, [ref('account.action_wizard_multi_chart_todo')], {
+       # 'state': 'open'
+   # })
+   # if install_todo.state == 'open':
+       # wiz = self.pool.get('wizard.multi.charts.accounts')
+       # values = {
+           # 'chart_template_id': ref('l10n_fr.l10n_fr_pcg_chart_template')
+       # }
+       # values.update(
+           # wiz.onchange_chart_template_id(cr, uid, False, ref('l10n_fr.l10n_fr_pcg_chart_template')).get('value', {})
+       # )
+       # wiz_id = wiz.create(cr, uid, values)
+       # wiz.execute(cr, uid, [wiz_id])
+       # install_todo.write({'state':'done'})
+#-
+#  I set account settings.
+#-
+
+#  !record {model: account.config.settings, id: ipbox_account_setting}:
+#    expects_chart_of_accounts: true
+#    date_stop: '2013-12-31'
+#    date_start: '2013-01-01'
+#    period: 'month'
+#-
+#  !python {model: account.config.settings}: |
+#    has_chart_of_accounts = ref('base.main_company') not in self.pool.get('account.installer').get_unconfigured_cmp(cr, uid)
+#    wiz_id = ref('ipbox_account_setting')
+#    if has_chart_of_accounts:
+#        self.execute(cr, uid, [ref('ipbox_account_setting')], context=context)
+#    else:
+#        wiz = self.pool.get('account.config.settings')
+#        values = {
+#                 'chart_template_id': ref('l10n_fr.l10n_fr_pcg_chart_template')
+#        }
+#        values.update(
+#           wiz.onchange_company_id(cr, uid, False, ref('base.main_company')).get('value', {})
+#        )
+#        values.update(
+#           wiz.onchange_chart_template_id(cr, uid, False, ref('l10n_fr.l10n_fr_pcg_chart_template')).get('value', {})
+#        )
+#        wiz.write(cr, uid,wiz_id, values)
+#        self.execute(cr, uid, [ref('ipbox_account_setting')], context=context)
+#
+
+

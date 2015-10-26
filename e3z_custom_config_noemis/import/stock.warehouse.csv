@@ -1,0 +1,4 @@
+id,name,company_id/id,lot_input_id/id,lot_stock_id/id,lot_output_id/id,partner_id/id
+stock.warehouse0,Dépôt,base.main_company,stock.stock_rc_dpt,stock.stock_location_stock,stock.stock_location_output,
+stock.warehouse1,Prêt – Pièces Détachées,base.main_company,stock.stock_spare_parts,stock.stock_spare_parts,stock.stock_location_output,
+stock.warehouse2,SAV,base.main_company,stock.stock_after_sale,stock.stock_after_sale,stock.stock_location_output,

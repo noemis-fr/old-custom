@@ -1,0 +1,17 @@
+-
+  Compute parent for account.account
+-
+  !python {model: account.account}: |
+    self._parent_store_compute(cr)
+
+-
+  Compute parent for stock.location
+-
+  !python {model: stock.location}: |
+    self._parent_store_compute(cr)
+
+-
+  Compute parent for product.category
+-
+  !python {model: product.category}: |
+    self._parent_store_compute(cr)

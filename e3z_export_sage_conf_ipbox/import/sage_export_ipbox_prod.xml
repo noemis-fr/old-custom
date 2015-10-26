@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data >
+
+        <record id="asgard_ledger_export.asgard_ledger_export_1" model="asgard.ledger.export">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="encoding">utf-8</field>
+            <field name="file_header">date; code journal; N° cpte; n°pièce; libellé; débit; crédit</field>
+            <field name="extension">csv</field>
+            <field name="end_line">windows</field>
+            <field name="name">Export Sage</field>
+            <field name="separator">;</field>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_field_1" model="asgard.ledger.export.fields">
+            <field name="field_internal">journal_code</field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Code journal</field>
+            <field name="position">0</field>
+            <field name="sequence">2</field>
+            <field name="lenght">3</field>
+            <field name="type_field">internal_field</field>
+            <field name="field_text">journal_code</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+
+        <record id="asgard_ledger_export.asgard_ledger_export_field_2" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref="account.field_account_move_line_date"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['date','%d/%m/%y']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Date de pièces</field>
+            <field name="position">0</field>
+            <field name="sequence">1</field>
+            <field name="lenght">6</field>
+            <field name="type_field">account_field</field>
+            <field name="field_text">field_description</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+
+
+        <record id="asgard_ledger_export.asgard_ledger_export_field_4" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Compte général</field>
+            <field name="position">0</field>
+            <field name="sequence">3</field>
+            <field name="lenght">6</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">object.account_id and object.account_id.code or ''</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_5" model="asgard.ledger.export.fields">-->
+            <!--<field name="active">True</field>-->
+            <!--<field name="field_internal"></field>-->
+            <!--<field name="field_account" ref=""/>-->
+            <!--<field name="company_id" ref="base.main_company"/>-->
+            <!--<field name="build_cmd">['string','%s']</field>-->
+            <!--<field name="field_indirection"></field>-->
+            <!--<field name="error_label"></field>-->
+            <!--<field name="name">Type de compte</field>-->
+            <!--<field name="position">0</field>-->
+            <!--<field name="sequence">5</field>-->
+            <!--<field name="lenght">1</field>-->
+            <!--<field name="type_field">text_field</field>-->
+            <!--<field name="field_text">G</field>-->
+            <!--<field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>-->
+        <!--</record>-->
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_6" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Compte tiers</field>
+            <field name="position">0</field>
+            <field name="sequence">4</field>
+            <field name="lenght">13</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">object.partner_ref and object.partner_ref or ''</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>-->
+        <record id="asgard_ledger_export.asgard_ledger_export_field_7" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">N° Pièce</field>
+            <field name="position">0</field>
+            <field name="sequence">4</field>
+            <field name="lenght">17</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">object.move_id and object.move_id.name.replace(object.journal_id.sequence_id.prefix[:object.journal_id.sequence_id.prefix.index('%')],object.export_journal_id.name).replace('/','') or (object.export_journal_id.name + 'Rgpt' + object.date.replace('-','')[2:] )</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_7" model="asgard.ledger.export.fields">-->
+            <!--<field name="active">True</field>-->
+            <!--<field name="field_internal"></field>-->
+            <!--<field name="field_account" ref="account.field_account_move_line_ref"/>-->
+            <!--<field name="company_id" ref="base.main_company"/>-->
+            <!--<field name="build_cmd">['string','%s']</field>-->
+            <!--<field name="field_indirection"></field>-->
+            <!--<field name="error_label"></field>-->
+            <!--<field name="name">Ref ecriture</field>-->
+            <!--<field name="position">0</field>-->
+            <!--<field name="sequence">7</field>-->
+            <!--<field name="lenght">13</field>-->
+            <!--<field name="type_field">account_field</field>-->
+            <!--<field name="field_text"></field>-->
+            <!--<field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>-->
+        <!--</record>-->
+        <record id="asgard_ledger_export.asgard_ledger_export_field_8" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Libellé écriture</field>
+            <field name="position">0</field>
+            <field name="sequence">5</field>
+            <field name="lenght">35</field>
+            <field name="type_field">account_field</field>
+            <field name="field_account" ref="account.field_account_move_line_name"/>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_9" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Mode de règlement</field>
+            <field name="position">0</field>
+            <field name="sequence">7</field>
+            <field name="lenght">1</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">' '</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>-->
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_10" model="asgard.ledger.export.fields">-->
+            <!--<field name="active">True</field>-->
+            <!--<field name="field_internal"></field>-->
+            <!--<field name="field_account" ref="account.field_account_move_line_date_maturity"/>-->
+            <!--<field name="company_id" ref="base.main_company"/>-->
+            <!--<field name="build_cmd">['date','%d%m%y']</field>-->
+            <!--<field name="field_indirection"></field>-->
+            <!--<field name="error_label"></field>-->
+            <!--<field name="name">Date d'échéance</field>-->
+            <!--<field name="position">0</field>-->
+            <!--<field name="sequence">10</field>-->
+            <!--<field name="lenght">6</field>-->
+            <!--<field name="type_field">account_field</field>-->
+            <!--<field name="field_text"></field>-->
+            <!--<field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>-->
+        <!--</record>-->
+        <!--<record id="asgard_ledger_export.asgard_ledger_export_field_11" model="asgard.ledger.export.fields">-->
+            <!--<field name="active">True</field>-->
+            <!--<field name="field_internal"></field>-->
+            <!--<field name="field_account" ref=""/>-->
+            <!--<field name="company_id" ref="base.main_company"/>-->
+            <!--<field name="build_cmd">['string','%s']</field>-->
+            <!--<field name="field_indirection"></field>-->
+            <!--<field name="error_label"></field>-->
+            <!--<field name="name">Sens</field>-->
+            <!--<field name="position">0</field>-->
+            <!--<field name="sequence">11</field>-->
+            <!--<field name="lenght">10</field>-->
+            <!--<field name="type_field">build_field</field>-->
+            <!--<field name="field_text">((object.debit > 0 and object.credit == 0) and 'D' ) or ((object.debit == 0 and object.credit > 0) and 'C' ) or 'M'</field>-->
+            <!--<field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>-->
+        <!--</record>-->
+        <record id="asgard_ledger_export.asgard_ledger_export_field_12" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Débit</field>
+            <field name="position">0</field>
+            <field name="sequence">6</field>
+            <field name="lenght">14</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">str(object.debit).replace('.', ',') or 0</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_field_13" model="asgard.ledger.export.fields">
+            <field name="active">True</field>
+            <field name="field_internal"></field>
+            <field name="field_account" ref=""/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="build_cmd">['string','%s']</field>
+            <field name="field_indirection"></field>
+            <field name="error_label"></field>
+            <field name="name">Crédit</field>
+            <field name="position">0</field>
+            <field name="sequence">7</field>
+            <field name="lenght">14</field>
+            <field name="type_field">build_field</field>
+            <field name="field_text">str(object.credit).replace('.', ',') or 0</field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_1" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.account_journal_gra"/>
+            <field name="name">GRA</field>
+            <field name="journal_name">GRA</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_2" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.check_journal"/>
+            <field name="name">CHQ</field>
+            <field name="journal_name">CHQ</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_3" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.bank_journal_cbce"/>
+            <field name="name">CBCE</field>
+            <field name="journal_name">CBCE</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_4" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.bank_journal_ca"/>
+            <field name="name">CA</field>
+            <field name="journal_name">CA</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_5" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.opening_journal"/>
+            <field name="name">AN</field>
+            <field name="journal_name">AN</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_6" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.miscellaneous_journal"/>
+            <field name="name">OD</field>
+            <field name="journal_name">OD</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_7" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.refund_expenses_journal"/>
+            <field name="name">AVACH</field>
+            <field name="journal_name">AVACH</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_8" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.refund_sales_journal"/>
+            <field name="name">AVVTE</field>
+            <field name="journal_name">AVVTE</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_9" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.expenses_journal"/>
+            <field name="name">ACH</field>
+            <field name="journal_name">ACH</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>		
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_10" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.sales_journal"/>
+            <field name="name">VTE</field>
+            <field name="journal_name">VTE</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>		
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_11" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.bank_journal_cad"/>
+            <field name="name">CAD</field>
+            <field name="journal_name">CAD</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_12" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.expenses_journal_fgx"/>
+            <field name="name">FGX</field>
+            <field name="journal_name">FGX</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_13" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.cash_journal"/>
+            <field name="name">CAI</field>
+            <field name="journal_name">CAI</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>
+        <record id="asgard_ledger_export.asgard_ledger_export_journal_14" model="asgard.ledger.export.journal">
+            <field name="active">True</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="journal_id" ref="account.bank_journal_ce"/>
+            <field name="name">CE</field>
+            <field name="journal_name">CE</field>
+            <field name="default_partner_ref"></field>
+            <field name="asgard_ledger_id" ref="asgard_ledger_export.asgard_ledger_export_1"/>
+        </record>		
+		
+    </data>
+</openerp>

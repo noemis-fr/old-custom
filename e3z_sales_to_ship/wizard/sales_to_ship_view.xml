@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="sale_to_ship_form_view" model="ir.ui.view">
+            <field name="name">sale.to.ship.form</field>
+            <field name="model">sale.to.ship</field>
+            <field name="arch" type="xml">
+                <form string="Sales to ship" version="7.0">
+                    <group>
+                        <field name="amount_total"/>
+                    </group>
+                    <footer>
+                        <button string="Close" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="e3z_sales_to_ship_action" model="ir.actions.act_window">
+            <field name="name">Sales to ship</field>
+            <field name="res_model">sale.to.ship</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="sale_to_ship_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_e3z_sales_to_ship_action"
+            action="e3z_sales_to_ship_action" parent="base.menu_invoiced"
+            sequence="20"/>
+    </data>
+</openerp>

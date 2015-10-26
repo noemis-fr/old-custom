@@ -1,0 +1,49 @@
+
+
+[data-id="purchase_price"] {
+    width: 70px;
+}
+
+[data-id="price_unit"] {
+    width: 70px;
+}
+
+[data-id="discount"] {
+    width: 70px;
+}
+
+[data-id="price_subtotal"] {
+    width: 70px;
+}
+
+[data-id="product_qty_available"] {
+    width: 30px;
+}
+
+[data-id="margin_display"] {
+    width: 100px;
+}
+
+[data-id="product_uom_qty"] {
+    width:30px;
+}
+
+[data-id="layout_type"] {
+    width:30px;
+}
+
+[data-id="tax_id"] {
+    width: 20px;
+}
+
+[data-id="name"] {
+    width: 300px;
+}
+
+[data-id="qty_display"] {
+    width: 100px;
+}
+
+[data-id="puvr"] {
+    width: 70px;
+}

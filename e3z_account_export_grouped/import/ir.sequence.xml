@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <!--
+        Sequences types for exports
+        -->
+        <record model="ir.sequence.type" id="seq_type_export_fr">
+            <field name="name">Séquence reference Pro pour la France</field>
+            <field name="code">seq_export_fr</field>
+        </record>
+        <record model="ir.sequence.type" id="seq_type_export_cee">
+            <field name="name">Séquence reference Pro pour l'UE</field>
+            <field name="code">seq_export_cee</field>
+        </record>
+        <record model="ir.sequence.type" id="seq_type_export_export">
+            <field name="name">Séquence reference Pro pour les exports</field>
+            <field name="code">seq_export_export</field>
+        </record>
+
+        <!--
+        Sequences for exports
+        -->
+        <record model="ir.sequence" id="seq_export_fr">
+            <field name="name">Séquence reference Pro pour la France</field>
+            <field name="code">seq_export_fr</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">00CPR</field>
+        </record>
+        <record model="ir.sequence" id="seq_export_cee">
+            <field name="name">Séquence reference Pro pour l'UE</field>
+            <field name="code">seq_export_cee</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">01CPR</field>
+        </record>
+        <record model="ir.sequence" id="seq_export_export">
+            <field name="name">Séquence reference Pro pour les exports</field>
+            <field name="code">seq_export_export</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">02CPR</field>
+        </record>
+    </data>
+</openerp>
+

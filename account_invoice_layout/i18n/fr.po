@@ -1,0 +1,359 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* account_invoice_layout
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 6.0dev\n"
+"Report-Msgid-Bugs-To: support@openerp.com\n"
+"POT-Creation-Date: 2012-02-08 00:35+0000\n"
+"PO-Revision-Date: 2012-02-24 20:24+0000\n"
+"Last-Translator: t.o <Unknown>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-05-29 06:46+0000\n"
+"X-Generator: Launchpad (build 16640)\n"
+
+#: selection:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Sub Total"
+msgstr "Sous-Total"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Note:"
+msgstr "Note :"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Cancelled Invoice"
+msgstr "Facture annulée"
+
+#: selection:account.invoice.line,state:0
+#: field:notify.message,name:0
+#. module: account_invoice_layout
+msgid "Title"
+msgstr "Titre"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Disc. (%)"
+msgstr "Rem. (%)"
+
+#: selection:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Note"
+msgstr "Note"
+
+#: view:account.invoice.special.msg:0
+#. module: account_invoice_layout
+msgid "Print"
+msgstr "Imprimer"
+
+#: help:notify.message,msg:0
+#. module: account_invoice_layout
+msgid ""
+"This notification will appear at the bottom of the Invoices when printed."
+msgstr "Cette notification apparaîtra en bas de la facture lorsqu'elle sera imprimée."
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Unit Price"
+msgstr "PVU"
+
+#: model:ir.model,name:account_invoice_layout.model_notify_message
+#. module: account_invoice_layout
+msgid "Notify By Messages"
+msgstr "Notifier par Messages"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "VAT :"
+msgstr "TVA :"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Tel. :"
+msgstr "Tél. :"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "PRO-FORMA"
+msgstr "PRO-FORMA"
+
+#: field:account.invoice,abstract_line_ids:0
+#. module: account_invoice_layout
+msgid "Invoice Lines"
+msgstr "Lignes de facture"
+
+#: view:account.invoice.line:0
+#. module: account_invoice_layout
+msgid "Seq."
+msgstr "Séq."
+
+#: model:ir.ui.menu,name:account_invoice_layout.menu_finan_config_notify_message
+#. module: account_invoice_layout
+msgid "Notification Message"
+msgstr "Message de Notification"
+
+#: report:account.invoice.layout:0
+#. module: account_invoice_layout
+msgid "Customer Code"
+msgstr "Code client"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Description"
+msgstr "Référence client"
+
+#: help:account.invoice.line,sequence:0
+#. module: account_invoice_layout
+msgid "Gives the sequence order when displaying a list of invoice lines."
+msgstr "Donne l'ordre d'affichage de la liste des lignes de facture."
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Price"
+msgstr "Prix Total"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Invoice Date"
+msgstr "Date de la facture"
+
+#: report:account.invoice.layout:0
+#. module: account_invoice_layout
+msgid "Taxes:"
+msgstr "Taxes :"
+
+#: field:account.invoice.line,functional_field:0
+#. module: account_invoice_layout
+msgid "Source Account"
+msgstr "Compte d'origine"
+
+#: model:ir.actions.act_window,name:account_invoice_layout.notify_mesage_tree_form
+#. module: account_invoice_layout
+msgid "Write Messages"
+msgstr "Écrire les Messages"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Base"
+msgstr "Base de calcul"
+
+#: selection:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Page Break"
+msgstr "Saut de page"
+
+#: view:notify.message:0
+#: field:notify.message,msg:0
+#. module: account_invoice_layout
+msgid "Special Message"
+msgstr "Message Spécial"
+
+#: help:account.invoice.special.msg,message:0
+#. module: account_invoice_layout
+msgid "Message to Print at the bottom of report"
+msgstr "Message à imprimer au bas du rapport"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Quantity"
+msgstr "Quantité"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Refund"
+msgstr "Note de crédit"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Fax :"
+msgstr "Fax :"
+
+#: report:account.invoice.layout:0
+#. module: account_invoice_layout
+msgid "Total:"
+msgstr "Total :"
+
+#: view:account.invoice.special.msg:0
+#. module: account_invoice_layout
+msgid "Select Message"
+msgstr "Sélectionnez le Message"
+
+#: view:notify.message:0
+#. module: account_invoice_layout
+msgid "Messages"
+msgstr "Messages"
+
+#: selection:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Product"
+msgstr "Produit"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Short Description"
+msgstr "Description"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Amount"
+msgstr "Montant"
+
+#: model:notify.message,msg:account_invoice_layout.demo_message1
+#. module: account_invoice_layout
+msgid "ERP & CRM Solutions..."
+msgstr "Solutions ERP & CRM..."
+
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Net Total :"
+msgstr "Total net :"
+
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Total :"
+msgstr "Total :"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Draft Invoice"
+msgstr "Facture brouillon"
+
+#: field:account.invoice.line,sequence:0
+#. module: account_invoice_layout
+msgid "Sequence Number"
+msgstr "Numéro Séquence"
+
+#: model:ir.model,name:account_invoice_layout.model_account_invoice_special_msg
+#. module: account_invoice_layout
+msgid "Account Invoice Special Message"
+msgstr "Message spécial des factures"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Origin"
+msgstr "N° commande"
+
+#: sql_constraint:account.invoice:0
+#. module: account_invoice_layout
+msgid "Invoice Number must be unique per Company!"
+msgstr "Le numéro de facture doit être unique par société !"
+
+#: selection:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Separator Line"
+msgstr "Ligne de séparation"
+
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Your Reference"
+msgstr "Votre référence"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Supplier Invoice"
+msgstr "Facture fournisseur"
+
+#: model:ir.actions.report.xml,name:account_invoice_layout.account_invoices_1
+#. module: account_invoice_layout
+msgid "Invoices"
+msgstr "Factures"
+
+#: constraint:account.invoice:0
+#. module: account_invoice_layout
+msgid "Invalid BBA Structured Communication !"
+msgstr "Structure de communication BBA incorrecte !"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Tax"
+msgstr "Taxe"
+
+#: model:ir.model,name:account_invoice_layout.model_account_invoice_line
+#. module: account_invoice_layout
+msgid "Invoice Line"
+msgstr "Ligne de facture"
+
+#: report:account.invoice.layout:0
+#. module: account_invoice_layout
+msgid "Net Total:"
+msgstr "Total net :"
+
+#: model:ir.actions.act_window,name:account_invoice_layout.action_account_invoice_special_msg
+#: model:ir.actions.report.xml,name:account_invoice_layout.account_invoices_layout_message
+#. module: account_invoice_layout
+msgid "Invoices and Message"
+msgstr "Factures et message"
+
+#: field:account.invoice.line,state:0
+#. module: account_invoice_layout
+msgid "Type"
+msgstr "Type"
+
+#: view:notify.message:0
+#. module: account_invoice_layout
+msgid "Write a notification or a wishful message."
+msgstr "Ecrire un avis"
+
+#: report:account.invoice.layout:0
+#: model:ir.model,name:account_invoice_layout.model_account_invoice
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Invoice"
+msgstr "Facture"
+
+#: view:account.invoice.special.msg:0
+#. module: account_invoice_layout
+msgid "Cancel"
+msgstr "Annuler"
+
+#: report:account.invoice.layout:0
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Supplier Refund"
+msgstr "Note de Crédit Fournisseur"
+
+#: field:account.invoice.special.msg,message:0
+#. module: account_invoice_layout
+msgid "Message"
+msgstr "Message"
+
+#: report:notify_account.invoice:0
+#. module: account_invoice_layout
+msgid "Taxes :"
+msgstr "Taxes :"
+
+#: model:ir.ui.menu,name:account_invoice_layout.menu_notify_mesage_tree_form
+#. module: account_invoice_layout
+msgid "All Notification Messages"
+msgstr "Tous les Messages de Notification"
+
+#. module: account_invoice_layout
+#: report:account.invoice.layout:0
+msgid "/ Due date :"
+msgstr "/ Date échéance :"

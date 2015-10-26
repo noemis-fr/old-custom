@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_order_form_lead" model="ir.ui.view">
+            <field name="name">sale.order.from.lead</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="nocreate_lead" attrs="{'invisible': [('lead_id', '!=', False)], 'readonly': [('state', 'not in', ('draft', 'sent'))]}"/>
+                    <field name="lead_name" attrs="{'invisible': ['|', ('lead_id','!=', False), ('nocreate_lead', '=', False)], 'required': [('nocreate_lead', '=', True),('lead_id','=',False)]}"/>
+                    <field name="lead_id" readonly="True" context="{'form_view_ref' : 'crm.crm_case_form_view_oppor'}"
+                           attrs="{'invisible': [('lead_id','=', False)]}"/>
+                    <field name="lead_stage"
+                           attrs="{'invisible': [('nocreate_lead','=', False)]}"/>
+                    <field name="planned_revenue"
+                           attrs="{'invisible': [('nocreate_lead','=',False)]}" widget="monetary"/>
+                    <field name="probability"
+                           attrs="{'invisible': [('nocreate_lead','=',False)]}"/>
+                </field>
+                <!-- ajout colonne ligne de commande -->
+                <field name="price_subtotal" position="after">
+                    <field name="margin" invisible="True"/>
+                    <field name="margin_percent" invisible="True"/>
+                    <field name="margin_display"/>
+                </field>
+                <xpath expr="//tree/field[@name='price_unit']" position="before">
+                    <field name="product_qty_available" readonly="True"/>
+                    <field name="qty_display" readonly="True" context="{'shop': order_id.shop_id}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_margin_percent_sale_order">
+            <field name="name">sale.order.margin.percent.view.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_margin.sale_margin_sale_order"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='sale_margin_grp']" position="replace"/>
+                <xpath expr="//group[@name='sale_total']" position="after">
+                    <group name="sale_margin_grp">
+                        <div colspan="2" col="2">
+                        <label for="margin"/>
+                        <field name="margin" widget='monetary' options="{'currency_field': 'currency_id'}" class="oe_inline"/>
+                        <br/>
+                        <label for="margin_percent"/>
+                        <field name="margin_percent" class="oe_inline"/>
+                        %%
+                    </div>
+                    </group>
+                </xpath>
+                <field name="pricelist_id" position="after">
+                    <field name="distribution_costs" string="Frais d'approche en %%" invisible="False"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="sale_margin.sale_margin_sale_order_line_form">
+            <field name="name">sale.order.line.tree.margin.view.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree//field[@name='price_unit']" position="before">
+                    <field name="purchase_price" groups="base.group_user"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_sales_order_filter_lead" model="ir.ui.view">
+            <field name="name">sale.order.lead.list.select</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+            <field name="arch" type="xml">
+                <field name="project_id" position="after">
+                    <field name="lead_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="crm_case_form_view_oppor_nocreate" model="ir.ui.view">
+            <field name="name">crm.case.form</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Opportunities']" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="crm_case_tree_view_oppor_nocreate" model="ir.ui.view">
+            <field name="name">crm.case.tree</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree[@string='Opportunities']" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_case_kanban_view_leads_nocreate">
+            <field name="name">CRM - Leads Kanban</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban[@default_group_by='stage_id']" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="view_quotation_margin_tree" model="ir.ui.view">
+            <field name="name">sale.order.margin.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree"/>
+            <field name="priority">200</field>
+            <field name="arch" type="xml">
+            	<field name="name" position="after">
+            		<field name="shop_id"/>
+            	</field>
+            	<field name="partner_id" position="after">
+            		<field name="client_order_ref" modifiers="{}"/>
+            	</field>
+            	<field name="amount_total" position="attributes">
+            		<attribute name="invisible">1</attribute>
+            	</field>
+            	<field name="amount_total" position="before">
+	            	<field name="margin" sum="Total Margin Value" modifiers="{'readonly': true}"/>
+	            	<field name="margin_percent" sum="Total Margin Percent" modifiers="{'readonly': true}"/>
+	            	<field name="amount_untaxed" sum="Total taxes incluses" modifiers="{'readonly': true}"/>
+            	</field>
+        	</field>
+        </record>
+        
+        <!-- <record id="view_amount_untaxed_tree" model="ir.ui.view">
+            <field name="name">sale.order.amount.untaxed.tree</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_tree"/>
+            <field name="priority">200</field>
+            <field name="arch" type="xml">
+            	<field name="amount_total" position="replace">
+            		<field name="amount_untaxed" sum="Total HT" modifiers="{'readonly': true}"/>
+            	</field>
+        	</field>
+        </record> -->
+    </data>
+</openerp>

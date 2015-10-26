@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="e3z_groups_rights.group_sale_logistique" model="res.groups">
+            <field name="name">Logistique</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+            <!-- TODO: FIXME: sale.adv is not defined -->
+<!--            <field name="implied_ids" eval="[(6, 0, [ref('sale.adv')])]"/>-->
+        </record>
+
+        <record id="e3z_groups_rights.group_sale_commercial" model="res.groups">
+            <field name="name">Commercial</field>
+            <field name="comment">the user will have an access to the sales configuration as well as statistic reports.</field>
+            <field name="category_id" ref="base.module_category_sales_management"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_sale_salesman_all_leads'))]"/>
+            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+
+
+        <menuitem name="Purchases"
+            id="base.menu_base_partner"
+            groups="base.group_sale_salesman,e3z_groups_rights.group_sale_logistique"
+            sequence="60"/>
+
+        <menuitem id="base.menu_aftersale" name="After-Sale Services"
+            groups="base.group_sale_salesman,e3z_groups_rights.group_sale_logistique"
+            parent="base.menu_base_partner" sequence="2" />
+
+        <menuitem name="Helpdesk and Support" id="crm_helpdesk.menu_help_support_main"
+            groups="base.group_sale_salesman,e3z_groups_rights.group_sale_logistique"
+            parent="base.menu_aftersale" action="crm_helpdesk.crm_case_helpdesk_act111" sequence="2"/>
+
+        <menuitem action="sale.action_orders" id="sale.menu_sale_order" parent="base.menu_sales" sequence="5"
+                  groups="base.group_sale_salesman,base.group_sale_manager,e3z_groups_rights.group_sale_logistique"/>
+
+        <record id="view_order_tree_commercial" model="ir.ui.view">
+            <field name="name">sale.order.tree.commercial</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="e3z_lead_sale_ipbox.view_quotation_margin_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_sale_commercial')])]"/>
+            <field name="arch" type="xml">
+                <!--<tree position="attributes">-->
+                    <!--<attribute name="class">test_e3z</attribute>-->
+                <!--</tree>-->
+                <!--<xpath expr="//field[@name='name']" position="attributes">-->
+                    <!--<attribute name="class">test_e3z</attribute>-->
+                <!--</xpath>-->
+                <xpath expr="//field[@name='margin_percent']" position="replace">
+                    <field name="margin_percent" string="Marge %%"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_picking_out_tree_logistique" model="ir.ui.view">
+            <field name="name">stock.picking.out.tree.logistique</field>
+            <field name="model">stock.picking.out</field>
+            <field name="inherit_id" ref="stock.view_picking_out_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_sale_logistique')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_picking_form_logistique" model="ir.ui.view">
+            <field name="name">stock.picking.form.logistique</field>
+            <field name="model">stock.picking</field>
+            <field eval="12" name="priority"/>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_sale_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='draft_validate']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Create Invoice/Refund']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Reverse Transfer']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='button_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

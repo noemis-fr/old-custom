@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_message_form_inherit" model="ir.ui.view">
+			<field name="name">view.message.form.inherit</field>
+			<field name="model">mail.message</field>
+			<field name="inherit_id" ref="mail.view_message_form" />
+			<field name="arch" type="xml">
+				<field name="notified_partner_ids" position="after">
+					<field name="partner_id" attrs="{'invisible':[('model', '!=', 'res.partner')]}" />
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

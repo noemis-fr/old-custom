@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+		<!--========================================================-->
+		<!--					PUNTO VENDITA - TREE				-->
+		<!--========================================================-->
+		<record model="ir.ui.view" id="view_punto_vendita_tree_incassi_clienti">
+			<field name="name">punto_vendita.incassi_clienti.tree</field>
+			<field name="model">punto_vendita</field>
+			<field name="inherit_id" ref="punto_vendita.view_punto_vendita_tree" />
+			<field name="arch" type="xml">
+				<field name="imponibile" position="after">
+					<field name="pagato" />
+					<field name="residuo" />
+				</field>
+			</field>
+		</record>
+
+	</data>
+</openerp>

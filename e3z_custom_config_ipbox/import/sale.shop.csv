@@ -1,0 +1,2 @@
+id,name,warehouse_id/id,payment_default_id/id,company_id/id
+sale.sale_shop_1,Depôt,stock.warehouse0,account.account_payment_term_net,base.main_company

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="product_normal_cump_form_view" model="ir.ui.view">
+            <field name="name">product.normal.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <group name="general" position="inside">
+                    <!--<label for="purchase_price"/>-->
+                    <field name="purchase_price"/>
+                </group>
+            </field>
+        </record>
+        
+        <record id="product_normal_cump_tree_view" model="ir.ui.view">
+            <field name="name">product.normal.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="state" position="before">
+                    <field name="standard_price"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

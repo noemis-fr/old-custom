@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="e3z_groups_rights.group_account_commercial" model="res.groups">
+            <field name="name">Commercial</field>
+            <field name="category_id" ref="base.module_category_accounting_and_finance"/>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="Accounting"
+            id="account.menu_finance"
+            groups="account.group_account_user,account.group_account_manager,account.group_account_invoice,e3z_groups_rights.group_account_commercial"
+            sequence="50"/>
+
+        <menuitem id="account.menu_finance_payables" name="Suppliers" parent="account.menu_finance" sequence="3"
+                groups="account.group_account_invoice,account.group_account_user,account.group_account_manager"/>
+
+        <menuitem action="account_payment.action_payment_order_tree" id="account_payment.menu_action_payment_order_form" parent="account_payment.menu_main_payment" sequence="3"
+                groups="account_payment.group_account_payment,account.group_account_invoice,account.group_account_user,account.group_account_manager"/>
+
+        <record id="invoice_tree_commercial" model="ir.ui.view">
+            <field name="name">account.invoice.tree.commercial</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <tree position="attributes">
+                    <attribute name="create">false</attribute>
+                </tree>
+            </field>
+        </record>
+
+        <record id="invoice_form_commercial" model="ir.ui.view">
+            <field name="name">account.invoice.form.commercial</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='invoice_open'][1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='invoice_open'][2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='invoice_proforma2']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Refund Invoice']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='invoice_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_cancel_draft']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Re-Open']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_invoice_customer_commercial" model="ir.ui.view">
+            <field name="name">account.invoice.customer.pay.commercial</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_voucher.view_invoice_customer"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='invoice_pay_customer'][1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='invoice_pay_customer'][2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_sale_receipt_form_commercial">
+            <field name="name">account.voucher.sale.form.commercial</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_sale_receipt_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='proforma_voucher']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Validate Payment']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='cancel_voucher'][1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='cancel_voucher'][2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_cancel_draft']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_vendor_receipt_form_commercial">
+            <field name="name">account.voucher.receipt.form.commercial</field>
+            <field name="model">account.voucher</field>
+            <field name="inherit_id" ref="account_voucher.view_vendor_receipt_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_account_commercial')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='proforma_voucher']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Cancel Receipt']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@string='Unreconcile']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_cancel_draft']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

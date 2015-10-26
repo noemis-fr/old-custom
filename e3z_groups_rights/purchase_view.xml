@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="e3z_groups_rights.group_purchase_commercial" model="res.groups">
+            <field name="name">Commercial</field>
+            <field name="comment">the user will have an access to the sales configuration as well as statistic reports.</field>
+            <field name="category_id" ref="base.module_category_purchase_management"/>
+        </record>
+
+        <record id="e3z_groups_rights.group_purchase_logistique" model="res.groups">
+            <field name="name">Logistique</field>
+            <field name="category_id" ref="base.module_category_purchase_management"/>
+        </record>
+
+        <menuitem name="Purchases"
+            id="base.menu_purchase_root"
+            groups="purchase.group_purchase_manager,purchase.group_purchase_user,group_purchase_commercial,e3z_groups_rights.group_purchase_logistique"
+            sequence="60"/>
+
+        <menuitem id="purchase.menu_procurement_management" name="Purchase"
+            parent="base.menu_purchase_root" sequence="1" groups="e3z_groups_rights.group_purchase_commercial,e3z_groups_rights.group_purchase_logistique,purchase.group_purchase_user"/>
+
+        <menuitem action="purchase.purchase_rfq" id="purchase.menu_purchase_rfq"
+            parent="purchase.menu_procurement_management"
+            sequence="0"
+            groups="e3z_groups_rights.group_purchase_commercial,e3z_groups_rights.group_purchase_logistique,purchase.group_purchase_user"/>
+
+        <menuitem action="purchase.purchase_form_action" id="purchase.menu_purchase_form_action" parent="purchase.menu_procurement_management" sequence="6"
+                groups="e3z_groups_rights.group_purchase_commercial,e3z_groups_rights.group_purchase_logistique,purchase.group_purchase_user"/>
+
+        <record id="view_move_tree_reception_picking_commercial" model="ir.ui.view">
+            <field name="name">view.move.tree.reception.picking.commercial</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_tree_reception_picking"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial'),ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field eval="12" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree[@string='Moves']" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Scrap Products']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Split in Serial Numbers']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Put in current pack']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Put in a new pack']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@states='assigned']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@help='Done']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--<record id="view_move_tree_reception_picking_dirscrap_commercial" model="ir.ui.view">-->
+            <!--<field name="name">stock.move.tree.reception.discrap.commercial</field>-->
+            <!--<field name="model">stock.move</field>-->
+            <!--<field name="inherit_id" ref="mrp_move_direct.view_move_tree_reception_picking_dirscrap_commercial"/>-->
+            <!--<field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial')])]"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<xpath expr="//field[@name='tracking_id']" position="before">-->
+                    <!--<button name="%(mrp_move_direct.move_scrap_dir)d"-->
+                        <!--string="Scrap Directly" type="action"-->
+                        <!--icon="terp-gtk-jump-to-ltr" context="{'scrap': True}"-->
+                        <!--states="draft,waiting,confirmed,assigned"/>-->
+                <!--</xpath>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="view_move_form_commercial" model="ir.ui.view">
+            <field name="name">stock.move.form.commercial</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial'),ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field eval="1" name="priority"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Stock Moves']" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_confirm']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Process Partially']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_done']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='force_assign']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='action_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Scrap']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='New Pack']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@string='Split']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_form_dirscrap_commercial" model="ir.ui.view">
+            <field name="name">stock.move.form.dirscrap.commercial</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="mrp_move_direct.view_move_form_dirscrap"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial'),ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet//button[@string='Scrap Directly']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_move_tree_reception_picking_dirscrap_commercial" model="ir.ui.view">
+            <field name="name">stock.move.tree.reception.discrap.commercial</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="mrp_move_direct.view_move_tree_reception_picking_dirscrap"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial'),ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="button[@string='Scrap Directly']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="purchase_order_form_commercial" model="ir.ui.view">
+            <field name="name">purchase.order.form.commercial</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_commercial'),ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Purchase Order']" position="attributes">
+                    <attribute name="create">false</attribute>
+                    <attribute name="edit">false</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='purchase_confirm'][1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='purchase_confirm'][2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='picking_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='invoice_ok']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='purchase_approve']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='action_cancel_draft']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='purchase_cancel']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <act_window
+            context="{'search_default_product_id': [active_id], 'default_product_id': active_id}"
+            id="purchase.action_purchase_line_product_tree"
+            name="Purchases"
+            res_model="purchase.order.line"
+            src_model="product.product"
+            groups="purchase.group_purchase_user,e3z_groups_rights.group_purchase_commercial,e3z_groups_rights.group_purchase_logistique"/>
+
+        <record id="purchase_order_tree_logistique" model="ir.ui.view">
+            <field name="name">purchase.order.tree.logistique</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_tree"/>
+            <field name="groups_id" eval="[(6, 0, [ref('e3z_groups_rights.group_purchase_logistique')])]"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree[@string='Purchase Order']" position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

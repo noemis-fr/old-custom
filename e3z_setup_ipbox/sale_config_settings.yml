@@ -1,0 +1,31 @@
+-
+  I set  multiple shops group settings.
+-
+  !record {model: sale.config.settings, id: ipbox_sale_setting}:
+    module_web_linkedin: False
+    group_invoice_so_lines: False
+    group_invoice_deli_orders: True
+    task_work: False
+    timesheet: False
+    module_delivery: True
+    group_sale_pricelist: True
+    module_warning: False
+    group_sale_delivery_address: True
+    module_sale_stock: True
+    group_mrp_properties: False
+    module_sale_journal: True
+    default_picking_policy: False
+    group_uom: False
+    group_discount_per_so_line: True
+    group_multiple_shops: True
+    module_sale_margin: True
+    module_account_analytic_analysis: False
+    module_crm_claim: False
+    module_crm_helpdesk: False
+    module_plugin_thunderbird: False
+    module_plugin_outlook: False
+    fetchmail_lead: False
+#    fetchmail_claim: False
+-
+  !python {model: sale.config.settings}: |
+    self.execute(cr, uid, [ref('ipbox_sale_setting')], context=context)

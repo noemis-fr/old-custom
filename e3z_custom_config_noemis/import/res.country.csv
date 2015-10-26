@@ -1,0 +1,254 @@
+id,name,property_account_position/id,code
+base.af,"Afghanistan, Islamic State of",account.account_fiscal_position_2,AF
+base.ax,Åland Islands,account.account_fiscal_position_2,AX
+base.al,Albania,account.account_fiscal_position_2,AL
+base.dz,Algeria,account.account_fiscal_position_2,DZ
+base.as,American Samoa,account.account_fiscal_position_2,AS
+base.ad,"Andorra, Principality of",account.account_fiscal_position_2,AD
+base.ao,Angola,account.account_fiscal_position_2,AO
+base.ai,Anguilla,account.account_fiscal_position_2,AI
+base.aq,Antarctica,account.account_fiscal_position_2,AQ
+base.ag,Antigua and Barbuda,account.account_fiscal_position_2,AG
+base.ar,Argentina,account.account_fiscal_position_2,AR
+base.am,Armenia,account.account_fiscal_position_2,AM
+base.aw,Aruba,account.account_fiscal_position_2,AW
+base.au,Australia,account.account_fiscal_position_2,AU
+base.at,Austria,account.account_fiscal_position_1,AT
+base.az,Azerbaijan,account.account_fiscal_position_2,AZ
+base.bs,Bahamas,account.account_fiscal_position_2,BS
+base.bh,Bahrain,account.account_fiscal_position_2,BH
+base.bd,Bangladesh,account.account_fiscal_position_2,BD
+base.bb,Barbados,account.account_fiscal_position_2,BB
+base.by,Belarus,account.account_fiscal_position_2,BY
+base.be,Belgium,account.account_fiscal_position_1,BE
+base.bz,Belize,account.account_fiscal_position_2,BZ
+base.bj,Benin,account.account_fiscal_position_2,BJ
+base.bm,Bermuda,account.account_fiscal_position_2,BM
+base.bt,Bhutan,account.account_fiscal_position_2,BT
+base.bo,Bolivia,account.account_fiscal_position_2,BO
+base.bq,"Bonaire, Sint Eustatius and Saba",account.account_fiscal_position_2,BQ
+base.ba,Bosnia-Herzegovina,account.account_fiscal_position_2,BA
+base.bw,Botswana,account.account_fiscal_position_2,BW
+base.bv,Bouvet Island,account.account_fiscal_position_2,BV
+base.br,Brazil,account.account_fiscal_position_2,BR
+base.io,British Indian Ocean Territory,account.account_fiscal_position_2,IO
+base.bn,Brunei Darussalam,account.account_fiscal_position_2,BN
+base.bg,Bulgaria,account.account_fiscal_position_1,BG
+base.bf,Burkina Faso,account.account_fiscal_position_2,BF
+base.bi,Burundi,account.account_fiscal_position_2,BI
+base.kh,"Cambodia, Kingdom of",account.account_fiscal_position_2,KH
+base.cm,Cameroon,account.account_fiscal_position_2,CM
+base.ca,Canada,account.account_fiscal_position_2,CA
+base.cv,Cape Verde,account.account_fiscal_position_2,CV
+base.ky,Cayman Islands,account.account_fiscal_position_2,KY
+base.cf,Central African Republic,account.account_fiscal_position_2,CF
+base.td,Chad,account.account_fiscal_position_2,TD
+base.cl,Chile,account.account_fiscal_position_2,CL
+base.cn,China,account.account_fiscal_position_2,CN
+base.cx,Christmas Island,account.account_fiscal_position_2,CX
+base.cc,Cocos (Keeling) Islands,account.account_fiscal_position_2,CC
+base.co,Colombia,account.account_fiscal_position_2,CO
+base.km,Comoros,account.account_fiscal_position_2,KM
+base.cg,Congo,account.account_fiscal_position_2,CG
+base.cd,"Congo, Democratic Republic of the",account.account_fiscal_position_2,CD
+base.ck,Cook Islands,account.account_fiscal_position_2,CK
+base.cr,Costa Rica,account.account_fiscal_position_2,CR
+base.hr,Croatia,account.account_fiscal_position_1,HR
+base.cu,Cuba,account.account_fiscal_position_2,CU
+base.cw,Curaçao,account.account_fiscal_position_2,CW
+base.cy,Cyprus,account.account_fiscal_position_1,CY
+base.cz,Czech Republic,account.account_fiscal_position_1,CZ
+base.dk,Denmark,account.account_fiscal_position_1,DK
+base.dj,Djibouti,account.account_fiscal_position_2,DJ
+base.dm,Dominica,account.account_fiscal_position_2,DM
+base.do,Dominican Republic,account.account_fiscal_position_2,DO
+base.tp,East Timor,account.account_fiscal_position_2,TP
+base.ec,Ecuador,account.account_fiscal_position_2,EC
+base.eg,Egypt,account.account_fiscal_position_2,EG
+base.sv,El Salvador,account.account_fiscal_position_2,SV
+base.gq,Equatorial Guinea,account.account_fiscal_position_2,GQ
+base.er,Eritrea,account.account_fiscal_position_2,ER
+base.ee,Estonia,account.account_fiscal_position_1,EE
+base.et,Ethiopia,account.account_fiscal_position_2,ET
+base.fk,Falkland Islands,account.account_fiscal_position_2,FK
+base.fo,Faroe Islands,account.account_fiscal_position_2,FO
+base.fj,Fiji,account.account_fiscal_position_2,FJ
+base.fi,Finland,account.account_fiscal_position_1,FI
+base.fr,France,,FR
+base.gf,French Guyana,account.account_fiscal_position_2,GF
+base.tf,French Southern Territories,account.account_fiscal_position_2,TF
+base.ga,Gabon,account.account_fiscal_position_2,GA
+base.gm,Gambia,account.account_fiscal_position_2,GM
+base.ge,Georgia,account.account_fiscal_position_2,GE
+base.de,Germany,account.account_fiscal_position_1,DE
+base.gh,Ghana,account.account_fiscal_position_2,GH
+base.gi,Gibraltar,account.account_fiscal_position_2,GI
+base.gr,Greece,account.account_fiscal_position_1,GR
+base.gl,Greenland,account.account_fiscal_position_2,GL
+base.gd,Grenada,account.account_fiscal_position_2,GD
+base.gp,Guadeloupe (French),account.account_fiscal_position_2,GP
+base.gu,Guam (USA),account.account_fiscal_position_2,GU
+base.gt,Guatemala,account.account_fiscal_position_2,GT
+base.gg,Guernsey,account.account_fiscal_position_2,GG
+base.gn,Guinea,account.account_fiscal_position_2,GN
+base.gw,Guinea Bissau,account.account_fiscal_position_2,GW
+base.gy,Guyana,account.account_fiscal_position_2,GY
+base.ht,Haiti,account.account_fiscal_position_2,HT
+base.hm,Heard and McDonald Islands,account.account_fiscal_position_2,HM
+base.va,Holy See (Vatican City State),account.account_fiscal_position_2,VA
+base.hn,Honduras,account.account_fiscal_position_2,HN
+base.hk,Hong Kong,account.account_fiscal_position_2,HK
+base.hu,Hungary,account.account_fiscal_position_1,HU
+base.is,Iceland,account.account_fiscal_position_2,IS
+base.in,India,account.account_fiscal_position_2,IN
+base.id,Indonesia,account.account_fiscal_position_2,ID
+base.ir,Iran,account.account_fiscal_position_2,IR
+base.iq,Iraq,account.account_fiscal_position_2,IQ
+base.ie,Ireland,account.account_fiscal_position_1,IE
+base.im,Isle of Man,account.account_fiscal_position_2,IM
+base.il,Israel,account.account_fiscal_position_2,IL
+base.it,Italy,account.account_fiscal_position_1,IT
+base.ci,Ivory Coast (Cote D'Ivoire),account.account_fiscal_position_2,CI
+base.jm,Jamaica,account.account_fiscal_position_2,JM
+base.jp,Japan,account.account_fiscal_position_2,JP
+base.je,Jersey,account.account_fiscal_position_2,JE
+base.jo,Jordan,account.account_fiscal_position_2,JO
+base.kz,Kazakhstan,account.account_fiscal_position_2,KZ
+base.ke,Kenya,account.account_fiscal_position_2,KE
+base.ki,Kiribati,account.account_fiscal_position_2,KI
+base.kw,Kuwait,account.account_fiscal_position_2,KW
+base.kg,Kyrgyz Republic (Kyrgyzstan),account.account_fiscal_position_2,KG
+base.la,Laos,account.account_fiscal_position_2,LA
+base.lv,Latvia,account.account_fiscal_position_1,LV
+base.lb,Lebanon,account.account_fiscal_position_2,LB
+base.ls,Lesotho,account.account_fiscal_position_2,LS
+base.lr,Liberia,account.account_fiscal_position_2,LR
+base.ly,Libya,account.account_fiscal_position_2,LY
+base.li,Liechtenstein,account.account_fiscal_position_2,LI
+base.lt,Lithuania,account.account_fiscal_position_1,LT
+base.lu,Luxembourg,account.account_fiscal_position_1,LU
+base.mo,Macau,account.account_fiscal_position_2,MO
+base.mk,"Macedonia, the former Yugoslav Republic of",account.account_fiscal_position_2,MK
+base.mg,Madagascar,account.account_fiscal_position_2,MG
+base.mw,Malawi,account.account_fiscal_position_2,MW
+base.my,Malaysia,account.account_fiscal_position_2,MY
+base.mv,Maldives,account.account_fiscal_position_2,MV
+base.ml,Mali,account.account_fiscal_position_2,ML
+base.mt,Malta,account.account_fiscal_position_1,MT
+base.mh,Marshall Islands,account.account_fiscal_position_2,MH
+base.mq,Martinique (French),account.account_fiscal_position_2,MQ
+base.mr,Mauritania,account.account_fiscal_position_2,MR
+base.mu,Mauritius,account.account_fiscal_position_2,MU
+base.yt,Mayotte,account.account_fiscal_position_2,YT
+base.mx,Mexico,account.account_fiscal_position_2,MX
+base.fm,Micronesia,account.account_fiscal_position_2,FM
+base.md,Moldavia,account.account_fiscal_position_2,MD
+base.mc,Monaco,account.account_fiscal_position_2,MC
+base.mn,Mongolia,account.account_fiscal_position_2,MN
+base.me,Montenegro,account.account_fiscal_position_2,ME
+base.ms,Montserrat,account.account_fiscal_position_2,MS
+base.ma,Morocco,account.account_fiscal_position_2,MA
+base.mz,Mozambique,account.account_fiscal_position_2,MZ
+base.mm,Myanmar,account.account_fiscal_position_2,MM
+base.na,Namibia,account.account_fiscal_position_2,NA
+base.nr,Nauru,account.account_fiscal_position_2,NR
+base.np,Nepal,account.account_fiscal_position_2,NP
+base.nl,Netherlands,account.account_fiscal_position_1,NL
+base.an,Netherlands Antilles,account.account_fiscal_position_2,AN
+base.nt,Neutral Zone,account.account_fiscal_position_2,NT
+base.nc,New Caledonia (French),account.account_fiscal_position_2,NC
+base.nz,New Zealand,account.account_fiscal_position_2,NZ
+base.ni,Nicaragua,account.account_fiscal_position_2,NI
+base.ne,Niger,account.account_fiscal_position_2,NE
+base.ng,Nigeria,account.account_fiscal_position_2,NG
+base.nu,Niue,account.account_fiscal_position_2,NU
+base.nf,Norfolk Island,account.account_fiscal_position_2,NF
+base.mp,Northern Mariana Islands,account.account_fiscal_position_2,MP
+base.kp,North Korea,account.account_fiscal_position_2,KP
+base.no,Norway,account.account_fiscal_position_2,NO
+base.om,Oman,account.account_fiscal_position_2,OM
+base.pk,Pakistan,account.account_fiscal_position_2,PK
+base.pw,Palau,account.account_fiscal_position_2,PW
+base.ps,"Palestinian Territory, Occupied",account.account_fiscal_position_2,PS
+base.pa,Panama,account.account_fiscal_position_2,PA
+base.pg,Papua New Guinea,account.account_fiscal_position_2,PG
+base.py,Paraguay,account.account_fiscal_position_2,PY
+base.pe,Peru,account.account_fiscal_position_2,PE
+base.ph,Philippines,account.account_fiscal_position_2,PH
+base.pn,Pitcairn Island,account.account_fiscal_position_2,PN
+base.pl,Poland,account.account_fiscal_position_1,PL
+base.pf,Polynesia (French),account.account_fiscal_position_2,PF
+base.pt,Portugal,account.account_fiscal_position_1,PT
+base.pr,Puerto Rico,account.account_fiscal_position_2,PR
+base.qa,Qatar,account.account_fiscal_position_2,QA
+base.re,Reunion (French),account.account_fiscal_position_2,RE
+base.ro,Romania,account.account_fiscal_position_1,RO
+base.ru,Russian Federation,account.account_fiscal_position_2,RU
+base.rw,Rwanda,account.account_fiscal_position_2,RW
+base.bl,Saint Barthélémy,account.account_fiscal_position_2,BL
+base.sh,Saint Helena,account.account_fiscal_position_2,SH
+base.kn,Saint Kitts & Nevis Anguilla,account.account_fiscal_position_2,KN
+base.lc,Saint Lucia,account.account_fiscal_position_2,LC
+base.mf,Saint Martin (French part),account.account_fiscal_position_2,MF
+base.pm,Saint Pierre and Miquelon,account.account_fiscal_position_2,PM
+base.st,Saint Tome (Sao Tome) and Principe,account.account_fiscal_position_2,ST
+base.vc,Saint Vincent & Grenadines,account.account_fiscal_position_2,VC
+base.ws,Samoa,account.account_fiscal_position_2,WS
+base.sm,San Marino,account.account_fiscal_position_2,SM
+base.sa,Saudi Arabia,account.account_fiscal_position_2,SA
+base.sn,Senegal,account.account_fiscal_position_2,SN
+base.rs,Serbia,account.account_fiscal_position_2,RS
+base.sc,Seychelles,account.account_fiscal_position_2,SC
+base.sl,Sierra Leone,account.account_fiscal_position_2,SL
+base.sg,Singapore,account.account_fiscal_position_2,SG
+base.sx,Sint Maarten (Dutch part),account.account_fiscal_position_2,SX
+base.sk,Slovakia,account.account_fiscal_position_1,SK
+base.si,Slovenia,account.account_fiscal_position_1,SI
+base.sb,Solomon Islands,account.account_fiscal_position_2,SB
+base.so,Somalia,account.account_fiscal_position_2,SO
+base.za,South Africa,account.account_fiscal_position_2,ZA
+base.gs,South Georgia and the South Sandwich Islands,account.account_fiscal_position_2,GS
+base.kr,South Korea,account.account_fiscal_position_2,KR
+base.ss,South Sudan,account.account_fiscal_position_2,SS
+base.es,Spain,account.account_fiscal_position_1,ES
+base.lk,Sri Lanka,account.account_fiscal_position_2,LK
+base.sd,Sudan,account.account_fiscal_position_2,SD
+base.sr,Suriname,account.account_fiscal_position_2,SR
+base.sj,Svalbard and Jan Mayen Islands,account.account_fiscal_position_2,SJ
+base.sz,Swaziland,account.account_fiscal_position_2,SZ
+base.se,Sweden,account.account_fiscal_position_2,SE
+base.ch,Switzerland,account.account_fiscal_position_2,CH
+base.sy,Syria,account.account_fiscal_position_2,SY
+base.tw,Taiwan,account.account_fiscal_position_2,TW
+base.tj,Tajikistan,account.account_fiscal_position_2,TJ
+base.tz,Tanzania,account.account_fiscal_position_2,TZ
+base.th,Thailand,account.account_fiscal_position_2,TH
+base.tg,Togo,account.account_fiscal_position_2,TG
+base.tk,Tokelau,account.account_fiscal_position_2,TK
+base.to,Tonga,account.account_fiscal_position_2,TO
+base.tt,Trinidad and Tobago,account.account_fiscal_position_2,TT
+base.tn,Tunisia,account.account_fiscal_position_2,TN
+base.tr,Turkey,account.account_fiscal_position_2,TR
+base.tm,Turkmenistan,account.account_fiscal_position_2,TM
+base.tc,Turks and Caicos Islands,account.account_fiscal_position_2,TC
+base.tv,Tuvalu,account.account_fiscal_position_2,TV
+base.ug,Uganda,account.account_fiscal_position_2,UG
+base.ua,Ukraine,account.account_fiscal_position_2,UA
+base.ae,United Arab Emirates,account.account_fiscal_position_2,AE
+base.uk,United Kingdom,account.account_fiscal_position_2,GB
+base.us,United States,account.account_fiscal_position_2,US
+base.uy,Uruguay,account.account_fiscal_position_2,UY
+base.um,USA Minor Outlying Islands,account.account_fiscal_position_2,UM
+base.uz,Uzbekistan,account.account_fiscal_position_2,UZ
+base.vu,Vanuatu,account.account_fiscal_position_2,VU
+base.ve,Venezuela,account.account_fiscal_position_2,VE
+base.vn,Vietnam,account.account_fiscal_position_2,VN
+base.vg,Virgin Islands (British),account.account_fiscal_position_2,VG
+base.vi,Virgin Islands (USA),account.account_fiscal_position_2,VI
+base.wf,Wallis and Futuna Islands,account.account_fiscal_position_2,WF
+base.eh,Western Sahara,account.account_fiscal_position_2,EH
+base.ye,Yemen,account.account_fiscal_position_2,YE
+base.yu,Yugoslavia,account.account_fiscal_position_2,YU
+base.zr,Zaire,account.account_fiscal_position_2,ZR
+base.zm,Zambia,account.account_fiscal_position_2,ZM
+base.zw,Zimbabwe,account.account_fiscal_position_2,ZW

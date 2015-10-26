@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+
+        <record id="account.seq_type_sale_invoice" model="ir.sequence.type">
+            <field name="name">Sale invoice</field>
+            <field name="code">account.invoice.sale</field>
+        </record>
+
+        <record id="account.seq_type_purchase_invoice" model="ir.sequence.type">
+            <field name="name">Purchase invoice</field>
+            <field name="code">account.invoice.purchase</field>
+        </record>
+
+        <record id="account.sequence_sale_invoice" model="ir.sequence">
+            <field name="name">Sale invoice</field>
+            <field name="code">account.invoice.sale</field>
+            <field eval="6" name="padding"/>
+            <field name="implementation">no_gap</field>
+        </record>
+
+        <record id="account.sequence_purchase_invoice" model="ir.sequence">
+            <field name="name">Purchase invoice</field>
+            <field name="code">account.invoice.purchase</field>
+            <field eval="6" name="padding"/>
+            <field name="implementation">no_gap</field>
+        </record>
+
+        <!--<record id="account.sales_journal" model="account.journal">-->
+            <!--<field name="sequence_id" ref="account.sequence_sale_invoice"/>-->
+        <!--</record>-->
+
+        <!--<record id="account.expenses_journal" model="account.journal">-->
+            <!--<field name="sequence_id" ref="account.sequence_purchase_invoice"/>-->
+        <!--</record>-->
+
+    </data>
+</openerp>

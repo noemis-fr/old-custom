@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="ir_config_distribution_cost" model="ir.config_parameter">
+            <field name="key">distribution_costs</field>
+            <field name="value">10</field>
+        </record>
+
+    </data>
+</openerp>

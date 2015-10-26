@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_sale_order_layout_inherit" model="ir.ui.view">
+            <field name="name">sale.order.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale_layout.view_order_form_inherit_1"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='price_unit']" position="after">
+                    <field name="discount" attrs="{'readonly':[('layout_type', '!=', 'article')]}" groups="sale.group_discount_per_so_line"/>
+                    <field name="puvr"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='price_unit']" position="before">
+                    <field name="purchase_price" attrs="{'readonly':[('layout_type', '!=', 'article')]}"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='price_subtotal']" position="after">
+                    <field name="margin" invisible="True"/>
+                    <field name="margin_percent" invisible="True"/>
+                    <field name="margin_display"/>
+                    <field name="qty_display" readonly="True"/>
+                    <field name="product_qty_available" readonly="True" invisible="True"/>
+                    <field name="tax_id" widget="many2many_tags" domain="[('parent_id','=',False),('type_tax_use','&lt;&gt;','purchase')]" attrs="{'readonly':[('layout_type', '!=', 'article')]}"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='name']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('layout_type', 'in', ('line', 'break'))], 'required':[('layout_type', 'not in', ['line', 'break'])]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_uom']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                </xpath>
+                <xpath expr="//form/notebook/page/group/field[@name='discount']" position="after">
+                    <field name="tax_id" widget="many2many_tags" domain="[('parent_id','=',False),('type_tax_use','&lt;&gt;','purchase')]" attrs="{'readonly':[('layout_type', '!=', 'article')]}"/>
+                    <field name="purchase_price" attrs="{'readonly':[('layout_type', '!=', 'article')]}"/>
+                </xpath>
+                <xpath expr="//tree/field[@name='discount']" position="replace"/>
+                <xpath expr="//tree/field[@name='name']" position="before">
+                    <field name="layout_type" on_change="onchange_sale_order_line_view(layout_type)"/>
+                    <field name="product_id"
+                           context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'shop':parent.shop_id, 'uom':product_uom}"
+                           groups="base.group_user"
+                           default_focus="1"
+                           attrs="{'readonly':[('layout_type', '!=', 'article')]}"
+                           on_change="product_id_change(parent.pricelist_id, product_id, product_uom_qty, product_uom, product_uos_qty, product_uos, name, parent.partner_id, False, True, parent.date_order, False, parent.fiscal_position, False, context)"/>
+                    <field name="product_uos_qty" invisible="True"/>
+                    <field name="product_uos" invisible="True"/>
+                    <field name="product_packaging" invisible="True"/>
+                </xpath>
+                <xpath expr="//tree[@string='Sales order lines']" position="attributes">
+                    <attribute name="editable">bottom</attribute>
+                    <attribute name="attrs">{'readonly':[('state', 'not in', ['draft', 'sent'])]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_uom_qty']" position="attributes">
+                    <attribute name="context">{'from_qty': True}</attribute>
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                    <attribute name="on_change">product_id_change(parent.pricelist_id,product_id,product_uom_qty,product_uom,product_uos_qty,product_uos,name,parent.partner_id, False, False, parent.date_order, product_packaging, parent.fiscal_position, True, context)</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_uom']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='price_unit']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='price_subtotal']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='product_uom']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('layout_type', '!=', 'article')]}</attribute>
+                </xpath>
+                <xpath expr="//tree/field[@name='sequence']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

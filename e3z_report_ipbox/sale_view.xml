@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_sale_order_inherit_stock_nobutton" model="ir.ui.view">
+			<field name="name">sale.order.form.nobutton</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+				<button string="Print" position="replace" />
+				<button string="Print" position="replace" />
+			</field>
+		</record>
+	</data>
+</openerp>
