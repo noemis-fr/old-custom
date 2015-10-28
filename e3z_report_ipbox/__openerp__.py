@@ -40,7 +40,7 @@ Sale and Invoice report modifications
     'data': [
         'account_invoice_layout_report.xml',
         'delivery_report.xml',
-        'sale_report.xml',
+#        'sale_report.xml',
         'purchase_report.xml',
         'account_invoice_layout_view.xml',
         'stock_view.xml',
