@@ -86,17 +86,27 @@
             </field>
         </record>
 
-        <!--<record model="ir.ui.view" id="invoice_tree_margin">-->
-            <!--<field name="name">account.invoice.tree.margin</field>-->
-            <!--<field name="model">account.invoice</field>-->
-            <!--<field name="inherit_id" ref="account.invoice_tree"/>-->
-            <!--<field name="arch" type="xml">-->
-                <!--<field name="currency_id" position="after">-->
-                    <!--<field name="margin" sum="Marge"/>-->
-                    <!--<field name="margin_percent" sum="marge"/>-->
-                <!--</field>-->
-            <!--</field>-->
-        <!--</record>-->
+        <record model="ir.ui.view" id="invoice_tree_margin">
+            <field name="name">account.invoice.tree.margin</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_tree"/>
+            <field name="arch" type="xml">
+                <field name="currency_id" position="after">
+                    <field name="margin" sum="Marge"/>
+                    <field name="margin_percent" sum="marge"/>
+                </field>
+                <field name="residual" position="attributes">
+                    <attribute name="string">Restant Dû</attribute>
+                </field>
+                <field name="amount_untaxed" position="attributes">
+                    <attribute name="string">Total HT</attribute>
+                </field>
+                <field name="amount_total" position="attributes">
+                    <attribute name="string">Total TTC</attribute>
+                </field>
+
+            </field>
+        </record>
 
 
     </data>
