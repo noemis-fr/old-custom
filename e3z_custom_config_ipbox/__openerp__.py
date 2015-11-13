@@ -89,8 +89,7 @@ Ce module permet d'intégrer le paramétrage structurant pour Dlice en inmportan
         ],
         'installable':
             True,
-        'auto_install':
-            False,
+        'auto_install': False,
         "active": False,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
