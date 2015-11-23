@@ -46,5 +46,6 @@ Sale and Invoice report modifications
         'stock_view.xml',
         'sale_view.xml',
         'sale_report.xml',
+        'data/email_template.xml',
     ],
 }
