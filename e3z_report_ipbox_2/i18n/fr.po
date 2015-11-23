@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 15:43+0000\n"
-"PO-Revision-Date: 2015-11-23 15:43+0000\n"
+"POT-Creation-Date: 2015-11-23 21:38+0000\n"
+"PO-Revision-Date: 2015-11-23 21:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -38,6 +38,11 @@ msgstr "Montant"
 #: report:notify_account.invoice1:0
 msgid "Base"
 msgstr "Base de calcul"
+
+#. module: e3z_report_ipbox_2
+#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
+msgid "Bon de commande avec mise en page NEW"
+msgstr "Bon de commande avec mise en page NEW"
 
 #. module: e3z_report_ipbox_2
 #: report:account.invoice.detail:0
@@ -86,7 +91,7 @@ msgstr "Date échéance :"
 #. module: e3z_report_ipbox_2
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
-#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
+#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:64
 #: code:addons/e3z_report_ipbox_2/report/shipping.py:56
 #: code:addons/e3z_report_ipbox_2/report/special_message_invoice.py:83
 #, python-format
@@ -157,7 +162,7 @@ msgstr "Factures"
 #. module: e3z_report_ipbox_2
 #: model:ir.actions.report.xml,name:e3z_report_ipbox_2.account_invoices_layout_message
 msgid "Invoices and Message"
-msgstr "Invoices and Message"
+msgstr "Factures et message"
 
 #. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
@@ -174,7 +179,7 @@ msgstr "Total net :"
 #. module: e3z_report_ipbox_2
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
-#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
+#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:64
 #: code:addons/e3z_report_ipbox_2/report/shipping.py:56
 #: code:addons/e3z_report_ipbox_2/report/special_message_invoice.py:83
 #, python-format
@@ -258,11 +263,6 @@ msgstr "Qté"
 #: report:sale.order.layout2:0
 msgid "Quantity"
 msgstr "Quantité"
-
-#. module: e3z_report_ipbox_2
-#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
-msgid "Quotation / Order (2)"
-msgstr "Quotation / Order (2)"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0

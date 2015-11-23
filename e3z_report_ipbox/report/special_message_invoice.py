@@ -25,6 +25,8 @@ from report import report_sxw
 import pooler
 from lxml import etree
 from openerp.osv import osv,fields
+from openerp.tools.translate import _
+
 
 class account_invoice_with_message(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):

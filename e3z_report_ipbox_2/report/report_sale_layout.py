@@ -33,6 +33,7 @@ rml_parents = {
 
 class sale_order_1(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
+        print "**************************************************************"
         super(sale_order_1, self).__init__(cr, uid, name, context)
         self.localcontext.update({
             'time': time,
@@ -174,7 +175,7 @@ class sale_order_1(report_sxw.rml_parse):
             result.append(res)
         return result
 
-report_sxw.report_sxw('report.sale.order.layout2', 'sale.order', 'addons/sale_layout/report/report_sale_layout.rml', parser=sale_order_1,header="header_shipping_sale")
+#report_sxw.report_sxw('report.sale.order.layout2', 'sale.order', 'addons/sale_layout/report/report_sale_layout.rml', parser=sale_order_1,header="header_shipping_sale")
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 
 

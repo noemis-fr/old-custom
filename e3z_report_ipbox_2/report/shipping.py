@@ -80,6 +80,6 @@ class shipping(report_sxw.rml_parse):
             desc = '[' + move_line.product_id.default_code + ']' + ' ' + desc
         return desc
 
-report_sxw.report_sxw('report.sale.shipping1','stock.picking','addons/e3z_report_ipbox/report/shipping.rml',parser=shipping,header="header_shipping_sale")
+#report_sxw.report_sxw('report.sale.shipping1','stock.picking','addons/e3z_report_ipbox_2/report/shipping.rml',parser=shipping,header="header_shipping_sale")
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

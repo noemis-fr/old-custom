@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-	<data>
-		<report id="sale_order_1"
-			string="Quotation / Order (2)" model="sale.order" name="sale.order.layout2"
-			rml="e3z_report_ipbox_2/report/report_sale_layout.rml" auto="False" />
-	</data>
+    <data>
+        <report id="sale_order_1"
+            string="Bon de commande avec mise en page"
+            model="sale.order"
+            name="sale.order.layout2"
+            rml="e3z_report_ipbox_2/report/report_sale_layout.rml"
+            auto="False" />
+    </data>
 </openerp>

@@ -20,7 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Report sale, stock and account',
+    'name': 'Report sale, stock and account (2)',
     'version': '1.0',
     'category': 'Tools',
     'description': """

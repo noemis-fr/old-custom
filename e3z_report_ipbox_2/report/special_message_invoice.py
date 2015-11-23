@@ -230,6 +230,6 @@ class account_invoice_with_message(report_sxw.rml_parse):
             result.append(res)
         return result
 
-report_sxw.report_sxw('report.notify_account.invoice1', 'account.invoice', 'addons/e3z_report_ipbox/report/special_message_invoice.rml', parser=account_invoice_with_message,header="header_invoice")
+#report_sxw.report_sxw('report.notify_account.invoice1', 'account.invoice', 'addons/e3z_report_ipbox_2/report/special_message_invoice.rml', parser=account_invoice_with_message,header="header_invoice")
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 
