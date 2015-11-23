@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 21:38+0000\n"
-"PO-Revision-Date: 2015-11-23 21:38+0000\n"
+"POT-Creation-Date: 2015-11-23 23:19+0000\n"
+"PO-Revision-Date: 2015-11-23 23:19+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,8 +41,8 @@ msgstr "Base de calcul"
 
 #. module: e3z_report_ipbox_2
 #: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
-msgid "Bon de commande avec mise en page NEW"
-msgstr "Bon de commande avec mise en page NEW"
+msgid "Bon de Commande Avec Mise En Page"
+msgstr "Bon de Commande Avec Mise En Page"
 
 #. module: e3z_report_ipbox_2
 #: report:account.invoice.detail:0
