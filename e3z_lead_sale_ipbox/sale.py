@@ -119,7 +119,7 @@ class sale_order(osv.osv):
 
 
 
-    def write(self, cr, uid, ids, vals, context):
+    def write(self, cr, uid, ids, vals, context=None):
         lead_obj = self.pool.get('crm.lead')
         order_obj = self.pool.get('sale.order')
         proxy = self.pool.get('ir.config_parameter')
@@ -183,21 +183,22 @@ class sale_order(osv.osv):
             context.update({'shop': order.shop_id.id})
             for line in order.order_line:
                 context.update({ 'states': ('confirmed','waiting','assigned','done'), 'what': ('in', 'out') })
-                stock_virtual = self.pool.get('product.product').get_product_available(cr, uid, [line.product_id.id], context=context)
-                if line.product_uom_qty > stock_virtual[line.product_id.id] and line.type == 'make_to_stock':
-                    diff = line.product_uom_qty - stock_virtual[line.product_id.id]
-                    if diff > line.product_uom_qty:
-                        diff = line.product_uom_qty
+                if line.product_id.id:
+                    stock_virtual = self.pool.get('product.product').get_product_available(cr, uid, [line.product_id.id], context=context)
+                    if line.product_uom_qty > stock_virtual[line.product_id.id] and line.type == 'make_to_stock':
+                        diff = line.product_uom_qty - stock_virtual[line.product_id.id]
+                        if diff > line.product_uom_qty:
+                            diff = line.product_uom_qty
 
-                    if (line.product_uom_qty - diff) > 0:
-                        new_line_id = self.pool.get('sale.order.line').copy(cr, uid, line.id)
-                        self.pool.get('sale.order.line').write(cr, uid, new_line_id, {'product_uom_qty': line.product_uom_qty - diff, 'product_uos_qty': line.product_uom_qty - diff})
-                        split = True
-                        message += 'La lignes %s de quantite %d a ete divisee en deux lignes:<br/>' % (line.name, line.product_uom_qty)
-                        message += '    - %s de quantite %d <br/>' % (line.name, diff)
-                        message += '    - %s de quantite %d <br/><br/>' % (line.name, line.product_uom_qty - diff)
+                        if (line.product_uom_qty - diff) > 0:
+                            new_line_id = self.pool.get('sale.order.line').copy(cr, uid, line.id)
+                            self.pool.get('sale.order.line').write(cr, uid, new_line_id, {'product_uom_qty': line.product_uom_qty - diff, 'product_uos_qty': line.product_uom_qty - diff})
+                            split = True
+                            message += 'La lignes %s de quantite %d a ete divisee en deux lignes:<br/>' % (line.name, line.product_uom_qty)
+                            message += '    - %s de quantite %d <br/>' % (line.name, diff)
+                            message += '    - %s de quantite %d <br/><br/>' % (line.name, line.product_uom_qty - diff)
 
-                    line.write({'product_uom_qty': diff, 'product_uos_qty': diff, 'type': 'make_to_order'})
+                        line.write({'product_uom_qty': diff, 'product_uos_qty': diff, 'type': 'make_to_order'})
 
 
         res = super(sale_order, self).action_button_confirm(cr, uid, ids, context)

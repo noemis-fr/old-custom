@@ -28,7 +28,14 @@
     'author': 'Elanz Centre',
     'website': 'http://www.openelanz.com',
     'summary': 'Leads and sales customizing',
-    'depends': ['base', 'sale', 'crm', 'sale_margin', 'mail', 'account'
+    'depends': [
+        'base',
+        'sale',
+        'crm',
+        'sale_margin',
+        'mail',
+        'account',
+        'procurement',
     ],
     'data': [
         'sale_view.xml',
