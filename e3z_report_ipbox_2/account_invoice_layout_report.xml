@@ -2,17 +2,17 @@
 <openerp>
 	<data>
 		<delete model="ir.actions.report.xml" id="account_invoice_layout.account_invoices_1" />
-		<report id="e3z_report_ipbox.account_invoices_1" string="Invoices"
+		<report id="account_invoices_1" string="Invoices"
 			model="account.invoice" name="account.invoice.layout1"
-			rml="e3z_report_ipbox/report/report_account_invoice_layout.rml" auto="False" />
+			rml="e3z_report_ipbox_2/report/report_account_invoice_layout.rml" auto="False" />
 
-		<report id="e3z_report_ipbox.account_invoices_detail" string="Factures détail"
+		<report id="account_invoices_detail" string="Factures détail"
 			model="account.invoice" name="account.invoice.detail"
-			rml="e3z_report_ipbox/report/report_account_invoice_layout.rml" auto="False" />
+			rml="e3z_report_ipbox_2/report/report_account_invoice_layout.rml" auto="False" />
 
 		<delete model="ir.actions.report.xml" id="account_invoice_layout.account_invoices_layout_message"/>
-		<report id="e3z_report_ipbox.account_invoices_layout_message" menu="False"
+		<report id="account_invoices_layout_message" menu="False"
 			string="Invoices and Message" model="account.invoice" name="notify_account.invoice1"
-			rml="e3z_report_ipbox/report/special_message_invoice.rml" auto="False" />
+			rml="e3z_report_ipbox_2/report/special_message_invoice.rml" auto="False" />
 	</data>
 </openerp>

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
+    
 		<report auto="False" id="report_purchase_quotation" model="purchase.order"
-			name="purchase.quotation" rml="e3z_report_ipbox/report/request_quotation.rml"
+			name="purchase.quotation" rml="e3z_report_ipbox_2/report/request_quotation.rml"
 			string="Request for Quotation" />
 
         <record model="ir.actions.report.xml" id="purchase.report_purchase_order">
-            <field name="report_file">e3z_report_ipbox/report/purchase_order.rml</field>
+            <field name="report_file">e3z_report_ipbox_2/report/purchase_order.rml</field>
         </record>
     </data>
 </openerp>

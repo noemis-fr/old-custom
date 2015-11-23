@@ -33,22 +33,18 @@ Sale and Invoice report modifications
         'sale',
         'account',
         'delivery',
-        'sale_layout',
+        'sale_order_title',
         'account_invoice_layout',
         'base_report_header',
+        'e3z_lead_sale_ipbox',  #puvr field;
     ],
     'data': [
         'account_invoice_layout_report.xml',
         'delivery_report.xml',
-#        'sale_report.xml',
         'purchase_report.xml',
         'account_invoice_layout_view.xml',
         'stock_view.xml',
-        'sale_view.xml'
+        'sale_view.xml',
+        'sale_report.xml',
     ],
-    'images': [],
-    'installable': True,
-    'auto_install': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
