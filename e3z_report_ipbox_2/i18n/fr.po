@@ -1,0 +1,356 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* e3z_report_ipbox
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-07 13:03+0000\n"
+"PO-Revision-Date: 2015-04-07 13:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Note:"
+msgstr "Note :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Cancelled Invoice"
+msgstr "Facture annulée"
+
+#. module: e3z_report_ipbox
+#: model:ir.actions.report.xml,name:e3z_report_ipbox.report_purchase_quotation
+msgid "Request for Quotation"
+msgstr "Demande de prix"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Disc. (%)"
+msgstr "Disc. (%)"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Due date :"
+msgstr "Date échéance :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Supplier Invoice"
+msgstr "Facture fournisseur"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Unit Price"
+msgstr "PVU"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Invoiced to"
+msgstr "Adresse de facturation :"
+
+#. module: e3z_report_ipbox
+#: help:report.choose.hearder,header:0
+msgid "Page Header"
+msgstr "Page Header"
+
+#. module: e3z_report_ipbox
+#: view:sale.order:0
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: e3z_report_ipbox
+#: model:ir.actions.report.xml,name:e3z_report_ipbox.account_invoices_detail
+msgid "Factures détail"
+msgstr "Factures détail"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "VAT :"
+msgstr "TVA :"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Qty"
+msgstr "Qté"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "PRO-FORMA"
+msgstr "PRO-FORMA"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Fax:"
+msgstr "Fax :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Shipped to"
+msgstr "Adresse de livraison :"
+
+#. module: e3z_report_ipbox
+#: model:ir.model,name:e3z_report_ipbox.model_report_choose_hearder
+msgid "Report choose hearder"
+msgstr "Report choose hearder"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Expected Date"
+msgstr "Date prévue"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+#: report:purchase.quotation:0
+msgid "Description"
+msgstr "Référence client"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Request for Quotation :"
+msgstr "Demande de prix :"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Expected Delivery address:"
+msgstr "Adresse de livraison attendue :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Price"
+msgstr "Prix Total"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Invoice Date"
+msgstr "Date de la facture"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Taxes:"
+msgstr "Taxes :"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Adresse de facturation"
+msgstr "Adresse de facturation"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Base"
+msgstr "Base de calcul"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Regards,"
+msgstr "Bien à vous,"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Payment terms"
+msgstr "Conditions de paiement"
+
+#. module: e3z_report_ipbox
+#: code:addons/e3z_report_ipbox/report/report_account_invoice_detail.py:59
+#: code:addons/e3z_report_ipbox/report/report_account_invoice_layout.py:59
+#: code:addons/e3z_report_ipbox/report/report_sale_layout.py:63
+#: code:addons/e3z_report_ipbox/report/shipping.py:56
+#: code:addons/e3z_report_ipbox/report/special_message_invoice.py:83
+#, python-format
+msgid "Error in report headers name !"
+msgstr "Error in report headers name !"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "TVA:"
+msgstr "TVA :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Fax :"
+msgstr "Fax :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Total:"
+msgstr "Total :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Short Description"
+msgstr "Description"
+
+#. module: e3z_report_ipbox
+#: model:ir.model,name:e3z_report_ipbox.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: e3z_report_ipbox
+#: code:addons/e3z_report_ipbox/report/report_account_invoice_detail.py:59
+#: code:addons/e3z_report_ipbox/report/report_account_invoice_layout.py:59
+#: code:addons/e3z_report_ipbox/report/report_sale_layout.py:63
+#: code:addons/e3z_report_ipbox/report/shipping.py:56
+#: code:addons/e3z_report_ipbox/report/special_message_invoice.py:83
+#, python-format
+msgid "No proper reports header defined for the selected report. Check that the report header defined in your report rml_parse line exist in Administration/reporting/Reporting headers."
+msgstr "No proper reports header defined for the selected report. Check that the report header defined in your report rml_parse line exist in Administration/reporting/Reporting headers."
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Description / Taxes"
+msgstr "Description / Taxes"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Amount"
+msgstr "Montant"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Tel. :"
+msgstr "Tél. :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Draft Invoice"
+msgstr "Facture brouillon"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Total :"
+msgstr "Total :"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Origin"
+msgstr "N° commande / BL"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Your Reference"
+msgstr "Votre référence"
+
+#. module: e3z_report_ipbox
+#: field:report.choose.hearder,header:0
+msgid "header"
+msgstr "header"
+
+#. module: e3z_report_ipbox
+#: model:ir.actions.report.xml,name:e3z_report_ipbox.account_invoices_1
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Tax"
+msgstr "Taxe"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Net Total :"
+msgstr "Net Total :"
+
+#. module: e3z_report_ipbox
+#: report:purchase.quotation:0
+msgid "Tel.:"
+msgstr "Tél. :"
+
+#. module: e3z_report_ipbox
+#: view:stock.picking.out:0
+msgid "Print Delivery Order"
+msgstr "Imprimer le bon de livraison"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+msgid "Net Total:"
+msgstr "Total net :"
+
+#. module: e3z_report_ipbox
+#: model:ir.actions.report.xml,name:e3z_report_ipbox.account_invoices_layout_message
+msgid "Invoices and Message"
+msgstr "Factures et message"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: model:ir.model,name:e3z_report_ipbox.model_account_invoice
+#: report:notify_account.invoice1:0
+msgid "Invoice"
+msgstr "Facture"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Supplier Refund"
+msgstr "Note de Crédit Fournisseur"
+
+#. module: e3z_report_ipbox
+#: report:account.invoice.detail:0
+#: report:account.invoice.layout1:0
+#: report:notify_account.invoice1:0
+msgid "Refund"
+msgstr "Note de crédit"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Taxes :"
+msgstr "Taxes :"
+
+#. module: e3z_report_ipbox
+#: report:notify_account.invoice1:0
+msgid "Adresse de livraison"
+msgstr "Adresse de livraison"
