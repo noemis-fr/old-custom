@@ -60,7 +60,6 @@
                     <field name="price_subtotal" sum="Total"/>
                     <field name="period_id"/>
                     <field name="category"/>
-                    <field name="state" invisible="1"/>
                     <field name="type" invisible="1"/>
                 </tree>
             </field>
@@ -132,7 +131,6 @@
                     <field name="price_subtotal" sum="Total"/>
                     <field name="period_id"/>
                     <field name="category"/>
-                    <field name="state" invisible="1"/>
                     <field name="type" invisible="1"/>
                 </tree>
             </field>

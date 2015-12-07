@@ -34,7 +34,6 @@ Sale and Invoice report modifications
         'account',
         'delivery',
         'sale_order_title',
-        'account_invoice_layout',
         'base_report_header',
         'e3z_lead_sale_ipbox',  #puvr field;
     ],
