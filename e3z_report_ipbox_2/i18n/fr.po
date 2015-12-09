@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-23 23:19+0000\n"
-"PO-Revision-Date: 2015-11-23 23:19+0000\n"
+"POT-Creation-Date: 2015-12-09 06:20+0000\n"
+"PO-Revision-Date: 2015-12-09 06:20+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -53,6 +53,7 @@ msgstr "Facture annulée"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Date Ordered"
 msgstr "Date de la commande"
 
@@ -62,6 +63,7 @@ msgstr "Date de la commande"
 #: report:notify_account.invoice1:0
 #: report:purchase.quotation:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Description"
 msgstr "Référence client"
 
@@ -91,7 +93,7 @@ msgstr "Date échéance :"
 #. module: e3z_report_ipbox_2
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
-#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:64
+#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
 #: code:addons/e3z_report_ipbox_2/report/shipping.py:56
 #: code:addons/e3z_report_ipbox_2/report/special_message_invoice.py:83
 #, python-format
@@ -118,6 +120,7 @@ msgstr "Factures détail"
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Fax :"
 msgstr "Fax :"
 
@@ -145,6 +148,7 @@ msgstr "Date de la facture"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Invoice address :"
 msgstr "Facturé à :"
 
@@ -167,6 +171,7 @@ msgstr "Factures et message"
 #. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Net Total :"
 msgstr "Total Net :"
 
@@ -179,7 +184,7 @@ msgstr "Total net :"
 #. module: e3z_report_ipbox_2
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
-#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:64
+#: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
 #: code:addons/e3z_report_ipbox_2/report/shipping.py:56
 #: code:addons/e3z_report_ipbox_2/report/special_message_invoice.py:83
 #, python-format
@@ -207,6 +212,7 @@ msgstr "N° commande / BL"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Our Salesman"
 msgstr "Contact"
 
@@ -224,6 +230,7 @@ msgstr "Page Header"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Payment Terms"
 msgstr "Condition de réglement"
 
@@ -238,6 +245,7 @@ msgstr "Conditions de paiement"
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Price"
 msgstr "Prix Total"
 
@@ -252,6 +260,21 @@ msgid "Print Delivery Order"
 msgstr "Imprimer le bon de livraison"
 
 #. module: e3z_report_ipbox_2
+#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_3
+msgid "Pro Forma"
+msgstr "Pro Forma"
+
+#. module: e3z_report_ipbox_2
+#: report:sale.order.layout3:0
+msgid "Pro Forma N°"
+msgstr "Pro Forma N°"
+
+#. module: e3z_report_ipbox_2
+#: report:sale.order.layout3:0
+msgid "Pro Forma Quotation Date"
+msgstr "Pro Forma Quotation Date"
+
+#. module: e3z_report_ipbox_2
 #: report:purchase.quotation:0
 msgid "Qty"
 msgstr "Qté"
@@ -261,6 +284,7 @@ msgstr "Qté"
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Quantity"
 msgstr "Quantité"
 
@@ -311,6 +335,7 @@ msgstr "Adresse de livraison :"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Shipping address :"
 msgstr "Livré à :"
 
@@ -336,6 +361,7 @@ msgstr "Note de Crédit Fournisseur"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "TVA :"
 msgstr "TVA :"
 
@@ -354,6 +380,7 @@ msgstr "Taxe"
 #. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Taxes :"
 msgstr "Taxes :"
 
@@ -368,6 +395,7 @@ msgstr "Taxes :"
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Tel. :"
 msgstr "Tél. :"
 
@@ -379,6 +407,7 @@ msgstr "Tél. :"
 #. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Total :"
 msgstr "Total :"
 
@@ -393,11 +422,13 @@ msgstr "Total :"
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Unit Price"
 msgstr "PVU"
 
 #. module: e3z_report_ipbox_2
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "VAT"
 msgstr "TVA"
 
@@ -411,6 +442,7 @@ msgstr "TVA :"
 #. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
 #: report:sale.order.layout2:0
+#: report:sale.order.layout3:0
 msgid "Your Reference"
 msgstr "Votre référence"
 
