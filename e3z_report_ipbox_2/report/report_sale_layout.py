@@ -33,7 +33,6 @@ rml_parents = {
 
 class sale_order_1(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
-        print "**************************************************************"
         super(sale_order_1, self).__init__(cr, uid, name, context)
         self.localcontext.update({
             'time': time,

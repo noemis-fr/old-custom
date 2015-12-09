@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<document filename="Sale Order.pdf">
-  <template title="Sale Order" author="OpenERP S.A.(sales@openerp.com)" allowSplitting="20">
+<document filename="Pro Forma.pdf">
+  <template title="Pro Forma" author="OpenERP S.A.(sales@openerp.com)" allowSplitting="20">
     <pageTemplate id="first">
       <frame id="first" x1="28.0" y1="28.0" width="539" height="786"/>
     </pageTemplate>
@@ -194,8 +194,7 @@
     <para style="terp_default_8">
       <font color="white"> </font>
     </para>
-    <para style="terp_header">[[ o.state not in ('draft','sent') and removeParentNode('para') ]] Quotation N° [[ o.name ]]</para>
-    <para style="terp_header">[[ o.state in ('draft','sent') and removeParentNode('para') ]] Order N° [[ o.name ]]</para>
+    <para style="terp_header"><b>Pro Forma N° [[ o.name ]]</b></para>
     <para style="terp_default_8">
       <font color="white"> </font>
     </para>
@@ -205,8 +204,8 @@
           <para style="terp_tblheader_General_Centre">Your Reference </para>
         </td>
         <td>
-          <para style="terp_tblheader_General_Centre">[[ o.state in ('draft','sent') and removeParentNode('para') ]] Date Ordered</para>
-          <para style="terp_tblheader_General_Centre">[[ o.state not in ('draft','sent') and removeParentNode('para') ]] Quotation Date</para>
+          <para style="terp_tblheader_General_Centre"><b>[[ o.state in ['draft','sent'] and removeParentNode('para') ]] Date Ordered</b></para>
+          <para style="terp_tblheader_General_Centre"><b>Pro Forma Quotation Date</b></para>
         </td>
         <td>
           <para style="terp_tblheader_General_Centre">Our Salesman </para>
