@@ -176,6 +176,8 @@ class sale_order_1(report_sxw.rml_parse):
         return result
 
 #report_sxw.report_sxw('report.sale.order.layout2', 'sale.order', 'addons/sale_layout/report/report_sale_layout.rml', parser=sale_order_1,header="header_shipping_sale")
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
-
-
+report_sxw.report_sxw(
+    'report.sale.order.layout3',
+    'sale.order',
+    'addons/sale_layout/report/report_sale_layout_proforma.rml',
+    parser=sale_order_1)
