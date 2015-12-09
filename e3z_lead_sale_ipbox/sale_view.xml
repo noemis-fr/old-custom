@@ -25,7 +25,6 @@
                     <field name="margin_display"/>
                 </field>
                 <xpath expr="//tree/field[@name='price_unit']" position="before">
-                    <field name="product_qty_available" readonly="True"/>
                     <field name="qty_display" readonly="True" context="{'shop': order_id.shop_id}"/>
                 </xpath>
             </field>
