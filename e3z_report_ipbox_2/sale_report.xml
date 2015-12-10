@@ -4,7 +4,7 @@
         <delete model="ir.actions.report.xml" id="sale.report_sale_order" />
 
         <report id="sale_order_1"
-            string="Bon de Commande"
+            string="Devis / Bon de Commande"
             model="sale.order"
             name="sale.order.layout2"
             rml="e3z_report_ipbox_2/report/report_sale_layout.rml"

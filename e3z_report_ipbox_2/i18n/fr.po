@@ -41,8 +41,8 @@ msgstr "Base de calcul"
 
 #. module: e3z_report_ipbox_2
 #: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
-msgid "Bon de Commande"
-msgstr "Bon de Commande"
+msgid "Devis / Bon de Commande"
+msgstr "Devis / Bon de Commande"
 
 #. module: e3z_report_ipbox_2
 #: report:account.invoice.detail:0
