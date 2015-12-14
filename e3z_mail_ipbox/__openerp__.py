@@ -28,7 +28,7 @@
     'author': 'Elanz Centre',
     'website': 'http://www.openelanz.com',
     'summary': 'Leads and sales customizing',
-    'depends': ['base', 'sale', 'mail', 'e3z_report_ipbox'
+    'depends': ['base', 'sale', 'mail', 'e3z_report_ipbox_2'
     ],
     'data': [
         'group_data.xml',
