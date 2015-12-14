@@ -2,9 +2,9 @@
 <openerp>
     <data>
 
-        <record id="sale.email_template_edi_sale" model="email.template">
-            <field name="report_template" ref="sale_layout.sale_order_1"/>
-        </record>
+<!--        <record id="sale.email_template_edi_sale" model="email.template">-->
+<!--            <field name="report_template" ref="sale_layout.sale_order_1"/>-->
+<!--        </record>-->
 
         <record id="stock.email_template_edi_stock" model="email.template">
             <field name="name">Stock Picking - Send by Email</field>
