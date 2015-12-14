@@ -41,9 +41,9 @@ class account_invoice(osv.osv):
 
         return super(account_invoice, self).create(cr, uid, vals, context)
 
-    def invoice_validate(self, cr, uid, ids, context=None):
-        super(account_invoice, self).invoice_validate(cr, uid, ids, context)
-        if context is None:
-            context = {'lang': 'fr_FR'}
-        self.pool.get('mail.proxy').send_mail(cr, uid, ids, 'account.invoice', 'Invoice - Send by Email', context)
-        return True
+#    def invoice_validate(self, cr, uid, ids, context=None):
+#        super(account_invoice, self).invoice_validate(cr, uid, ids, context)
+#        if context is None:
+#            context = {'lang': 'fr_FR'}
+#        self.pool.get('mail.proxy').send_mail(cr, uid, ids, 'account.invoice', 'Invoice - Send by Email', context)
+#        return True
