@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-<!--        <record model="ir.ui.view" id="view_invoice_line_tree_inherit_1_noseq">-->
-<!--            <field name="name">account.invoice.line.tree.inherit_1.noseq</field>-->
-<!--            <field name="model">account.invoice.line</field>-->
-<!--            <field name="inherit_id" ref="account.view_invoice_line_tree"/>-->
-<!--            <field name="type">tree</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <xpath expr="/tree/field[@name='name']" position="before">-->
-<!--                    <field name="state" invisible="1"/>-->
-<!--                    <field name="sequence" string="Seq."/>-->
-<!--                </xpath>-->
-<!--                <xpath expr="/tree/field[@name='account_id']" position="replace">-->
-<!--                    <field name="functional_field"/>-->
-<!--                </xpath>-->
-<!--				<field name="name" position="before">-->
-<!--					<field name="product_id"-->
-<!--						on_change="product_id_change(product_id, uos_id, quantity, name, parent.type, parent.partner_id, parent.fiscal_position, price_unit, parent.currency_id, context, parent.company_id)" />-->
-<!--				</field>-->
-<!--                <field name="sequence" position="attributes">-->
-<!--                    <attribute name="invisible">True</attribute>-->
-<!--                </field>-->
-<!--                <field name="name" position="attributes">-->
-<!--                    <attribute name="context">{'search':True}</attribute>-->
-<!--                </field>-->
-<!--                <field name="discount" position="after">-->
-<!--                    <field name="purchase_price"/>-->
-<!--                    <field name="invoice_line_tax_id" widget="many2many_tags"/>-->
-<!--                    <field name="margin" invisible="True"/>-->
-<!--                    <field name="margin_percent" invisible="True"/>-->
-<!--                    <field name="margin_display"/>-->
-<!--                </field>-->
-<!--            </field>-->
-<!--        </record>-->
+        <record model="ir.ui.view" id="view_invoice_line_tree_inherit_1_noseq">
+            <field name="model">account.invoice.line</field>
+            <field name="inherit_id" ref="account.view_invoice_line_tree"/>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <xpath expr="/tree/field[@name='name']" position="before">
+                    <field name="sequence" string="Seq."/>
+                </xpath>
+                <field name="name" position="before">
+                    <field name="product_id"
+                        on_change="product_id_change(product_id, uos_id, quantity, name, parent.type, parent.partner_id, parent.fiscal_position, price_unit, parent.currency_id, context, parent.company_id)" />
+                </field>
+                <field name="sequence" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="name" position="attributes">
+                    <attribute name="context">{'search':True}</attribute>
+                </field>
+                <field name="discount" position="after">
+                    <field name="purchase_price"/>
+                    <field name="invoice_line_tax_id" widget="many2many_tags"/>
+                    <field name="margin" invisible="True"/>
+                    <field name="margin_percent" invisible="True"/>
+                    <field name="margin_display"/>
+                </field>
+            </field>
+        </record>
 
         <record model="ir.ui.view" id="invoice_form_margin">
             <field name="name">account.invoice.form.margin</field>
