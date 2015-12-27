@@ -30,10 +30,15 @@
         </record>
 
         <record model="ir.ui.view" id="invoice_form_margin">
-            <field name="name">account.invoice.form.margin</field>
             <field name="model">account.invoice</field>
             <field name="inherit_id" ref="account.invoice_form"/>
             <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line']/tree/field[@name='discount']" position="after">
+                    <field name="purchase_price" />
+                </xpath>
+                <xpath expr="//field[@name='invoice_line']/tree/field[@name='invoice_line_tax_id']" position="after">
+                    <field name="margin_display"/>
+                </xpath>
                 <field name="residual" position="after">
                     <field name="distribution_costs" string="Distribution costs"/>
                     <field name="margin" string="Margin euros"/>
