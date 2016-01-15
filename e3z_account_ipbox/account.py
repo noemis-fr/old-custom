@@ -75,6 +75,8 @@ class account_invoice(osv.osv):
          'account.invoice.line': (_get_invoice_line, ['price_unit', 'margin', 'purchase_price'], 11)
      }),
      'distribution_costs': fields.float('Distribution costs'),
+    'invoice_line': fields.one2many(
+        'account.invoice.line', 'invoice_id', 'Invoice Lines'),
     }
 
 
