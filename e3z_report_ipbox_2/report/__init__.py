@@ -21,6 +21,7 @@
 
 import report_account_invoice_layout
 import report_account_invoice_detail
+import report_account_invoice_affacturage
 import special_message_invoice
 import report_sale_layout
 import shipping

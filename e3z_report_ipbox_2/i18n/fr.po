@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-09 06:20+0000\n"
-"PO-Revision-Date: 2015-12-09 06:20+0000\n"
+"POT-Creation-Date: 2016-02-16 23:59+0000\n"
+"PO-Revision-Date: 2016-02-16 23:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,7 @@ msgid "Adresse de livraison"
 msgstr "Adresse de livraison"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -33,6 +34,7 @@ msgid "Amount"
 msgstr "Montant"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -40,11 +42,7 @@ msgid "Base"
 msgstr "Base de calcul"
 
 #. module: e3z_report_ipbox_2
-#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
-msgid "Devis / Bon de Commande"
-msgstr "Devis / Bon de Commande"
-
-#. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -58,6 +56,7 @@ msgid "Date Ordered"
 msgstr "Date de la commande"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -73,11 +72,17 @@ msgid "Description / Taxes"
 msgstr "Description / Taxes"
 
 #. module: e3z_report_ipbox_2
+#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.sale_order_1
+msgid "Devis / Bon de Commande"
+msgstr "Devis / Bon de Commande"
+
+#. module: e3z_report_ipbox_2
 #: report:notify_account.invoice1:0
 msgid "Disc. (%)"
 msgstr "Remise. (%)"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -85,12 +90,14 @@ msgid "Draft Invoice"
 msgstr "Facture brouillon"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Due date :"
 msgstr "Date échéance :"
 
 #. module: e3z_report_ipbox_2
+#: code:addons/e3z_report_ipbox_2/report/report_account_invoice_affacturage.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
@@ -111,11 +118,17 @@ msgid "Expected Delivery address:"
 msgstr "Adresse de livraison attendue :"
 
 #. module: e3z_report_ipbox_2
+#: model:ir.actions.report.xml,name:e3z_report_ipbox_2.account_invoice_5
+msgid "Facture (Affacturage)"
+msgstr "Facture (Affacturage)"
+
+#. module: e3z_report_ipbox_2
 #: model:ir.actions.report.xml,name:e3z_report_ipbox_2.account_invoices_detail
 msgid "Factures détail"
 msgstr "Factures détail"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -131,6 +144,7 @@ msgstr "Fax :"
 
 #. module: e3z_report_ipbox_2
 #: code:_description:0
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: model:ir.model,name:e3z_report_ipbox_2.model_account_invoice
@@ -140,6 +154,7 @@ msgid "Invoice"
 msgstr "Facture"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -153,6 +168,7 @@ msgid "Invoice address :"
 msgstr "Facturé à :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Invoiced to"
@@ -176,12 +192,14 @@ msgid "Net Total :"
 msgstr "Total Net :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Net Total:"
 msgstr "Total net :"
 
 #. module: e3z_report_ipbox_2
+#: code:addons/e3z_report_ipbox_2/report/report_account_invoice_affacturage.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_detail.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_account_invoice_layout.py:59
 #: code:addons/e3z_report_ipbox_2/report/report_sale_layout.py:63
@@ -192,6 +210,7 @@ msgid "No proper reports header defined for the selected report. Check that the 
 msgstr "No proper reports header defined for the selected report. Check that the report header defined in your report rml_parse line exist in Administration/reporting/Reporting headers."
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -204,6 +223,7 @@ msgid "Order N°"
 msgstr "N° de commande"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -217,6 +237,7 @@ msgid "Our Salesman"
 msgstr "Contact"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -235,12 +256,19 @@ msgid "Payment Terms"
 msgstr "Condition de réglement"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Payment terms"
 msgstr "Conditions de paiement"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
+msgid "Pour être libératoire, le règlement de cette facture doit être effectué à : NATIXIS FACTOR, 10-12, avenue Winston Churchill, 94676 Charenton-le-Pont Cedex - Tél : 01 58 32 80 00, qui a acquis notre créance par voie de subrogation dans le cadre d'un contrat d'affacturage. NATIXIS FACTOR devra être avisée de toute réclamation. RIB : 30007 00011 00010500791 36 - Domiciliation : NATIXIS Paris. IBAN : FR76 3000 7000 1100 0105 0079 136. SWIFT CODE ( BIC ) : NATX FR PP XXX. N° ICS : FR57ZZZ483693"
+msgstr "Pour être libératoire, le règlement de cette facture doit être effectué à : NATIXIS FACTOR, 10-12, avenue Winston Churchill, 94676 Charenton-le-Pont Cedex - Tél : 01 58 32 80 00, qui a acquis notre créance par voie de subrogation dans le cadre d'un contrat d'affacturage. NATIXIS FACTOR devra être avisée de toute réclamation. RIB : 30007 00011 00010500791 36 - Domiciliation : NATIXIS Paris. IBAN : FR76 3000 7000 1100 0105 0079 136. SWIFT CODE ( BIC ) : NATX FR PP XXX. N° ICS : FR57ZZZ483693"
+
+#. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -270,16 +298,12 @@ msgid "Pro Forma N°"
 msgstr "Pro Forma N°"
 
 #. module: e3z_report_ipbox_2
-#: report:sale.order.layout3:0
-msgid "Pro Forma Quotation Date"
-msgstr "Pro Forma Quotation Date"
-
-#. module: e3z_report_ipbox_2
 #: report:purchase.quotation:0
 msgid "Qty"
 msgstr "Qté"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -299,6 +323,7 @@ msgid "Quotation N°"
 msgstr "Devis N°"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -328,6 +353,7 @@ msgid "Request for Quotation :"
 msgstr "Demande de prix :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Shipped to"
@@ -340,12 +366,14 @@ msgid "Shipping address :"
 msgstr "Livré à :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Short Description"
 msgstr "Description"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -353,6 +381,7 @@ msgid "Supplier Invoice"
 msgstr "Facture fournisseur"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -371,6 +400,7 @@ msgid "TVA:"
 msgstr "TVA :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -385,12 +415,14 @@ msgid "Taxes :"
 msgstr "Taxes :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Taxes:"
 msgstr "Taxes :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -412,12 +444,14 @@ msgid "Total :"
 msgstr "Total :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 msgid "Total:"
 msgstr "Total :"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0
@@ -433,6 +467,7 @@ msgid "VAT"
 msgstr "TVA"
 
 #. module: e3z_report_ipbox_2
+#: report:account.invoice.affacturage:0
 #: report:account.invoice.detail:0
 #: report:account.invoice.layout1:0
 #: report:notify_account.invoice1:0

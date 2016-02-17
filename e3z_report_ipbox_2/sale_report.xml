@@ -16,5 +16,13 @@
             name="sale.order.layout3"
             rml="e3z_report_ipbox_2/report/report_sale_layout_proforma.rml"
             auto="False" />
+
+        <report id="account_invoice_5"
+            string="Facture (Affacturage)"
+            model="account.invoice"
+            name="account.invoice.affacturage"
+            rml="e3z_report_ipbox_2/report/report_account_invoice_affacturage.rml"
+            auto="False" />
+
     </data>
 </openerp>
