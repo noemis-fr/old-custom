@@ -5,6 +5,7 @@
     'category': 'Custom',
     'author': 'Noemis',
     'website': 'http://www.noemis.fr',
+    'description': "",
     'depends': [
         'stock',
     ],

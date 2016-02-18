@@ -30,6 +30,7 @@
     'author': "Akretion,Odoo Community Association (OCA)",
     'website': 'http://www.akretion.com',
     'depends': ['account_accountant'],
+    'description': "",
     'external_dependencies': {
         'python': ['unicodecsv'],
         },
