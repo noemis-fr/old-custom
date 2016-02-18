@@ -119,16 +119,16 @@
     <blockTableStyle id="Table_Payment_Terms">
       <blockAlignment value="LEFT"/>
       <blockValign value="TOP"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="0,-1" stop="0,-1"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="1,-1" stop="1,-1"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
     </blockTableStyle>
     <blockTableStyle id="Table_Payment_Terms_2">
       <blockAlignment value="LEFT"/>
       <blockValign value="TOP"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="0,-1" stop="0,-1"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="1,-1" stop="1,-1"/>
-      <lineStyle kind="LINEBELOW" colorName="#FF0000" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,-1" stop="2,-1"/>
     </blockTableStyle>
     <initialize>
       <paraStyle name="all" alignment="justify"/>
@@ -549,7 +549,7 @@
       <tr>
         <td>
 <para style="terp_default_9"><font face="Helvetica" size="7.0">
-          Pour être libératoire, le règlement de cette facture doit être effectué à : NATIXIS FACTOR, 10-12, avenue Winston Churchill, 94676 Charenton-le-Pont Cedex - Tél : 01 58 32 80 00, qui a acquis notre créance par voie de subrogation dans le cadre d'un contrat d'affacturage. NATIXIS FACTOR devra être avisée de toute réclamation. RIB : 30007 00011 00010500791 36 - Domiciliation : NATIXIS Paris. IBAN : FR76 3000 7000 1100 0105 0079 136. SWIFT CODE ( BIC ) : NATX FR PP XXX. N° ICS : FR57ZZZ483693
+                            Dans le cas où le paiement intégral n'interviendrait pas à la date prévue par les parties, le vendeur se réserve le droit de reprendre la chose livrée et de résoudre le contrat. En cas de paiement anticipé, application d'un escompte de 1%. Tout retard de paiement engendre une pénalité calculée sur la base du taux d'intérêt légal en vigueur. Réserve de Propriété : le matériel demeure l'entière propriété de la société NOEMIS jusqu'au complet paiement des sommes dues. TVA acquittée sur les débits.
 </font></para>
         </td>
       </tr>

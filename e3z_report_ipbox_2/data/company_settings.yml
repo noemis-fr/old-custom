@@ -1,0 +1,47 @@
+- !record {model: res.header, id: header_invoice_affacturage}:
+    name : "header_invoice_affacturage"
+    internal : true
+    rml_header: |
+        <header>
+                <pageTemplate>
+                    <frame id="first" x1="1.3cm" y1="6.0cm" height="17.7cm" width="19.0cm"/>
+                     <stylesheet>
+                        <!-- Set here the default font to use for all <para> tags -->
+                        <paraStyle name='Normal' fontName="DejaVu Sans"/>
+                        <paraStyle name="main_footer" fontSize="8.0" alignment="CENTER"/>
+                        <paraStyle name="main_footer_left" fontSize="8.0" alignment="LEFT"/>
+                        <paraStyle name="main_header" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+                     </stylesheet>
+                    <pageGraphics>
+                        <!-- Set here the default font to use for all <drawString> tags -->
+                        <setFont name="DejaVu Sans" size="8"/>
+                        <!-- You Logo - Change X,Y,Width and Height -->
+                        <image x="1.3cm" y="27.9cm" height="45.0" >[[ company.logo or removeParentNode('image') ]]</image>
+                        <fill color="red"/>
+                        <stroke color="red"/>
+            
+                        <!--page bottom-->
+                        <lines>1.0cm 5.0cm 20.0cm 5.0cm</lines>
+                        <lines>1.0cm 5.0cm 1.0cm 3.0cm</lines>
+                        <lines>20.0cm 5.0cm 20.0cm 3.0cm</lines>
+                        <lines>1.0cm 3.0cm 20.0cm 3.0cm</lines>
+                         <place x="1.3cm" y="3.1cm" height="3.0cm" width="19.0cm">
+                          <para style="main_footer_left">
+                            <font color="white"></font>
+                          </para>
+                          <para style="main_footer_left">
+                                Pour être libératoire, le règlement de cette facture doit être effectué à : NATIXIS FACTOR, 10-12, avenue Winston Churchill, 94676 Charenton-le-Pont Cedex - Tél : 01 58 32 80 00, qui a acquis notre créance par voie de subrogation dans le cadre d'un contrat d'affacturage. NATIXIS FACTOR devra être avisée de toute réclamation. RIB : 30007 00011 00010500791 36 - Domiciliation : NATIXIS Paris. IBAN : FR76 3000 7000 1100 0105 0079 136. SWIFT CODE ( BIC ) : NATX FR PP XXX. N° ICS : FR57ZZZ483693
+                          </para>
+                        </place>
+                        <lines>1.2cm 2.65cm 19.9cm 2.65cm</lines>
+                        <place x="1.3cm" y="0cm" height="2.55cm" width="19.0cm">
+                            <para style="main_footer">Contact : [[ user.name ]] - Page: <pageNumber/></para>
+                            <para style="main_footer">
+                              NOEMIS - 1 rue louis Blériot- BP 38 - 63015 Clermont- Ferrand- Tél : 04 73 14 02 02 – Fax : 04 73 14 03 03
+                              SARL au capital de 129 000 eur
+                              N°SIRET : 30393848400092 NAF : 465Z  N° intracommunautaire : FR41303938484
+                            </para>
+                        </place>
+                    </pageGraphics>
+                </pageTemplate>
+            </header>

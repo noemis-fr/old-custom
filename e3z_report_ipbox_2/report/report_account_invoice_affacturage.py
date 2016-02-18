@@ -223,6 +223,6 @@ class account_invoice_1(report_sxw.rml_parse):
             result.append(res)
         return result
 
-report_sxw.report_sxw('report.account.invoice.affacturage', 'account.invoice', 'addons/e3z_report_ipbox_2/report/report_account_invoice_layout.rml', parser=account_invoice_1,header="header_invoice")
+report_sxw.report_sxw('report.account.invoice.affacturage', 'account.invoice', 'addons/e3z_report_ipbox_2/report/report_account_invoice_layout.rml', parser=account_invoice_1,header="header_invoice_affacturage")
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

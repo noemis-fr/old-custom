@@ -38,6 +38,7 @@ Sale and Invoice report modifications
         'e3z_lead_sale_ipbox',  #puvr field;
     ],
     'data': [
+        'data/company_settings.yml',
         'account_invoice_layout_report.xml',
         'delivery_report.xml',
         'purchase_report.xml',
