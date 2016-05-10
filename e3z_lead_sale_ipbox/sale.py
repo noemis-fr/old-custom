@@ -43,11 +43,21 @@ class sale_order(osv.osv):
             result[line.order_id.id] = True
         return result.keys()
 
-    # def _amount_all(self, cr, uid, ids, field_name, arg, context=None):
-    #     res = super(sale_order, self)._amount_all(cr, uid, ids, field_name, arg, context)
-    #     for order in self.browse(cr, uid, ids, context=context):
-    #         res[order.id]['amount_total'] = res[order.id]['amount_total'] + order.planned_revenue
-    #     return res
+    def onchange_partner_id(
+            self, cr, uid, ids, partner_id, context=None):
+        partner_obj = self.pool['res.partner']
+        config_obj = self.pool['ir.config_parameter']
+        res = super(sale_order, self).onchange_partner_id(
+            cr, uid, ids, partner_id, context=context)
+        distribution_costs = float(config_obj.get_param(
+            cr, uid, 'distribution_costs'))
+        if partner_id:
+            partner_costs = partner_obj.browse(
+                cr, uid, partner_id, context=context).distribution_costs
+            distribution_costs += partner_costs
+        res['value']['distribution_costs'] = distribution_costs
+        return res
+
 
     def _get_margin_percent(self, cr, uid, ids, field_name, arg, context):
         order_obj = self.pool.get('sale.order')
@@ -95,9 +105,6 @@ class sale_order(osv.osv):
     def create(self, cr, uid, vals, context=None):
         lead_obj = self.pool.get('crm.lead')
         order_obj = self.pool.get('sale.order')
-        proxy = self.pool.get('ir.config_parameter')
-        distribution_costs = proxy.get_param(cr, uid, 'distribution_costs')
-        vals.update({'distribution_costs': distribution_costs})
         planned_revenue = vals.get('planned_revenue', 0)
         proba = vals.get('probability', 0)
         res = super(sale_order, self).create(cr, uid, vals, context)
@@ -122,10 +129,6 @@ class sale_order(osv.osv):
     def write(self, cr, uid, ids, vals, context=None):
         lead_obj = self.pool.get('crm.lead')
         order_obj = self.pool.get('sale.order')
-        proxy = self.pool.get('ir.config_parameter')
-        if not vals.get('distribution_costs', False):
-            distribution_costs = proxy.get_param(cr, uid, 'distribution_costs')
-            vals.update({'distribution_costs': distribution_costs})
 
         if not vals.get('lead_id', False):
             for order in order_obj.browse(cr, uid, ids, context):

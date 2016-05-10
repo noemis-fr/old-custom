@@ -2,27 +2,28 @@
 <openerp>
     <data>
 
+        <record id="view_partner_form" model="ir.ui.view">
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="title" position="after">
+                    <field name="distribution_costs"/>
+                </field>
+            </field>
+        </record>
 
         <record id="view_partner_form_credit" model="ir.ui.view">
-            <field name="name">res.partner.credit.form.inherit</field>
             <field name="model">res.partner</field>
-            <field name="priority">2</field>
             <field name="inherit_id" ref="account.view_partner_property_form"/>
             <field name="arch" type="xml">
-                <!--<field name="credit_limit" position="attributes">-->
-                    <!--<attribute name="groups">account.group_account_manager,account.group_account_user</attribute>-->
-                <!--</field>-->
-                <!--<field name="credit_limit" position="after">-->
-                    <!--<field name="credit_usual" widget="monetary" groups="account.group_account_manager,account.group_account_user"/>-->
-                <!--</field>-->
                 <field name="credit" position="replace"/>
                 <field name="credit_limit" position="replace"/>
                 <notebook position="inside">
                     <page String="Encours" attrs="{'invisible':[('parent_id', '!=', False)]}">
                         <group>
-                        <field name="credit"/>
-                        <field name="credit_limit" groups="account.group_account_manager,account.group_account_user"/>
-                        <field name="credit_usual" widget="monetary" groups="account.group_account_manager,account.group_account_user"/>
+                            <field name="credit"/>
+                            <field name="credit_limit" groups="account.group_account_manager,account.group_account_user"/>
+                            <field name="credit_usual" widget="monetary" groups="account.group_account_manager,account.group_account_user"/>
                         </group>
                     </page>
                 </notebook>

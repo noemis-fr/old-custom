@@ -56,6 +56,7 @@ class res_partner(osv.osv):
         return self._asset_difference_search(cr, uid, obj, name, 'payable', args, context=context)
 
     _columns = {
+        'distribution_costs': fields.float('Distribution costs'),
         'credit_usual': fields.float('Credit usual'),
         'credit': fields.function(_credit_debit_get,
             fnct_search=_credit_search, string='Total Receivable', multi='dc', help="Total amount this customer owes you."),
