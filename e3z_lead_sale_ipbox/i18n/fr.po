@@ -1,14 +1,13 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
 #	* e3z_lead_sale_ipbox
-#	* account
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 08:56+0000\n"
-"PO-Revision-Date: 2014-03-06 08:56+0000\n"
+"POT-Creation-Date: 2016-05-11 00:05+0000\n"
+"PO-Revision-Date: 2016-05-11 00:05+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,145 +16,16 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: e3z_lead_sale_ipbox
-#: sql_constraint:sale.order:0
-msgid "Order Reference must be unique per Company!"
-msgstr "La référence de commande doit être unique par société!"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,probability:0
-msgid "Probability"
-msgstr "Probabilité"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,distribution_costs:0
-msgid "Distribution costs"
-msgstr "Frais d'approches "
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,lead_id:0
-msgid "Lead"
-msgstr "Opportunité"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,planned_revenue:0
-msgid "Planned Revenue"
-msgstr "Revenu attendu"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:117
-#: code:addons/e3z_lead_sale_ipbox/wizard/reminder_lead.py:41
+#: code:addons/e3z_lead_sale_ipbox/sale.py:220
 #, python-format
-msgid "There is no lead name, please set one before create the opportunity!"
-msgstr "Il n'y a pas de nom d'opportunité, veuillez en mettre un avant de créer une opportunité!"
-
-#. module: e3z_lead_sale_ipbox
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_crm_case_section
-msgid "Sales Teams"
-msgstr "Équipes commerciales"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,margin_percent:0
-#: field:sale.order.line,margin_percent:0
-msgid "Margin in Percent"
-msgstr "Marge en pourcent"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,lead_stage:0
-msgid "Lead stage"
-msgstr "Étape opportunité"
-
-#. module: e3z_lead_sale_ipbox
-#: view:sale.order:0
-msgid "Create/Update lead"
-msgstr "Créer/MaJ Oppor."
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:117
-#: code:addons/e3z_lead_sale_ipbox/sale.py:147
-#: code:addons/e3z_lead_sale_ipbox/wizard/reminder_lead.py:41
-#, python-format
-msgid "Error!"
-msgstr "Erreur!"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:122
-#, python-format
-msgid "Lead created from {}"
-msgstr "Opportunité créee depuis {}"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:126
-#, python-format
-msgid "{} {}'s credit is superior than the credit limit"
-msgstr "{} {} a un crédit superieur à sa limite de crédit"
-
-#. module: e3z_lead_sale_ipbox
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_crm_lead
-msgid "Lead/Opportunity"
-msgstr "Piste/opportunité"
-
-#. module: e3z_lead_sale_ipbox
-#: field:res.partner,credit_usual:0
-msgid "Credit usual"
-msgstr "Limite Encours habituelle"
-
-#. module: e3z_lead_sale_ipbox
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_res_partner
-msgid "Partner"
-msgstr "Partenaire"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:121
-#, python-format
-msgid "Lead {} created"
-msgstr "Opportunité {} créee"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order,lead_name:0
-msgid "Lead name"
-msgstr "Nom Opportunité"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:112
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_sale_order
-#, python-format
-msgid "Sales Order"
-msgstr "Bon de commande"
-
-#. module: e3z_lead_sale_ipbox
-#: field:crm.lead,sale_id:0
-msgid "Order"
-msgstr "Commande"
-
-#. module: e3z_lead_sale_ipbox
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_sale_order_line
-msgid "Sales Order Line"
-msgstr "Ligne de commandes de vente"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,margin_display:0
-msgid "Margin"
-msgstr "Marge"
-
-#. module: e3z_lead_sale_ipbox
-#: field:account.invoice,distribution_costs:0
-msgid "Distribution Costs"
-msgstr "Frais d'approche"
-
-#. module: e3z_lead_sale_ipbox
-#: field:product.product,purchase_price:0
-msgid "Purchase Price"
-msgstr "Prix d'achat"
-
-#. module: e3z_lead_sale_ipbox
-#: model:ir.model,name:e3z_lead_sale_ipbox.model_account_invoice
-msgid "Invoice"
-msgstr "Facture"
-
-#. module: e3z_lead_sale_ipbox
-#: field:res.partner,credit_limit:0
-msgid "Credit Limit"
-msgstr "Ass. SFAC"
+msgid "\n"
+"Insurance credit: {},\n"
+"Computed Credit: {},\n"
+"Usual credit: {}"
+msgstr "\n"
+"Ass. Créd. Autorisé: {} \n"
+"Encours calculé: {} \n"
+"Limite encours habituelle: {}"
 
 #. module: e3z_lead_sale_ipbox
 #: view:sale.reminder.lead:0
@@ -163,14 +33,31 @@ msgid "Are you sure to confirm this order without create an Opportunity?"
 msgstr "Etes-vous sur de confirmer cette commande sans créer d'opportunité?"
 
 #. module: e3z_lead_sale_ipbox
-#: view:sale.reminder.lead:0
-msgid "You haven't create a Opportunity for this order."
-msgstr "Vous n'avez pas crée d'opportunité pour cette commande."
+#: code:addons/e3z_lead_sale_ipbox/sale.py:493
+#, python-format
+msgid "Before choosing a product,\n"
+" select a customer in the sales form."
+msgstr "Avant de choisir un article,\n"
+" selectionner un client dans le formulaire de vente."
 
 #. module: e3z_lead_sale_ipbox
 #: view:sale.reminder.lead:0
-msgid "Reminder"
-msgstr "Rappel"
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:581
+#, python-format
+msgid "Cannot find a pricelist line matching this product and quantity.\n"
+"You have to change either the product, the quantity or the pricelist."
+msgstr "Impossible de trouver une liste de prix correspondant au produit et à la quantité.\n"
+"Vous devez changer soit l'article, la quantité ou la liste de prix."
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:589
+#, python-format
+msgid "Configuration Error!"
+msgstr "Erreur de configuration !"
 
 #. module: e3z_lead_sale_ipbox
 #: view:sale.reminder.lead:0
@@ -179,36 +66,30 @@ msgstr "Confirmer Commande"
 
 #. module: e3z_lead_sale_ipbox
 #: view:sale.reminder.lead:0
-msgid "Cancel"
-msgstr "Annuler"
+msgid "Create Oppor & Confirm Order"
+msgstr "Créer Oppor. & Confirmer Commande"
 
 #. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:154
-#, python-format
-msgid '\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}'
-msgstr '\nAss. Créd. Autorisé: {} \nEncours calculé: {} \nLimite encours habituelle: {}'
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:152
+#: code:addons/e3z_lead_sale_ipbox/sale.py:218
 #, python-format
 msgid "Credit limit allowed is reached."
 msgstr "La limite de crédit a été atteinte."
 
 #. module: e3z_lead_sale_ipbox
-#: view:sale.reminder.lead:0
-msgid "or"
-msgstr "ou"
+#: field:res.partner,credit_usual:0
+msgid "Credit usual"
+msgstr "Limite Encours habituelle"
 
 #. module: e3z_lead_sale_ipbox
-#: view:sale.reminder.lead:0
-msgid "Create Oppor & Confirm Order"
-msgstr "Créer Oppor. & Confirmer Commande"
+#: field:account.invoice,distribution_costs:0
+msgid "Distribution Costs"
+msgstr "Frais d'approche"
 
 #. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:139
-#, python-format
-msgid "Confirm Create"
-msgstr "Validation de la confirmation"
+#: field:res.partner,distribution_costs:0
+#: field:sale.order,distribution_costs:0
+msgid "Distribution costs"
+msgstr "Frais d'approches "
 
 #. module: e3z_lead_sale_ipbox
 #: field:sale.order,nocreate_lead:0
@@ -216,34 +97,102 @@ msgid "Don't create lead"
 msgstr "Créer une oppor."
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,purchase_price:0
-msgid "Prix d'achat"
-msgstr "PAU"
-
-#. module: sale_margin
-#: field:sale.order.line,purchase_price:0
-msgid "Cost Price"
-msgstr "PAU"
+#: code:addons/e3z_lead_sale_ipbox/sale.py:160
+#: code:addons/e3z_lead_sale_ipbox/sale.py:221
+#: code:addons/e3z_lead_sale_ipbox/wizard/reminder_lead.py:42
+#, python-format
+msgid "Error!"
+msgstr "Erreur!"
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,price_unit:0
-msgid "Unit Price"
-msgstr "PVU"
+#: view:sale.order:0
+msgid "Frais d'approche en %"
+msgstr "Frais d'approche en %"
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,price_subtotal:0
-msgid "Subtotal"
-msgstr "PVT"
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_account_invoice
+#, python-format
+msgid "Invoice"
+msgstr "Facture"
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,qty_display:0
-msgid "Qty/Available"
-msgstr "QS / QRD"
+#: field:sale.order,lead_id:0
+msgid "Lead"
+msgstr "Opportunité"
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,product_qty_available:0
-msgid "Qty available"
-msgstr "Qté dispo"
+#: code:addons/e3z_lead_sale_ipbox/sale.py:165
+#, python-format
+msgid "Lead created from {}"
+msgstr "Opportunité créee depuis {}"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order,lead_name:0
+msgid "Lead name"
+msgstr "Nom Opportunité"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order,lead_stage:0
+msgid "Lead stage"
+msgstr "Étape opportunité"
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:164
+#, python-format
+msgid "Lead {} created"
+msgstr "Opportunité {} créee"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_crm_lead
+#, python-format
+msgid "Lead/Opportunity"
+msgstr "Piste/opportunité"
+
+#. module: e3z_lead_sale_ipbox
+#: view:sale.order:0
+msgid "Marge %"
+msgstr "Marge %"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order.line,margin_display:0
+msgid "Margin"
+msgstr "Marge"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order,margin_percent:0
+#: field:sale.order.line,margin_percent:0
+msgid "Margin in Percent"
+msgstr "Marge en pourcent"
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:493
+#, python-format
+msgid "No Customer Defined!"
+msgstr "No Customer Defined!"
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:573
+#, python-format
+msgid "No Pricelist ! : "
+msgstr "Aucune liste de prix ! : "
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:584
+#, python-format
+msgid "No valid pricelist line found ! :"
+msgstr "Aucune liste de prix valide trouvée ! :"
+
+#. module: e3z_lead_sale_ipbox
+#: field:crm.lead,sale_id:0
+msgid "Order"
+msgstr "Commande"
+
+#. module: e3z_lead_sale_ipbox
+#: sql_constraint:sale.order:0
+msgid "Order Reference must be unique per Company!"
+msgstr "La référence de commande doit être unique par société!"
 
 #. module: e3z_lead_sale_ipbox
 #: field:sale.order.line,puvr:0
@@ -251,32 +200,75 @@ msgid "PUVR"
 msgstr "PVU Net"
 
 #. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,product_id:0
-msgid "Product"
-msgstr "Ref."
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,name:0
-msgid "Description"
-msgstr "Désignation"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,discount:0
-msgid "Discount (%)"
-msgstr "Rem. (%)"
-
-#. module: e3z_lead_sale_ipbox
-#: field:sale.order.line,tax_id:0
-msgid "Taxes"
-msgstr "TVA"
-
-#. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:556
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_res_partner
 #, python-format
-msgid "Cannot find a pricelist line matching this product and quantity.\n"
-"You have to change either the product, the quantity or the pricelist."
-msgstr "Impossible de trouver une liste de prix correspondant au produit et à la quantité.\n"
-"Vous devez changer soit l'article, la quantité ou la liste de prix."
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order,planned_revenue:0
+msgid "Planned Revenue"
+msgstr "Revenu attendu"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order,probability:0
+msgid "Probability"
+msgstr "Probabilité"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_procurement_order
+#, python-format
+msgid "Procurement"
+msgstr "Approvisionnement"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_product_product
+#, python-format
+msgid "Product"
+msgstr "Article"
+
+#. module: e3z_lead_sale_ipbox
+#: field:product.product,purchase_price:0
+msgid "Purchase Price"
+msgstr "Prix d'achat"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order.line,product_qty_available:0
+msgid "Qty available"
+msgstr "Qté dispo"
+
+#. module: e3z_lead_sale_ipbox
+#: field:sale.order.line,qty_display:0
+msgid "Qty/Available"
+msgstr "QS / QRD"
+
+#. module: e3z_lead_sale_ipbox
+#: view:sale.reminder.lead:0
+msgid "Reminder"
+msgstr "Rappel"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_sale_order
+#, python-format
+msgid "Sales Order"
+msgstr "Commande de ventes"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_sale_order_line
+#, python-format
+msgid "Sales Order Line"
+msgstr "Ligne de commandes de vente"
+
+#. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/purchase.py:78
+#, python-format
+msgid "Selected Unit of Measure does not belong to the same category as the product Unit of Measure."
+msgstr "Selected Unit of Measure does not belong to the same category as the product Unit of Measure."
 
 #. module: e3z_lead_sale_ipbox
 #: code:addons/e3z_lead_sale_ipbox/purchase.py:97
@@ -291,6 +283,28 @@ msgid "The selected supplier only sells this product by %s"
 msgstr "Le fournisseur selectionné vend cet article seulement par %s"
 
 #. module: e3z_lead_sale_ipbox
+#: code:addons/e3z_lead_sale_ipbox/sale.py:160
+#: code:addons/e3z_lead_sale_ipbox/wizard/reminder_lead.py:42
+#, python-format
+msgid "There is no lead name, please set one before create the opportunity!"
+msgstr "Il n'y a pas de nom d'opportunité, veuillez en mettre un avant de créer une opportunité!"
+
+#. module: e3z_lead_sale_ipbox
+#: view:sale.order:0
+msgid "Total Margin Percent"
+msgstr "Valeur en % de la Marge"
+
+#. module: e3z_lead_sale_ipbox
+#: view:sale.order:0
+msgid "Total Margin Value"
+msgstr "Valeur Total de la Marge"
+
+#. module: e3z_lead_sale_ipbox
+#: view:sale.order:0
+msgid "Total taxes incluses"
+msgstr "Total taxes incluses"
+
+#. module: e3z_lead_sale_ipbox
 #: code:addons/e3z_lead_sale_ipbox/purchase.py:78
 #: code:addons/e3z_lead_sale_ipbox/purchase.py:93
 #: code:addons/e3z_lead_sale_ipbox/purchase.py:97
@@ -299,26 +313,32 @@ msgid "Warning!"
 msgstr "Attention!"
 
 #. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:468
+#: code:addons/e3z_lead_sale_ipbox/sale.py:571
 #, python-format
-msgid "Before choosing a product,\n"
-" select a customer in the sales form."
-msgstr "Avant de choisir un article,\n"
-" selectionner un client dans le formulaire de vente."
+msgid "You have to select a pricelist or a customer in the sales form !\n"
+"Please set one before choosing a product."
+msgstr "You have to select a pricelist or a customer in the sales form !\n"
+"Please set one before choosing a product."
 
 #. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:559
-#, python-format
-msgid "No valid pricelist line found ! :"
-msgstr "Aucune liste de prix valide trouvée ! :"
+#: view:sale.reminder.lead:0
+msgid "You haven't create a Opportunity for this order."
+msgstr "Vous n'avez pas crée d'opportunité pour cette commande."
 
 #. module: e3z_lead_sale_ipbox
-#: code:addons/e3z_lead_sale_ipbox/sale.py:548
-#, python-format
-msgid "No Pricelist ! : "
-msgstr "Aucune liste de prix ! : "
+#: view:crm.lead:0
+msgid "false"
+msgstr "false"
 
-#. module: account
-#: field:res.partner,credit:0
-msgid "Total Receivable"
-msgstr "Total encours client"
+#. module: e3z_lead_sale_ipbox
+#: view:sale.reminder.lead:0
+msgid "or"
+msgstr "ou"
+
+#. module: e3z_lead_sale_ipbox
+#: code:_description:0
+#: model:ir.model,name:e3z_lead_sale_ipbox.model_sale_reminder_lead
+#, python-format
+msgid "sale.reminder.lead"
+msgstr "sale.reminder.lead"
+
