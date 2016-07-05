@@ -94,7 +94,11 @@ class account_invoice_line(osv.osv):
                     res[line.id] = round((line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)
                     # res[line.id] = line.margin * 100 / (line.product_uom_qty)
                     res[line.id] -= line.quantity * (100.0-line.discount)/100 * (line.invoice_id.distribution_costs / 100.0)
-                    res[line.id] = res[line.id] * 100 / (line.quantity*((100.0-line.discount)/100.0))
+                    divide = (line.quantity*((100.0-line.discount)/100.0))
+                    if divide:
+                        res[line.id] = res[line.id] * 100 / divide
+                    else:
+                        res[line.id] = 0
                 else:
                     # res[line.id] = line.margin * 100 / (line.price_unit * line.product_uom_qty)
                     res[line.id] = round((line.price_unit*line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)

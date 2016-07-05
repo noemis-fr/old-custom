@@ -28,7 +28,7 @@
     'author': 'Elanz Centre',
     'website': 'http://www.openelanz.com',
     'summary': 'Account invoice lines menus',
-    'depends': ['base', 'account', 'e3z_account_ipbox'
+    'depends': ['base', 'account', 'e3z_account_ipbox','stock',
     ],
     'data': [
         'account_view.xml',
