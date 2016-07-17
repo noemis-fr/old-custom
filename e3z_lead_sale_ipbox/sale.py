@@ -214,10 +214,10 @@ class sale_order(osv.osv):
             #             text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_id.parent_id.credit_limit, order.partner_id.parent_id.credit, order.partner_id.parent_id.credit_usual)
             #         raise osv.except_osv(_('Error!'), text_error)
             # else:
-            if order.partner_invoice_id.credit > order.partner_invoice_id.credit_limit and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
-                text_error = _('Credit limit allowed is reached.').format(order.partner_invoice_id.credit, order.partner_invoice_id.credit_limit)
+            if order.partner_invoice_id.total_credit > order.partner_invoice_id.credit_limit and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
+                text_error = _('Credit limit allowed is reached.').format(order.partner_invoice_id.total_credit, order.partner_invoice_id.credit_limit)
                 if order.partner_invoice_id.credit_limit < order.partner_invoice_id.credit_usual:
-                    text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_invoice_id.credit_limit, order.partner_invoice_id.credit, order.partner_invoice_id.credit_usual)
+                    text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_invoice_id.credit_limit, order.partner_invoice_id.total_credit, order.partner_invoice_id.credit_usual)
                 raise osv.except_osv(_('Error!'), text_error)
             if order.lead_id:
                 self.pool.get('crm.lead').case_mark_won(cr, uid, [order.lead_id.id], context)
