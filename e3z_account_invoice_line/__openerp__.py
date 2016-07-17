@@ -1,42 +1,33 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2012-2013 Elanz (<http://www.openelanz.fr>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright (C) 2012-2013 Elanz (<http://www.openelanz.fr>).
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'Account invoice lines menus',
     'version': '1.0',
     'category': 'Tools',
-    'description': """
-""",
     'author': 'Elanz Centre',
     'website': 'http://www.openelanz.com',
     'summary': 'Account invoice lines menus',
-    'depends': ['base', 'account', 'e3z_account_ipbox','stock',
+    'description': """
+===========================
+Account Invoice line module
+===========================
+
+* provide two extra menu for account invoice lines in accounting part
+  to make statistic.
+
+* Add a field 'project_code' on sale order, copied on invoice line.
+""",
+    'depends': [
+        'account',
+        'sale',
+        'e3z_account_ipbox',
     ],
     'data': [
-        'account_view.xml',
+        'views/view_sale_order.xml',
+        'views/view_account_invoice_line.xml',
+        'views/action.xml',
+        'views/menu.xml',
     ],
-    'images': [],
-    'installable': True,
-    'application': False,
-    'auto_install': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

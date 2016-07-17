@@ -1,25 +1,42 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-# 	* e3z_account_invoice_line
+#	* e3z_account_invoice_line
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-03 17:01+0000\n"
-"PO-Revision-Date: 2015-02-04 09:36+0100\n"
-"Last-Translator: JC MARTIN <jcmartin@elanz.fr>\n"
+"POT-Creation-Date: 2016-07-17 19:22+0000\n"
+"PO-Revision-Date: 2016-07-17 19:22+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.5.5\n"
 
 #. module: e3z_account_invoice_line
-#: view:account.invoice.line:0 field:account.invoice.line,category:0
+#: model:ir.actions.act_window,help:e3z_account_invoice_line.action_invoice_line_customer_tree
+#: model:ir.actions.act_window,help:e3z_account_invoice_line.action_invoice_line_supplier_tree
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create an invoice line.\n"
+"              </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                Cliquez pour créer une ligne de facture.\n"
+"              </p>\n"
+"            "
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+#: field:account.invoice.line,category:0
 msgid "Category"
 msgstr "Catégorie"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+msgid "Customer"
+msgstr "Client"
 
 #. module: e3z_account_invoice_line
 #: field:account.invoice.line,date_invoice:0
@@ -28,8 +45,22 @@ msgstr "Date de la facture"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
-msgid "Product"
-msgstr "Produit"
+msgid "Group By..."
+msgstr "Regrouper par..."
+
+#. module: e3z_account_invoice_line
+#: code:_description:0
+#: model:ir.model,name:e3z_account_invoice_line.model_account_invoice_line
+#, python-format
+msgid "Invoice Line"
+msgstr "Ligne de facture"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+#: model:ir.actions.act_window,name:e3z_account_invoice_line.action_invoice_line_customer_tree
+#: model:ir.ui.menu,name:e3z_account_invoice_line.invoice_line_customer
+msgid "Invoice lines customers"
+msgstr "Lignes de factures clients"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
@@ -37,6 +68,38 @@ msgstr "Produit"
 #: model:ir.ui.menu,name:e3z_account_invoice_line.invoice_line_supplier
 msgid "Invoice lines suppliers"
 msgstr "Lignes de factures fournisseurs"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+#: field:account.invoice.line,month:0
+msgid "Month"
+msgstr "Mois"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+#: field:account.invoice.line,period_id:0
+msgid "Period"
+msgstr "Période"
+
+#. module: e3z_account_invoice_line
+#: view:account.invoice.line:0
+msgid "Product"
+msgstr "Produit"
+
+#. module: e3z_account_invoice_line
+#: field:account.invoice.line,project_code_so:0
+msgid "Project Code"
+msgstr "Code Projet"
+
+#. module: e3z_account_invoice_line
+#: field:account.invoice.line,ref_invoice:0
+msgid "Ref Invoice"
+msgstr "Ref Facture"
 
 #. module: e3z_account_invoice_line
 #: field:account.invoice.line,ref_product:0
@@ -49,56 +112,21 @@ msgid "Refunds"
 msgstr "Avoirs"
 
 #. module: e3z_account_invoice_line
-#: view:account.invoice.line:0
-msgid "Default"
-msgstr "Défaut"
+#: field:account.invoice.line,origin_so:0
+msgid "SO"
+msgstr "SO"
 
 #. module: e3z_account_invoice_line
-#: field:account.invoice.line,ref_invoice:0
-msgid "Ref invoice"
-msgstr "Réf. facture"
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0 field:account.invoice.line,year:0
-msgid "Year"
-msgstr "Année"
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0
-#: model:ir.actions.act_window,name:e3z_account_invoice_line.action_invoice_line_customer_tree
-#: model:ir.ui.menu,name:e3z_account_invoice_line.invoice_line_customer
-msgid "Invoice lines customers"
-msgstr "Lignes de factures clients"
-
-#. module: e3z_account_invoice_line
-#: model:ir.model,name:e3z_account_invoice_line.model_account_invoice_line
-msgid "Invoice Line"
-msgstr "Ligne de facture"
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0 field:account.invoice.line,month:0
-msgid "Month"
-msgstr "Mois"
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0
-msgid "Group By..."
-msgstr "Regrouper par..."
+#: code:_description:0
+#: model:ir.model,name:e3z_account_invoice_line.model_sale_order
+#, python-format
+msgid "Sales Order"
+msgstr "Commande de ventes"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
 msgid "Search invoice lines"
 msgstr "Chercher dans les lignes de facture"
-
-#. module: e3z_account_invoice_line
-#: field:account.invoice.line,type:0
-msgid "Type"
-msgstr "Type"
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0 field:account.invoice.line,period_id:0
-msgid "Period"
-msgstr "Période"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
@@ -107,29 +135,17 @@ msgstr "Fournisseur"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
-msgid "Partner"
-msgstr "Partenaire"
+msgid "Total"
+msgstr "Total"
+
+#. module: e3z_account_invoice_line
+#: field:account.invoice.line,type:0
+msgid "Type"
+msgstr "Type"
 
 #. module: e3z_account_invoice_line
 #: view:account.invoice.line:0
-msgid "Customer"
-msgstr "Client"
+#: field:account.invoice.line,year:0
+msgid "Year"
+msgstr "Année"
 
-#. module: e3z_account_invoice_line
-#: model:ir.actions.act_window,help:e3z_account_invoice_line.action_invoice_line_customer_tree
-#: model:ir.actions.act_window,help:e3z_account_invoice_line.action_invoice_line_supplier_tree
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Click to create an invoice line.\n"
-"              </p>\n"
-"            "
-msgstr ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Cliquez pour créer une ligne de facture.\n"
-"              </p>\n"
-"            "
-
-#. module: e3z_account_invoice_line
-#: view:account.invoice.line:0
-msgid "Invoices"
-msgstr "Factures"

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp><data>
+
+    <!-- Customer Part -->
+    <record id="view_invoice_line_customer_search" model="ir.ui.view">
+        <field name="model">account.invoice.line</field>
+        <field name="arch" type="xml">
+            <search string="Search invoice lines">
+                <field name="partner_id" string="Customer"/>
+                <field name="name"/>
+                <field name="ref_product"/>
+                <field name="ref_invoice"/>
+                <field name="origin_so"/>
+                <field name="project_code_so" />
+                <field name="period_id"/>
+                <filter string="Period" domain="[('period_id', '!=', False)]" />
+                <filter string="Invoices" domain="[('type', '=', 'out_invoice')]" />
+                <filter string="Refunds" domain="[('type', '=', 'out_refund')]" />
+                <group expand="0" string="Group By...">
+                    <filter string="Customer" context="{'group_by': 'partner_id'}" />
+                    <filter string="Product" context="{'group_by': 'name'}" />
+                    <filter string="Month" context="{'group_by': 'month'}" />
+                    <filter string="Year" context="{'group_by': 'year'}" />
+                    <filter string="Period" context="{'group_by': 'period_id'}" />
+                    <filter string="Category" context="{'group_by': 'category'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_invoice_line_customer_tree" model="ir.ui.view">
+        <field name="model">account.invoice.line</field>
+        <field eval="20" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Invoice lines customers">
+                <field name="date_invoice"/>
+                <field name="partner_id" string="Customer"/>
+                <field name="ref_invoice"/>
+                <field name="origin_so"/>
+                <field name="project_code_so" />
+                <field name="name"/>
+                <field name="ref_product"/>
+                <field name="quantity"/>
+                <field name="price_unit"/>
+                <field name="purchase_price"/>
+                <field name="margin_display"/>
+                <field name="price_subtotal" sum="Total"/>
+                <field name="period_id"/>
+                <field name="category"/>
+                <field name="year"/>
+                <field name="month"/>
+                <field name="type" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Supplier Part -->
+    <record id="view_invoice_line_supplier_search" model="ir.ui.view">
+        <field name="model">account.invoice.line</field>
+        <field name="arch" type="xml">
+            <search string="Search invoice lines">
+                <field name="partner_id" string="Supplier"/>
+                <field name="name"/>
+                <field name="ref_product"/>
+                <field name="ref_invoice"/>
+                <field name="period_id"/>
+                <filter string="Period" domain="[('period_id', '!=', False)]" />
+                <filter string="Invoices" domain="[('type', '=', 'in_invoice')]" />
+                <filter string="Refunds" domain="[('type', '=', 'in_refund')]" />
+                <group expand="0" string="Group By...">
+                    <filter string="Supplier" context="{'group_by': 'partner_id'}" />
+                    <filter string="Product" context="{'group_by': 'name'}" />
+                    <filter string="Month" context="{'group_by': 'month'}" />
+                    <filter string="Year" context="{'group_by': 'year'}" />
+                    <filter string="Period" context="{'group_by': 'period_id'}" />
+                    <filter string="Category" context="{'group_by': 'category'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_invoice_line_supplier_tree" model="ir.ui.view">
+        <field name="model">account.invoice.line</field>
+        <field eval="20" name="priority"/>
+        <field name="arch" type="xml">
+            <tree string="Invoice lines suppliers">
+                <field name="date_invoice"/>
+                <field name="partner_id" string="Supplier"/>
+                <field name="ref_invoice"/>
+                <field name="name"/>
+                <field name="ref_product"/>
+                <field name="quantity"/>
+                <field name="price_unit"/>
+                <field name="price_subtotal" sum="Total"/>
+                <field name="period_id"/>
+                <field name="category"/>
+                <field name="type" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+</data></openerp>

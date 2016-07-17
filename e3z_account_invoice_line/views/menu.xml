@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp><data>
+
+    <menuitem id="invoice_line_customer" 
+        name="Invoice lines customers" 
+            parent="account.menu_finance_receivables"
+            sequence="20"
+         action="action_invoice_line_customer_tree"/>
+
+    <menuitem id="invoice_line_supplier"
+        name="Invoice lines suppliers"
+            parent="account.menu_finance_payables"
+            sequence="20"
+            action="action_invoice_line_supplier_tree"/>
+
+</data></openerp>

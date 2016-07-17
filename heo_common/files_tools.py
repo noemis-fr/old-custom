@@ -25,7 +25,7 @@
 import os
 import time, datetime
 import codecs
-from Crypto.Hash import SHA256
+#from Crypto.Hash import SHA256
 from heo_common.hnm_lib import fvalue
 from unidecode import unidecode
 
