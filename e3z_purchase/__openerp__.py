@@ -29,7 +29,8 @@
     'website': 'http://www.openelanz.com',
     'depends': ['base', 'purchase'],
     'data': [
-        'purchase_view.xml'
+        'views/purchase_view.xml',
+        'views/stock_view.xml',
     ],
     'demo':
         [

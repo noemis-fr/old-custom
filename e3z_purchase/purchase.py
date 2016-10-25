@@ -27,6 +27,26 @@ from openerp.tools.translate import _
 from datetime import datetime
 from openerp.tools import DEFAULT_SERVER_DATE_FORMAT, DEFAULT_SERVER_DATETIME_FORMAT, DATETIME_FORMATS_MAP
 
+import logging 
+
+_logger = logging.getLogger(__name__)
+
+class purchase_order_line(osv.osv):
+    _inherit = 'purchase.order.line'
+    
+    _columns = {
+        'origin' : fields.char(string='Origine')
+    }
+    
+class stock_move(osv.osv):
+    _inherit = 'stock.move'
+    _columns = {
+        'origin': fields.related('purchase_line_id','origin', type='char', string='Origin', readonly=True),
+        
+    }
+
+stock_move()
+    
 class purchase_order(osv.osv):
     _inherit = 'purchase.order'
 
@@ -107,6 +127,7 @@ class purchase_order(osv.osv):
             for order_line in porder.order_line:
                 line_key = make_key(order_line, ('name', 'date_planned', 'taxes_id', 'price_unit', 'product_id', 'move_dest_id', 'account_analytic_id'))
                 o_line = order_infos['order_line'].setdefault(line_key, {})
+                _logger.debug("O_LINE %s" % o_line)
                 if o_line:
                     # merge the line with an existing line
                     o_line['product_qty'] += order_line.product_qty * order_line.product_uom.factor / o_line['uom_factor']
@@ -118,7 +139,8 @@ class purchase_order(osv.osv):
                             field_val = field_val.id
                         o_line[field] = field_val
                     o_line['uom_factor'] = order_line.product_uom and order_line.product_uom.factor or 1.0
-
+                o_line['origin'] = order_line.order_id.origin
+                _logger.debug("O_LINE %s" % o_line)
 
 
         allorders = []
