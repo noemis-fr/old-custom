@@ -41,11 +41,11 @@ class purchase_order_line(osv.osv):
 class stock_move(osv.osv):
     _inherit = 'stock.move'
     _columns = {
-        'origin': fields.related('purchase_line_id','origin', type='char', string='Origin', readonly=True),
+        'purchase_origin': fields.related('purchase_line_id','origin', type='char', string='Origin Merged', readonly=True),
         
     }
 
-stock_move()
+
     
 class purchase_order(osv.osv):
     _inherit = 'purchase.order'
