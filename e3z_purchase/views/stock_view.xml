@@ -3,7 +3,7 @@
     <data>
 
         
-<!--        <record id="view_move_picking_tree" model="ir.ui.view">
+        <record id="view_move_picking_tree" model="ir.ui.view">
             <field name="name">stock.move.tree</field>
             <field name="model">stock.move</field>
             <field name="inherit_id" ref="stock.view_move_picking_tree"></field>
@@ -16,7 +16,7 @@
                 </field>
                 
             </field>
-        </record>-->
+        </record>
         
 <!--        <record id="view_move_tree_reception_picking_origin" model="ir.ui.view">
             <field name="name">stock.move.tree2</field>
