@@ -36,7 +36,7 @@ class purchase_order_line(osv.osv):
     
     _columns = {
         'origin' : fields.char(string='Origine')
-    }
+    }   
     
 class stock_move(osv.osv):
     _inherit = 'stock.move'
@@ -139,7 +139,7 @@ class purchase_order(osv.osv):
                             field_val = field_val.id
                         o_line[field] = field_val
                     o_line['uom_factor'] = order_line.product_uom and order_line.product_uom.factor or 1.0
-                o_line['origin'] = order_line.order_id.origin
+                o_line['origin'] = order_line.origin or order_line.order_id.origin or ''
                 _logger.debug("O_LINE %s" % o_line)
 
 
