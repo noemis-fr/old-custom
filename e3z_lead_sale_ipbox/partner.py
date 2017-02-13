@@ -27,6 +27,7 @@ class res_partner(osv.osv):
 
     def _compute_credit_info(self, cr, uid, ids, field_names, arg, context=None):
         order_obj = self.pool['sale.order']
+        inv_obj = self.pool['account.invoice']
         res = super(res_partner, self)._credit_debit_get(
             cr, uid, ids, field_names, arg, context=context)
         for partner in self.browse(cr, uid, ids, context=context):
@@ -36,6 +37,7 @@ class res_partner(osv.osv):
 
             # Get uninvoiced sale orders
             sale_credit = 0
+            inv_credit = 0
             order_ids = order_obj.search(
                 cr, uid, [
                     ('partner_invoice_id', 'in', child_ids + [partner.id]),
@@ -43,9 +45,16 @@ class res_partner(osv.osv):
                     ('invoice_ids', '=', False)])
             for order in order_obj.browse(cr, uid, order_ids):
                     sale_credit += order.amount_total
+                    
+            inv_ids = inv_obj.search(cr, uid, 
+                        [
+                    ('partner_id', 'in', child_ids + [partner.id]),
+                    ('state', 'in', ['draft', ])])
+            for inv in inv_obj.browse(cr, uid, inv_ids):
+                inv_credit += inv.amount_total
             res[partner.id]['sale_credit'] = sale_credit
             res[partner.id]['total_credit'] =\
-                sale_credit + res[partner.id].get('credit', 0)
+                sale_credit + res[partner.id].get('credit', 0) + inv_credit
         return res
 
     _columns = {
