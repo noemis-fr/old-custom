@@ -21,10 +21,10 @@
                 <notebook position="inside">
                     <page String="Encours" attrs="{'invisible':[('parent_id', '!=', False)]}">
                         <group>
-                            <field name="credit"/>
+                            <field name="credit" string="Total Factures Ouvertes"/>
                             <field name="credit_limit" groups="account.group_account_manager,account.group_account_user"/>
-                            <field name="sale_credit"/>
-                            <field name="total_credit"/>
+                            <field name="sale_credit" string="SO en cours non Fac."/>
+                            <field name="total_credit" string="Total SO + Fac Brouillon"/>
                             <field name="credit_usual" widget="monetary" groups="account.group_account_manager,account.group_account_user"/>
                         </group>
                     </page>
