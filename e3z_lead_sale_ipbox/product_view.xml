@@ -19,7 +19,7 @@
             <field name="inherit_id" ref="product.product_product_tree_view"/>
             <field name="arch" type="xml">
                 <field name="state" position="before">
-                    <field name="standard_price"/>
+                    <field name="standard_price" sum="Cost"/>
                 </field>
             </field>
         </record>
