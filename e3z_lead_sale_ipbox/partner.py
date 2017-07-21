@@ -66,4 +66,29 @@ class res_partner(osv.osv):
         'total_credit': fields.function(
             _compute_credit_info, type='float', multi='credit_info',
             string='Total Receivable (With Sale Orders)'),
-    }
+        'after_days': fields.integer(default=30),
+        }
+        
+    def check_after_payment_term(self, cr, uid, ids, context=None):
+        ctx = context.copy()
+        ctx['all_fiscalyear'] = True
+        query = self.pool.get('account.move.line')._query_get(cr, uid, context=ctx)
+        cr.execute("""SELECT EXISTS
+                      (SELECT l.partner_id, a.type, SUM(l.debit-l.credit)
+                      FROM account_move_line l
+                      LEFT JOIN account_account a ON (l.account_id=a.id)
+                      INNER JOIN res_partner part on (l.partner_id=part.id)
+                      WHERE a.type IN ('receivable','payable')
+                      AND l.partner_id IN %s
+                      AND l.reconcile_id IS NULL
+                      AND( l.date_maturity +  part.after_days)<NOW()
+                      AND """ + query + """
+                      GROUP BY l.partner_id, a.type)
+                      """,
+                   (tuple(ids),))
+        maps = {'receivable':'credit', 'payable':'debit' }
+        res = {}
+        for val in cr.fetchall():
+            if val is None: val=0
+            res = val
+        return res

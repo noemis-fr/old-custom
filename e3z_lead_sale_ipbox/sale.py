@@ -44,7 +44,7 @@ class sale_order(osv.osv):
         return result.keys()
 
     def onchange_partner_id(
-            self, cr, uid, ids, partner_id, context=None):
+        self, cr, uid, ids, partner_id, context=None):
         partner_obj = self.pool['res.partner']
         config_obj = self.pool['ir.config_parameter']
         res = super(sale_order, self).onchange_partner_id(
@@ -100,6 +100,9 @@ class sale_order(osv.osv):
                     )
                 }),
         'nocreate_lead': fields.boolean('Don\'t create lead'),
+        'commercial_partner_id': fields.many2one('res.partner', string='Commercial Entity', compute_sudo=True,
+        related='partner_id.commercial_partner_id', store=True, readonly=True,
+        help="The commercial entity that will be used on Journal Entries for this invoice"),
         }
 
     def create(self, cr, uid, vals, context=None):
@@ -214,11 +217,7 @@ class sale_order(osv.osv):
             #             text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_id.parent_id.credit_limit, order.partner_id.parent_id.credit, order.partner_id.parent_id.credit_usual)
             #         raise osv.except_osv(_('Error!'), text_error)
             # else:
-            if order.partner_invoice_id.total_credit > order.partner_invoice_id.credit_limit and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
-                text_error = _('Credit limit allowed is reached.').format(order.partner_invoice_id.total_credit, order.partner_invoice_id.credit_limit)
-                if order.partner_invoice_id.credit_limit < order.partner_invoice_id.credit_usual:
-                    text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_invoice_id.credit_limit, order.partner_invoice_id.total_credit, order.partner_invoice_id.credit_usual)
-                raise osv.except_osv(_('Error!'), text_error)
+            self.check_credit_condition(cr, uid, order.id,None,context)
             if order.lead_id:
                 self.pool.get('crm.lead').case_mark_won(cr, uid, [order.lead_id.id], context)
 

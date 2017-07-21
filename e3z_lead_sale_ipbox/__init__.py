@@ -27,3 +27,4 @@ import partner
 import wizard
 import procurement
 import purchase
+import warning

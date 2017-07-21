@@ -26,6 +26,7 @@
                             <field name="sale_credit" string="SO en cours non Fac."/>
                             <field name="total_credit" string="Total SO + Fac Brouillon"/>
                             <field name="credit_usual" widget="monetary" groups="account.group_account_manager,account.group_account_user"/>
+                            <field name="after_days" string="délai"/>
                         </group>
                     </page>
                 </notebook>

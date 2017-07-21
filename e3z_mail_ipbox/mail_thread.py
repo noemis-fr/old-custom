@@ -22,6 +22,8 @@ __author__ = 'vchemiere'
 from openerp.osv import osv, fields
 from openerp import SUPERUSER_ID
 
+import logging
+_logger = logging.getLogger(__name__)
 
 class mail_thread(osv.osv):
     _inherit = 'mail.thread'
@@ -46,6 +48,7 @@ class mail_thread(osv.osv):
             context_operation = dict(context, operation='create')
         else:
             context_operation = context
+        _logger.debug("MAIL THREAD FROM e3z")
         thread_id = super(mail_thread, self).create(cr, uid, values, context=context_operation)
 
         return thread_id

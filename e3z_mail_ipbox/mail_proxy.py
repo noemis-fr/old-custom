@@ -65,6 +65,7 @@ class mail_proxy(osv.osv):
         # values['partner_ids'] = [partner.id for partner in self.pool.get(model).browse(cr, uid, ids[0]).message_follower_ids]
         wiz_id = wiz_obj.create(cr, uid, values, context)
         wizard = wiz_obj.browse(cr, uid, wiz_id, context)
+        _logger.debug("IP BOX PROXY SEND MAIL")
         wiz_obj.send_mail(cr, uid, [wiz_id], context)
         # active_ids = context.get('active_ids')
         # is_log = context.get('mail_compose_log', False)
