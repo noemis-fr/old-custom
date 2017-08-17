@@ -33,9 +33,19 @@ class sale_order(osv.osv):
         title = False
         message = False
         
-        self.check_credit_condition(cr, uid, ids,part,context)
+        result_check = self.check_credit_condition(cr, uid, ids,part,context)
 
         result =  super(sale_order, self).onchange_partner_id(cr, uid, ids, part, context=context)
+        
+        if result_check.get('warning',False):
+            if result.get('warning',False):
+                warning['title'] = result_check['warning']['title'] and result_check['warning']['title'] +' & '+ result['warning']['title'] or result['warning']['title']
+                warning['message'] = result_check['warning']['message'] and result_check['warning']['message'] + ' ' + result['warning']['message'] or result['warning']['message']
+            else:
+                warning['title'] = result_check['warning']['title']
+                warning['message'] = result_check['warning']['message']
+            if warning:
+                result['warning'] = warning
 
         return result
     
@@ -43,6 +53,8 @@ class sale_order(osv.osv):
         
         users_obj = self.pool.get('res.users')
         text_error = None
+        warning = {}
+        result = {}
         
         if not isinstance(ids,type([])):
             ids=[ids]
@@ -64,7 +76,12 @@ class sale_order(osv.osv):
             else :
                 text_error += _('date limite de paiement + délai dépassée.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
         if text_error !=None:
-            raise osv.except_osv(_('Error!'), text_error)
-    
+            warning['title'] = 'problème comptabilité, id du client :'+str(part)
+            warning['message'] = text_error
+        
+        if warning:
+            result['warning'] = warning
+            
+        return result
 sale_order()
 
