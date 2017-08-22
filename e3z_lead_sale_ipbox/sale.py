@@ -217,7 +217,7 @@ class sale_order(osv.osv):
             #             text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( order.partner_id.parent_id.credit_limit, order.partner_id.parent_id.credit, order.partner_id.parent_id.credit_usual)
             #         raise osv.except_osv(_('Error!'), text_error)
             # else:
-            self.check_credit_condition(cr, uid, order.id,None,context)
+            self.check_credit_condition(cr, uid, order.id,None,False,context)
             if order.lead_id:
                 self.pool.get('crm.lead').case_mark_won(cr, uid, [order.lead_id.id], context)
 
