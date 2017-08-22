@@ -33,9 +33,9 @@ class sale_order(osv.osv):
         title = False
         message = False
         
-        result_check = self.check_credit_condition(cr, uid, ids,part,context)
+        result_check = self.check_credit_condition(cr, uid, ids,part,True,context)
 
-        result =  super(sale_order, self).onchange_partner_id(cr, uid, ids, part,True, context=context)
+        result =  super(sale_order, self).onchange_partner_id(cr, uid, ids, part, context=context)
         
         if result_check.get('warning',False):
             if result.get('warning',False):
