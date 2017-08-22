@@ -35,7 +35,7 @@ class sale_order(osv.osv):
         
         result_check = self.check_credit_condition(cr, uid, ids,part,context)
 
-        result =  super(sale_order, self).onchange_partner_id(cr, uid, ids, part, context=context)
+        result =  super(sale_order, self).onchange_partner_id(cr, uid, ids, part,True, context=context)
         
         if result_check.get('warning',False):
             if result.get('warning',False):
@@ -49,7 +49,7 @@ class sale_order(osv.osv):
 
         return result
     
-    def check_credit_condition(self,cr, uid, ids,part = None, context = None):
+    def check_credit_condition(self,cr, uid, ids,part = None,on_change = False, context = None):
         
         users_obj = self.pool.get('res.users')
         text_error = None
@@ -76,6 +76,8 @@ class sale_order(osv.osv):
             else :
                 text_error += _('date limite de paiement + délai dépassée.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
         if text_error !=None:
+            if on_change !=True:
+                raise osv.except_osv(_('Error!'), text_error)
             warning['title'] = 'problème comptabilité, id du client :'+str(part)
             warning['message'] = text_error
         
