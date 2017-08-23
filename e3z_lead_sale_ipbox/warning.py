@@ -70,7 +70,7 @@ class sale_order(osv.osv):
             text_error = _('Credit limit allowed is reached.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
             if partner.commercial_partner_id.credit_limit < partner.commercial_partner_id.credit_usual:
                 text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( partner.commercial_partner_id.credit_limit, partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_usual)
-        if partner.commercial_partner_id.check_after_payment_term()==True:
+        if partner.commercial_partner_id.check_after_payment_term()!=0:
             if text_error == None:
                 text_error = _('date limite de paiement + délai dépassée.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
             else :
