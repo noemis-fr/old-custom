@@ -66,9 +66,12 @@ class res_partner(osv.osv):
         'total_credit': fields.function(
             _compute_credit_info, type='float', multi='credit_info',
             string='Total Receivable (With Sale Orders)'),
-        'after_days': fields.integer(default=30),
+        'after_days': fields.integer(),
         }
         
+    _defaults={'after_days': 30}
+    
+    
     def check_after_payment_term(self, cr, uid, ids, context=None):
         ctx = context.copy()
         ctx['all_fiscalyear'] = True
