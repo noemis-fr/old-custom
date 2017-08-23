@@ -89,6 +89,6 @@ class res_partner(osv.osv):
         maps = {'receivable':'credit', 'payable':'debit' }
         res = {}
         for val in cr.fetchall():
-            if val is None: val=0
-            res = val
+            if val is None: val=False
+            res = val[0]
         return res
