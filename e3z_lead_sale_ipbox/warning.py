@@ -67,14 +67,14 @@ class sale_order(osv.osv):
         
         
         if partner.commercial_partner_id.total_credit > partner.commercial_partner_id.credit_limit and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
-            text_error = _('Credit limit allowed is reached.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
+            text_error = _(' PB ENCOURS.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
             if partner.commercial_partner_id.credit_limit < partner.commercial_partner_id.credit_usual:
                 text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( partner.commercial_partner_id.credit_limit, partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_usual)
         if partner.commercial_partner_id.check_after_payment_term():
             if text_error == None:
-                text_error = _('Date limite de paiement + delai est dépassee.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
+                text_error = _('PB RETARD.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
             else :
-                text_error += _(' Date limite de paiement + delai est dépassee.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
+                text_error += _(' PB RETARD.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
         if text_error !=None:
             if on_change !=True:
                 raise osv.except_osv(_('Error!'), text_error)
