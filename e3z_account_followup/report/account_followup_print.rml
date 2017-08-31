@@ -169,9 +169,12 @@
       <font color="white"> </font>
     </para>
     <section>
-      <blockTable colWidths="150.0,70.0,114.0,114.0" style="Table1">
+      <blockTable colWidths="125.0,130.0,50.0,104.0,104.0" style="Table1">
         <para style="terp_default_8">[[repeatIn(getLines(o), 'cur_lines') ]]</para>
         <tr>
+        <td>
+          <para style="terp_tblheader_Details_Centre">Ref</para>
+        </td>
           <td>
             <para style="terp_tblheader_Details_Centre">Invoice Ref.</para>
           </td>
@@ -186,9 +189,12 @@
           </td>
         </tr>
       </blockTable>
-      <blockTable colWidths="150.0,70.0,114.0,114.0" style="Table15">
+      <blockTable colWidths="125.0,130.0,50.0,104.0,104.0" style="Table15">
         <tr>
            <para style="terp_default_8">[[repeatIn(cur_lines['line'], 'line') ]]</para>
+          <td>
+            <para style="terp_default_Centre_9">[[ line['ref'] ]]</para>
+          </td>
           <td>
             <para style="terp_default_Centre_9">[[ line['name'] ]]</para>
           </td>
@@ -203,7 +209,7 @@
           </td>
         </tr>
       </blockTable>
-       <blockTable colWidths="150.0,70.0,114.0,114.0" style="Table2">
+       <blockTable colWidths="235.0,70.0,104.0,104.0" style="Table2">
         <tr>
           <td>
             <para style="terp_default_8">
