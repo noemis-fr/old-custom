@@ -24,7 +24,8 @@ from openerp.osv import fields,osv
 from openerp.tools.translate import _
 from __builtin__ import isinstance
 from dateutil.relativedelta import relativedelta
-
+import logging
+_logger = logging.getLogger(__name__)
 
 class sale_order(osv.osv):
     _inherit = 'sale.order'
@@ -66,10 +67,16 @@ class sale_order(osv.osv):
         partner = self.pool.get('res.partner').browse(cr, uid, part, context=context)
         
         
+       
+        
         if partner.commercial_partner_id.total_credit > partner.commercial_partner_id.credit_limit and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
             text_error = _(' PB ENCOURS.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
             if partner.commercial_partner_id.credit_limit < partner.commercial_partner_id.credit_usual:
                 text_error += _('\nInsurance credit: {},\nComputed Credit: {},\nUsual credit: {}').format( partner.commercial_partner_id.credit_limit, partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_usual)
+                
+        _logger.debug("Log for controling conditions")
+        _logger.debug("Commercial partner : %s and delay conditions %s" % (partner.commercial_partner_id, partner.commercial_partner_id.check_after_payment_term()))
+        _logger.debug("User access level %s  %s" % (users_obj.has_group(cr, uid, 'account.group_account_user'), users_obj.has_group(cr, uid, 'account.group_account_manager')))    
         if partner.commercial_partner_id.check_after_payment_term() and not users_obj.has_group(cr, uid, 'account.group_account_user') and not users_obj.has_group(cr, uid, 'account.group_account_manager'):
             if text_error == None:
                 text_error = _('PB RETARD.').format(partner.commercial_partner_id.total_credit, partner.commercial_partner_id.credit_limit)
