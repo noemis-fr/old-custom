@@ -99,7 +99,11 @@ class crm_lead(osv.osv):
 
         if model == 'crm.lead':
             model = 'sale.order'
-            thread_id = self.pool.get('crm.lead').browse(cr, uid, thread_id).sale_id.id
+            lead= self.pool.get('crm.lead').browse(cr, uid, thread_id)
+            if isinstance(lead, list):
+                lead = lead[0]
+            thread_id = lead.sale_id.id
+            
 
         values = kwargs
         values.update({
@@ -123,3 +127,4 @@ class crm_lead(osv.osv):
         if thread_id:
             msg_id = mail_message.create(cr, uid, values, context=context)
         return res
+    
