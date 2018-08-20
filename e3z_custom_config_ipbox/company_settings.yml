@@ -131,7 +131,7 @@
                       <place x="1.3cm" y="0cm" height="2.55cm" width="19.0cm">
                           <para style="main_footer">Contact : [[ user.name ]] - Page: <pageNumber/></para>
                           <para style="main_footer">
-                            IPbox - 1 rue louis Blériot- BP 38 - 63015 Clermont- Ferrand- Tél : [[ company.partner_id.phone or '' ]] – Fax : [[ company.partner_id.fax or '' ]]
+                            IPbox - 5 rue Claude Burdin- 63100 Clermont-Ferrand - Tél : [[ company.partner_id.phone or '' ]] – Fax : [[ company.partner_id.fax or '' ]]
                             SARL au capital de 129 000 eur
                             N°SIRET : [[ company.siret or '' ]] NAF : [[ company.ape or '' ]]  N° intracommunautaire : [[ company.vat or '' ]]
                           </para>
