@@ -95,7 +95,7 @@
     <para style="terp_default_8">
       <font color="white"> </font>
     </para>
-    <blockTable colWidths="371.0,98.0" repeatRows="1" style="Table_Product_Header_Title">
+    <blockTable colWidths="371.0,98.0,98.0" repeatRows="1" style="Table_Product_Header_Title">
       <tr>
         <td>
           <para style="terp_tblheader_Details"><b>Description</b></para>
@@ -103,24 +103,36 @@
         <td>
           <para style="terp_tblheader_Details_Centre"><b>Qty</b></para>
         </td>
+        <td>
+          <para style="terp_tblheader_Details_Centre"><b>Date</b></para>
+        </td>
       </tr>
     </blockTable>
     <section>
       <para style="terp_default_9">[[ repeatIn(order.order_line,'order_line') ]]</para>
-      <blockTable colWidths="371.0,98.0" style="Table_Product_Line">
+      <blockTable colWidths="371.0,98.0,98.0" style="Table_Product_Line">
         <tr>
           <td>
             <para style="terp_default_9">[ [[ order_line.product_id.default_code ]] ] [[ order_line.name ]]</para>
           </td>
+          
+          Merci de nous confirmer votre meilleure date;
           <td>
             <para style="terp_default_Right_9">
                 [[ formatLang(order_line.product_qty )]]
                 <i>[[ (order_line.product_uom and order_line.product_uom.name) or '' ]]</i>
             </para>
           </td>
+          <td>
+            <para style="terp_default_9">Merci de nous confirmer votre meilleure date.</para>
+          </td>
         </tr>
       </blockTable>
     </section>
+    <para style="terp_default_9">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_9">Merci de confirmer votre meilleure date.</para>
     <para style="terp_default_9">
       <font color="white"> </font>
     </para>
