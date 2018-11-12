@@ -132,10 +132,6 @@
     <para style="terp_default_9">
       <font color="white"> </font>
     </para>
-    <para style="terp_default_9">Merci de confirmer votre meilleure date.</para>
-    <para style="terp_default_9">
-      <font color="white"> </font>
-    </para>
     <para style="terp_default_9">[[ format(order.notes or '') ]]</para>
     <para style="terp_default_9">
       <font color="white"> </font>
