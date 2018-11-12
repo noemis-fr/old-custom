@@ -116,7 +116,7 @@
             <para style="terp_default_9">[ [[ order_line.product_id.default_code ]] ] [[ order_line.name ]]</para>
           </td>
           
-          Merci de nous confirmer votre meilleure date;
+          Merci de nous confirmer votre meilleure date.
           <td>
             <para style="terp_default_Right_9">
                 [[ formatLang(order_line.product_qty )]]
