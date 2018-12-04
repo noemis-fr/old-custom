@@ -89,22 +89,24 @@ class account_invoice_line(osv.osv):
         res = {}
         for line in invoice_line_obj.browse(cr, uid, ids):
             res[line.id] = 0
-            if line.quantity:
-                if line.price_unit == 0:
-                    res[line.id] = round((line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)
-                    # res[line.id] = line.margin * 100 / (line.product_uom_qty)
-                    res[line.id] -= line.quantity * (100.0-line.discount)/100 * (line.invoice_id.distribution_costs / 100.0)
-                    divide = (line.quantity*((100.0-line.discount)/100.0))
-                    if divide:
-                        res[line.id] = res[line.id] * 100 / divide
+            try:
+                if line.quantity:
+                    if line.price_unit == 0:
+                        res[line.id] = round((line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)
+                        # res[line.id] = line.margin * 100 / (line.product_uom_qty)
+                        res[line.id] -= line.quantity * (100.0-line.discount)/100 * (line.invoice_id.distribution_costs / 100.0)
+                        divide = (line.quantity*((100.0-line.discount)/100.0))
+                        if divide:
+                            res[line.id] = res[line.id] * 100 / divide
+                        else:
+                            res[line.id] = 0
                     else:
-                        res[line.id] = 0
-                else:
-                    # res[line.id] = line.margin * 100 / (line.price_unit * line.product_uom_qty)
-                    res[line.id] = round((line.price_unit*line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)
-                    res[line.id] -= line.price_unit * line.quantity * (100.0-line.discount)/100 * (line.invoice_id.distribution_costs / 100.0)
-                    res[line.id] = res[line.id] * 100 / (line.price_unit * line.quantity*((100.0-line.discount)/100.0))
-
+                        # res[line.id] = line.margin * 100 / (line.price_unit * line.product_uom_qty)
+                        res[line.id] = round((line.price_unit*line.quantity*(100.0-line.discount)/100.0) -(line.purchase_price*line.quantity), 2)
+                        res[line.id] -= line.price_unit * line.quantity * (100.0-line.discount)/100 * (line.invoice_id.distribution_costs / 100.0)
+                        res[line.id] = res[line.id] * 100 / (line.price_unit * line.quantity*((100.0-line.discount)/100.0))
+            except:
+                pass
         return res
 
     def _get_margin_display(self, cr, uid, ids, field_name, arg, context):
