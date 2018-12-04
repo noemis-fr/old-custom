@@ -102,7 +102,7 @@ class crm_lead(osv.osv):
             lead= self.pool.get('crm.lead').browse(cr, uid, thread_id)
             if isinstance(lead, list):
                 lead = lead[0]
-            thread_id = lead.user_id.id
+            thread_id = lead.sale_id.id
             
 
         values = kwargs
